@@ -1,4 +1,0 @@
-Changelog:
-
-0.00.1 Nightly
-First release, will be updated soon.
