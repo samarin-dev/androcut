@@ -1,0 +1,13 @@
+
+plugins {
+	id 'application'
+}
+
+
+mainClassName = "org.develnext.jphp.ext.javafx.FXLauncher"
+jar.archiveName = "dn-compiled-module.jar"
+
+
+sourceSets {
+	main.resources.srcDirs = ['src_generated', 'src', 'vendor/ide.bundle.std.JPHPCoreBundle', 'vendor/ide.bundle.std.JPHPRuntimeBundle', 'vendor/ide.bundle.std.JPHPJsonBundle', 'vendor/ide.bundle.std.JPHPXmlBundle', 'vendor/ide.bundle.std.UIDesktopBundle', 'vendor/ide.bundle.std.JPHPDesktopDebugBundle', 'vendor/develnext.bundle.game2d.Game2DBundle']
+}
