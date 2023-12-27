@@ -1,0 +1,13 @@
+
+plugins {
+	id 'application'
+}
+
+
+mainClassName = "org.develnext.jphp.ext.javafx.FXLauncher"
+jar.archiveName = "dn-compiled-module.jar"
+
+
+sourceSets {
+	main.resources.srcDirs = ['src_generated', 'src']
+}
