@@ -1,0 +1,5 @@
+[classes]
+bundle\gignight\Localization
+bundle\gignight\LocalizationFile
+bundle\gignight\exception\LocalizationException
+bundle\gignight\exception\LocalizationFileNotFoundException
