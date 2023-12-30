@@ -1,16 +1,28 @@
 {
   "props": [],
   "components": {
+    "fileChooser5": {
+      "type": "script\\FileChooserScript",
+      "x": 384,
+      "y": 496,
+      "props": {
+        "filterName": "Все файлы",
+        "filterExtensions": "*.*",
+        "filterAny": "0",
+        "inputNode": "editimg",
+        "actionNode": "button27"
+      }
+    },
     "fileChooserAlt": {
       "type": "script\\FileChooserScript",
-      "x": 592,
-      "y": 352,
+      "x": 384,
+      "y": 400,
       "props": {
         "filterName": "Все файлы",
         "filterExtensions": "*.*",
         "filterAny": "0",
         "inputNode": "edit",
-        "actionNode": "button32"
+        "actionNode": "buttonfldr"
       }
     },
     "fileChooser": {
@@ -19,10 +31,38 @@
       "y": 288,
       "props": {
         "multiple": false,
+        "initialDirectory": "/scripts",
         "filterName": "Androcut Automatical Uninstall Script (*.aaus)",
         "filterExtensions": "*.aaus",
-        "filterAny": "0",
+        "filterAny": true,
         "actionNode": "button34"
+      }
+    },
+    "fileChooser3": {
+      "type": "script\\FileChooserScript",
+      "x": 624,
+      "y": 288,
+      "props": {
+        "saveDialog": true,
+        "initialDirectory": "/scripts",
+        "filterName": "Androcut Automatical Uninstall Script (*.aaus)",
+        "filterExtensions": "*.aaus",
+        "filterAny": true,
+        "inputNode": "scriptpath",
+        "actionNode": "buttonpath"
+      }
+    },
+    "fileChooser4": {
+      "type": "script\\FileChooserScript",
+      "x": 704,
+      "y": 288,
+      "props": {
+        "initialDirectory": "/scripts",
+        "filterName": "Androcut Automatical Uninstall Script (*.aaus)",
+        "filterExtensions": "*.aaus",
+        "filterAny": true,
+        "inputNode": "scriptpath",
+        "actionNode": "buttonopen"
       }
     },
     "dirChooser": {
