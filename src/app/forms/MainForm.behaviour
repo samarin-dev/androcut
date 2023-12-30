@@ -86,4 +86,7 @@
   <target id="button18">
     <behaviour color="#669966" offsetX="0" offsetY="0" radius="10" type="behaviour\custom\InnerShadowEffectBehaviour" when="HOVER"/>
   </target>
+  <target id="button21">
+    <behaviour color="#ff6666" offsetX="0" offsetY="0" radius="10" type="behaviour\custom\InnerShadowEffectBehaviour" when="HOVER"/>
+  </target>
 </behaviours>

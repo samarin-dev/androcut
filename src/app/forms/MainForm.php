@@ -6,6 +6,8 @@ use php\io\IOException;
 use Error;
 use php\io\Stream;
 use std, gui, framework, app;
+use php\gui\event\UXEvent; 
+use php\gui\event\UXMouseEvent; 
 
 
 class MainForm extends AbstractForm
@@ -332,7 +334,8 @@ class MainForm extends AbstractForm
     function doLinkAltAction(UXEvent $e = null)
     {    
         $linkAlt = $this->linkAlt->text;
-        open("https://www.google.com/search?q= $linkAlt");
+        open(htmlspecialchars("https://www.google.com/search?q= $linkAlt"), ENT_QUOTES);
+        $this->toast(htmlspecialchars("https://www.google.com/search?q= $linkAlt"), ENT_QUOTES);
     }
 
 
@@ -572,6 +575,7 @@ class MainForm extends AbstractForm
     {    
         $total = $this->listView->items->count;
         $this->label41->text = "Total: $total";
+        $this->helper->text = 'List of applications available on device by selected filter';
     }
 
 
@@ -650,7 +654,6 @@ class MainForm extends AbstractForm
      */
     function doButton43Action(UXEvent $e = null)
     {   
-        $this->toast('Main (Apps) Screen also reloaded with parameter [All]'); 
         $this->button42->text = 'Packages on device';
         $this->radioGroup->selectedIndex = 0;
         $this->doButtonAction();
@@ -942,8 +945,8 @@ class MainForm extends AbstractForm
      */
     function doButton32Action(UXEvent $e = null)
     {    
-        $partition = $this->combobox->selected;
-        $filename = $this->edit->text;
+        $partition = $this->comboboxAlt->selected;
+        $filename = $this->editimg->text;
         $this->FastbootAction("fastboot flash $partition $filename");
     }
 
@@ -1098,6 +1101,335 @@ class MainForm extends AbstractForm
     {    
         open('manual.chm');
     }
+
+    /**
+     * @event button25.mouseEnter 
+     */
+    function doButton25MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Get support';
+    }
+
+    /**
+     * @event button44.mouseEnter 
+     */
+    function doButton44MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Show information about app';
+    }
+
+    /**
+     * @event panelAlt.mouseEnter 
+     */
+    function doPanelAltMouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Short information about device';
+    }
+
+    /**
+     * @event button15.mouseEnter 
+     */
+    function doButton15MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Update list of connected devices';
+    }
+
+    /**
+     * @event combobox3.mouseEnter 
+     */
+    function doCombobox3MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'List of connected devices';
+    }
+
+    /**
+     * @event spoiler.mouseEnter 
+     */
+    function doSpoilerMouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Let`s do it!';
+    }
+
+    /**
+     * @event button7.mouseEnter 
+     */
+    function doButton7MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Reboot selected device';
+    }
+
+    /**
+     * @event button9.mouseEnter 
+     */
+    function doButton9MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Reboot selected device to Bootloader/Fastboot/EDL';
+    }
+
+    /**
+     * @event button11.mouseEnter 
+     */
+    function doButton11MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Shutdown selected device';
+    }
+
+    /**
+     * @event button10.mouseEnter 
+     */
+    function doButton10MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Suitable if power button is broken';
+    }
+
+    /**
+     * @event button20.mouseEnter 
+     */
+    function doButton20MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Start remote control session for selected device, sessions is unlimited';
+    }
+
+    /**
+     * @event listViewAlt.mouseEnter 
+     */
+    function doListViewAltMouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Callback for operations with packages';
+    }
+
+    /**
+     * @event panel3.mouseEnter 
+     */
+    function doPanel3MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Short information about app';
+    }
+
+    /**
+     * @event radioGroup.mouseEnter 
+     */
+    function doRadioGroupMouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Filter by...';
+    }
+
+    /**
+     * @event button.mouseEnter 
+     */
+    function doButtonMouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Refresh app`s list';
+    }
+
+    /**
+     * @event buttonAlt.mouseEnter 
+     */
+    function doButtonAltMouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Disable selected';
+    }
+
+    /**
+     * @event button8.mouseEnter 
+     */
+    function doButton8MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Enable selected';
+    }
+
+    /**
+     * @event button3.mouseEnter 
+     */
+    function doButton3MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Remove selected';
+    }
+
+    /**
+     * @event button4.mouseEnter 
+     */
+    function doButton4MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Get an *.apk of one (or first) selected app';
+    }
+
+    /**
+     * @event button13.mouseEnter 
+     */
+    function doButton13MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Workstation mode';
+    }
+
+    /**
+     * @event button28.mouseEnter 
+     */
+    function doButton28MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Save selected as Androcut Automatical Uninstall Script';
+    }
+
+    /**
+     * @event helper.mouseExit 
+     */
+    function doHelperMouseExit(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = '0-0?';
+    }
+
+    /**
+     * @event helper.mouseEnter 
+     */
+    function doHelperMouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = '❤-❤';
+    }
+
+    /**
+     * @event button33.mouseEnter 
+     */
+    function doButton33MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Refresh local repository';
+    }
+
+    /**
+     * @event button34.mouseEnter 
+     */
+    function doButton34MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Add to repository an external script';
+    }
+
+    /**
+     * @event button17.mouseEnter 
+     */
+    function doButton17MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Remove selected from repository';
+    }
+
+    /**
+     * @event button43.mouseEnter 
+     */
+    function doButton43MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Refresh packages list (also refreshing main (Apps) screen with parameter [All])';
+    }
+
+    /**
+     * @event listView6.mouseEnter 
+     */
+    function doListView6MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Double click - add to script';
+    }
+
+    /**
+     * @event listView4.mouseEnter 
+     */
+    function doListView4MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Select to open';
+    }
+
+    /**
+     * @event button37.mouseEnter 
+     */
+    function doButton37MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Save script';
+    }
+
+    /**
+     * @event editAlt.mouseEnter 
+     */
+    function doEditAltMouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Script name (type your own if you creating new one)';
+    }
+
+    /**
+     * @event button36.mouseEnter 
+     */
+    function doButton36MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Add package name manual';
+    }
+
+    /**
+     * @event button39.mouseEnter 
+     */
+    function doButton39MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Execute script with parameter Disable';
+    }
+
+    /**
+     * @event button40.mouseEnter 
+     */
+    function doButton40MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Execute script with parameter Enable';
+    }
+
+    /**
+     * @event button41.mouseEnter 
+     */
+    function doButton41MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Execute script with parameter Uninstall';
+    }
+
+    /**
+     * @event button21.action 
+     */
+    function doButton21Action(UXEvent $e = null)
+    {    
+        app()->showForm('scripteditor');
+    }
+
+    /**
+     * @event listView5.mouseEnter 
+     */
+    function doListView5MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Script (list of apps)';
+    }
+
+    /**
+     * @event listView7.mouseEnter 
+     */
+    function doListView7MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Console output (click to copy)';
+    }
+
+    /**
+     * @event edit3.mouseEnter 
+     */
+    function doEdit3MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Type command here, press [↑] for last command/paste from clipboard, [Enter] to execute';
+    }
+
+    /**
+     * @event button19.mouseEnter 
+     */
+    function doButton19MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Are you sure?';
+    }
+
+    /**
+     * @event button21.mouseEnter 
+     */
+    function doButton21MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Open script editor';
+    }
+
     
     //UI/UX
     function showNotice()

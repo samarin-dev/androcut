@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="800" styleClass=" ">
+<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632" prefWidth="800" styleClass=" ">
   <children>
-    <ImageViewEx AnchorPane.bottomAnchor="7" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" autoSize="false" centered="true" focusTraversable="false" height="593" id="image" layoutX="0" layoutY="0" mosaic="false" mosaicGap="0" proportional="true" stretch="false" styleClass="" textFill="#000000" width="800">
+    <ImageViewEx AnchorPane.bottomAnchor="7" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" autoSize="false" centered="true" focusTraversable="false" height="625" id="image" layoutX="0" layoutY="0" mosaic="false" mosaicGap="0" proportional="true" stretch="false" styleClass="" textFill="#000000" width="800">
       <font>
         <Font name="System Regular" size="12"/>
       </font>
     </ImageViewEx>
-    <Panel AnchorPane.bottomAnchor="40" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" backgroundColor="#333333" borderColor="#c0c0c0" borderRadius="0" borderStyle="SOLID" borderWidth="0" focusTraversable="false" id="notice" layoutX="0" layoutY="320" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" opacity="0" prefHeight="240" prefWidth="800" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+    <Panel AnchorPane.bottomAnchor="40" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" backgroundColor="#333333" borderColor="#c0c0c0" borderRadius="0" borderStyle="SOLID" borderWidth="0" focusTraversable="false" id="notice" layoutX="0" layoutY="352" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" opacity="0" prefHeight="240" prefWidth="800" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
       <children>
         <Panel AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" backgroundColor="#4d4d4d" borderColor="#c0c0c0" borderRadius="0" borderStyle="SOLID" borderWidth="0" focusTraversable="false" id="panel4" layoutX="0" layoutY="184" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="56" prefWidth="800" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
           <children>
@@ -51,9 +51,14 @@
         <Font name="System Regular" size="12"/>
       </titleFont>
     </Panel>
-    <Panel AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" borderColor="#333333" borderRadius="0" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel" layoutX="0" layoutY="0" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="600" prefWidth="800" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+    <Panel AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" borderColor="#333333" borderRadius="0" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel" layoutX="0" layoutY="0" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="632" prefWidth="800" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
       <children>
-        <TabPaneEx AnchorPane.bottomAnchor="89" AnchorPane.leftAnchor="-1" AnchorPane.rightAnchor="-1" AnchorPane.topAnchor="32" focusTraversable="true" id="tabPane" layoutX="0" layoutY="33" prefHeight="472" prefWidth="800" side="BOTTOM" styleClass="tab-pane " tabClosingPolicy="UNAVAILABLE">
+        <Button AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="-1" AnchorPane.rightAnchor="-1" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="helper" layoutX="0" layoutY="599" prefHeight="32" prefWidth="800" styleClass="button " text="0-0?" textAlignment="LEFT" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </Button>
+        <TabPaneEx AnchorPane.bottomAnchor="119" AnchorPane.leftAnchor="-1" AnchorPane.rightAnchor="-1" AnchorPane.topAnchor="31" focusTraversable="true" id="tabPane" layoutX="0" layoutY="32" prefHeight="480" prefWidth="800" side="BOTTOM" styleClass="tab-pane " tabClosingPolicy="UNAVAILABLE">
           <tabs>
             <Tab text="Apps (Manual)">
               <content>
@@ -64,7 +69,7 @@
                         <Font name="System Regular" size="12"/>
                       </font>
                       <content>
-                        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="377" prefWidth="180" styleClass="">
+                        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="375" prefWidth="180" styleClass="">
                           <padding>
                             <Insets bottom="9.6" left="9.6" right="9.6" top="9.6"/>
                           </padding>
@@ -134,7 +139,7 @@
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/download.png" id="data-button4" visible="1"/>
                     <RadioGroupPane AnchorPane.bottomAnchor="13" AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="54" alignment="TOP_LEFT" focusTraversable="false" id="radioGroup" layoutX="200" layoutY="413" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" orientation="HORIZONTAL" prefHeight="24" prefWidth="546" selectedIndex="0" spacing="19.634146341463" styleClass="" textColor="#ffffff">
                       <children>
-                        <HBox alignment="BASELINE_LEFT" focusTraversable="false" id="" layoutX="0" layoutY="0" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="16" prefWidth="546" spacing="19" styleClass="">
+                        <HBox alignment="BASELINE_LEFT" focusTraversable="false" id="" layoutX="0" layoutY="0" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="17" prefWidth="546" spacing="19" styleClass="">
                           <children/>
                         </HBox>
                       </children>
@@ -276,7 +281,7 @@
                         <Font name="System Regular" size="12"/>
                       </font>
                       <content>
-                        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="294" prefWidth="180" styleClass="">
+                        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="292" prefWidth="180" styleClass="">
                           <padding>
                             <Insets bottom="9.6" left="9.6" right="9.6" top="9.6"/>
                           </padding>
@@ -333,20 +338,20 @@
                         <Font name="System Regular" size="12"/>
                       </font>
                       <content>
-                        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="142" prefWidth="590" styleClass="">
+                        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="140" prefWidth="590" styleClass="">
                           <padding>
                             <Insets bottom="9.6" left="9.6" right="9.6" top="9.6"/>
                           </padding>
                           <children>
                             <Data cursor="DEFAULT" enabled="1" graphic=".data/img/edit.png" id="data-button32" visible="1"/>
                             <Data cursor="DEFAULT" enabled="1" id="data-comboboxAlt" visible="1"/>
-                            <TextField AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="42.39999961853" alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="edit" layoutX="17.6" layoutY="48" prefColumnCount="12" prefHeight="35" prefWidth="472" promptText="Flashing image..." styleClass="text-input text-field " text="">
+                            <TextField AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="42.39999961853" alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="editimg" layoutX="17.6" layoutY="48" prefColumnCount="12" prefHeight="35" prefWidth="472" promptText="Flashing image..." styleClass="text-input text-field " text="">
                               <font>
                                 <Font name="System Regular" size="12"/>
                               </font>
                             </TextField>
-                            <Data cursor="DEFAULT" enabled="1" id="data-edit" visible="1"/>
-                            <Button AnchorPane.rightAnchor="12.4" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button27" layoutX="535" layoutY="48" prefHeight="35" prefWidth="32" styleClass="button " text="Кнопка" textAlignment="CENTER" underline="false" wrapText="false">
+                            <Data cursor="DEFAULT" enabled="1" id="data-editimg" visible="1"/>
+                            <Button AnchorPane.rightAnchor="12.4" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button27" layoutX="536" layoutY="48" prefHeight="35" prefWidth="32" styleClass="button " text="Кнопка" textAlignment="CENTER" underline="false" wrapText="false">
                               <font>
                                 <Font name="System Regular" size="12"/>
                               </font>
@@ -421,11 +426,6 @@
                       </items>
                     </ListViewEx>
                     <Data cursor="DEFAULT" enabled="1" id="data-listView5" visible="1"/>
-                    <Button AnchorPane.rightAnchor="54" AnchorPane.topAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button36" layoutX="706" layoutY="8" opacity="0.9" prefHeight="32" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
-                      <font>
-                        <Font name="System Regular" size="12"/>
-                      </font>
-                    </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/add.png" id="data-button36" visible="1"/>
                     <Button AnchorPane.rightAnchor="230" AnchorPane.topAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button37" layoutX="530" layoutY="8" opacity="0.9" prefHeight="32" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
@@ -481,6 +481,17 @@
                       </items>
                     </ListViewEx>
                     <Data cursor="DEFAULT" enabled="1" id="data-editAlt" visible="1"/>
+                    <Button AnchorPane.rightAnchor="6" AnchorPane.topAnchor="160" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button21" layoutX="754" layoutY="160" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </Button>
+                    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/edit.png" id="data-button21" visible="1"/>
+                    <Button AnchorPane.rightAnchor="54" AnchorPane.topAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button36" layoutX="706" layoutY="8" opacity="0.9" prefHeight="32" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </Button>
                   </children>
                 </AnchorPane>
               </content>
@@ -520,7 +531,7 @@
           </tabs>
         </TabPaneEx>
         <Data cursor="DEFAULT" draggable="NONE" enabled="1" id="data-tabPane" visible="1"/>
-        <Panel AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" backgroundColor="#1a1a1a" borderColor="#c0c0c0" borderRadius="0" borderStyle="SOLID" borderWidth="0" focusTraversable="false" id="panelAlt" layoutX="1" layoutY="511" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="88" prefWidth="798" styleClass="list-view " titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_RIGHT">
+        <Panel AnchorPane.bottomAnchor="32" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" backgroundColor="#1a1a1a" borderColor="#c0c0c0" borderRadius="0" borderStyle="SOLID" borderWidth="0" focusTraversable="false" id="panelAlt" layoutX="1" layoutY="511" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="88" prefWidth="798" styleClass="list-view " titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_RIGHT">
           <padding>
             <Insets bottom="1" left="1" right="1" top="1"/>
           </padding>
@@ -651,6 +662,7 @@
           </font>
         </Button>
         <Data cursor="DEFAULT" enabled="" id="data-button45" visible="1"/>
+        <Data cursor="DEFAULT" enabled="1" id="data-helper" visible="1"/>
       </children>
       <titleFont>
         <Font name="System Regular" size="12"/>
