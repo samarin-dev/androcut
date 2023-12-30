@@ -29,8 +29,9 @@ Androcut позволяет:
 
 1. Загрузите последнюю версию DevelNext (develnext.org)
 2. Склонируйте/загрузите ввиде *.zip репозиторий
-3. Откройте в DevelNext androcut.dnproject
-4. Выберите Собрать/Запустить
+4. Откройте в DevelNext androcut.dnproject
+5. Установите и подключите к проекту зависимости (эту https://github.com/TsSaltan/jphp-preg-ext и эту https://github.com/TsSaltan/jphp-windows-ext)
+6. Выберите Собрать/Запустить
 
 Androcut is a software package united by a single graphical interface (launcher),
 created primarily to simplify the process of removing unwanted software from devices running Android OS as well as
@@ -62,4 +63,5 @@ Compilation
 1. Download the latest version of DevelNext (develnext.org)
 2. Clone/download as *.zip repository
 3. Open androcut.dnproject in DevelNext
-4. Select Build/Run
+4. Install and add dependencies to the project (this https://github.com/TsSaltan/jphp-preg-ext and this https://github.com/TsSaltan/jphp-windows-ext)
+5. Select Build/Run
