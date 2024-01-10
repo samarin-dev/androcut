@@ -12,3 +12,12 @@ First publical beta release
 - Helpbar added
 - Only full and jar versions provides from this release
 - Documentation updated
+
+=======================================
+2024.01
+=======================================
+- Ukranian localization added
+- Russian localization added
+- Social icons improved
+- Minor bugfixes and optimizations
+- Documentation updated
