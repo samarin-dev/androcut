@@ -39,7 +39,7 @@
     <Data cursor="DEFAULT" enabled="1" id="data-button" visible="1"/>
     <Slider AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="76.9140625" AnchorPane.topAnchor="55" blockIncrement="10" focusTraversable="true" id="slider" layoutX="8" layoutY="55" majorTickUnit="10" max="120" min="0" orientation="HORIZONTAL" prefHeight="38" prefWidth="552" showTickLabels="true" showTickMarks="true" snapToTicks="false" styleClass="slider " value="12"/>
     <Data cursor="DEFAULT" enabled="1" id="data-slider" visible="1"/>
-    <org.develnext.jphp.ext.javafx.support.control.NumberSpinner AnchorPane.rightAnchor="8" AnchorPane.topAnchor="56" alignment="CENTER_LEFT" arrowsStyle="RIGHT_VERTICAL" editable="true" focusTraversable="true" id="numberField" initial="12" layoutX="568" layoutY="56" max="120" min="3" prefHeight="32" prefWidth="64" step="1" styleClass="spinner  "/>
+    <org.develnext.jphp.ext.javafx.support.control.NumberSpinner AnchorPane.rightAnchor="8" AnchorPane.topAnchor="56" alignment="CENTER_LEFT" arrowsStyle="RIGHT_VERTICAL" editable="true" focusTraversable="true" id="numberField" initial="12" layoutX="568" layoutY="56" max="120" min="3" prefHeight="32" prefWidth="64" step="1" styleClass="spinner "/>
     <Data cursor="DEFAULT" enabled="1" id="data-numberField" visible="1"/>
   </children>
 </AnchorPane>

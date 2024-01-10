@@ -1,6 +1,11 @@
 <?php
 namespace app\forms;
 
+use php\lang\Process;
+use php\lang\System;
+use bundle\windows\WindowsException;
+use bundle\windows\WindowsScriptHost;
+use bundle\windows\Windows;
 use windows;
 use php\io\IOException;
 use Error;
@@ -335,7 +340,6 @@ class MainForm extends AbstractForm
     {    
         $linkAlt = $this->linkAlt->text;
         open(htmlspecialchars("https://www.google.com/search?q= $linkAlt"), ENT_QUOTES);
-        $this->toast(htmlspecialchars("https://www.google.com/search?q= $linkAlt"), ENT_QUOTES);
     }
 
 
@@ -344,7 +348,6 @@ class MainForm extends AbstractForm
      */
     function doShow(UXWindowEvent $e = null)
     {    
-        $this->StartupCheck();
         if (fs::size('rnc.cfg') > 0)
         {
             $this->doButton15Action();
@@ -380,6 +383,40 @@ class MainForm extends AbstractForm
         $this->tabPane->selectedTab->graphic = $icon;
         
         $this->tabPane->selectFirstTab();
+        
+        $lang = new UXLabelEx;
+        $lang->rightAnchor = 1;
+        $lang->leftAnchor = 1;
+        $lang->text = 'English';
+        $lang->textColor = UXColor::of('#ffff4d');
+        $img_icon = new UXImageView(new UXImage('res://.data/img/uk-ser.png'));                          
+        $icon = new UXHBox([$img_icon]);
+        $lang->graphic = $icon;
+        $this->combobox4->items->add($lang);
+        
+        $lang = new UXLabelEx;
+        $lang->rightAnchor = 1;
+        $lang->leftAnchor = 1;
+        $lang->text = 'Українська';
+        $lang->textColor = UXColor::of('#ffff4d');
+        $img_icon = new UXImageView(new UXImage('res://.data/img/dia.png'));                          
+        $icon = new UXHBox([$img_icon]);
+        $lang->graphic = $icon;
+        $this->combobox4->items->add($lang);
+        
+        $lang = new UXLabelEx;
+        $lang->rightAnchor = 1;
+        $lang->leftAnchor = 1;
+        $lang->text = 'Русский';
+        $lang->textColor = UXColor::of('#ffff4d');
+        $img_icon = new UXImageView(new UXImage('res://.data/img/rus-ser.png'));                          
+        $icon = new UXHBox([$img_icon]);
+        $lang->graphic = $icon;
+        $this->combobox4->items->add($lang);
+        
+        $this->combobox4->selectedIndex = 0;
+        
+        $this->getUpdate();
     }
 
 
@@ -917,10 +954,7 @@ class MainForm extends AbstractForm
     {    
         //just for tests
         
-        $device = $this->combobox3->selected->text;
-        $device = explode(' ', $device);
-        $device = $device[0];
-        $this->toast($device);
+        $this->doButton25Action();
     }
 
     /**
@@ -1017,7 +1051,7 @@ class MainForm extends AbstractForm
         $deviceid = explode(' ', $deviceid);
         $deviceid = str::trim($deviceid[0]);
         
-        execute("scrcpy/scrcpy -s $deviceid");
+        execute("scrcpy -s $deviceid");
     }
 
     /**
@@ -1430,6 +1464,25 @@ class MainForm extends AbstractForm
         $this->helper->text = 'Open script editor';
     }
 
+    /**
+     * @event combobox4.action 
+     */
+    function doCombobox4Action(UXEvent $e = null)
+    {    
+        if ($this->combobox4->selectedIndex == 0)
+        {
+            $this->localization('en-US');
+        }
+        elseif ($this->combobox4->selectedIndex == 1)
+        {
+            $this->localization('uk-UA');
+        }
+        elseif ($this->combobox4->selectedIndex == 2)
+        {
+            $this->localization('ru-RU');
+        }
+    }
+
     
     //UI/UX
     function showNotice()
@@ -1737,107 +1790,6 @@ class MainForm extends AbstractForm
         $this->listView3->scrollTo($this->listView3->items->count());
     }
     
-    function StartupCheck($ignore = false)
-    {
-        $os = strtolower(Windows::getProductName());
-        
-        if (str::contains($os, 'windows') == true)
-        {
-            if (fs::exists('adb.exe') == false) //checkup for Android Platform Tools
-            {
-                $this->ErrorToast('red', 'adb.exe', $ignore);
-            }
-            elseif (fs::exists('AdbWinApi.dll') == false)
-            {
-                $this->ErrorToast('red', 'AdbWinApi.dll', $ignore);
-            }
-            elseif (fs::exists('AdbWinUsbApi.dll') == false)
-            {
-                $this->ErrorToast('red', 'AdbWinUsbApi.dll', $ignore);
-            }
-            elseif (fs::exists('fastboot.exe') == false)
-            {
-                $this->ErrorToast('red', 'fastboot.exe', $ignore);
-            }
-            elseif (fs::exists('dmtracedump.exe') == false)
-            {
-                $this->ErrorToast('red', 'fastboot.exe', $ignore);
-            }
-            elseif (fs::exists('etc1tool.exe') == false)
-            {
-                $this->ErrorToast('red', 'etc1tool.exe', $ignore);
-            }
-            elseif (fs::exists('hprof-conv.exe') == false)
-            {
-                $this->ErrorToast('red', 'hprof-conv.exe', $ignore);
-            }
-            elseif (fs::exists('libwinpthread-1.dll') == false)
-            {
-                $this->ErrorToast('red', 'libwinpthread-1.dll', $ignore);
-            }
-            elseif (fs::exists('make_f2fs.exe') == false)
-            {
-                $this->ErrorToast('red', 'make_f2fs.exe', $ignore);
-            }
-            elseif (fs::exists('make_f2fs_casefold.exe') == false)
-            {
-                $this->ErrorToast('red', 'make_f2fs_casefold.exe', $ignore);
-            }
-            elseif (fs::exists('mke2fs.exe') == false)
-            {
-                $this->ErrorToast('red', 'mke2fs.exe', $ignore);
-            }
-            elseif (fs::exists('sqlite3.exe') == false)
-            {
-                $this->ErrorToast('red', 'sqlite3.exe', $ignore);
-            }
-            elseif (fs::exists('scrcpy/scrcpy.exe') == false) //third-party software
-            {
-                $this->ErrorToast('ok', 'scrcpy/scrcpy.exe', $ignore);
-            }
-            elseif (fs::exists('scrcpy/scrcpy-server') == false)
-            {
-                $this->ErrorToast('ok', 'scrcpy/scrcpy-server', $ignore);
-            }
-            elseif (fs::exists('scrcpy/adb.exe') == false)
-            {
-                $this->ErrorToast('ok', 'scrcpy/adb.exe', $ignore);
-            }
-            elseif (fs::exists('scrcpy/AdbWinApi.dll') == false)
-            {
-                $this->ErrorToast('ok', 'scrcpy/AdbWinApi.dll', $ignore);
-            }
-            elseif (fs::exists('scrcpy/AdbWinUsbApi.dll') == false)
-            {
-                $this->ErrorToast('ok', 'scrcpy/AdbWinUsbApi.dll', $ignore);
-            }
-            elseif (fs::exists('scrcpy/avcodec-60.dll') == false)
-            {
-                $this->ErrorToast('ok', 'scrcpy/avcodec-60.dll', $ignore);
-            }
-            elseif (fs::exists('scrcpy/avformat-60.dll') == false)
-            {
-                $this->ErrorToast('ok', 'scrcpy/avformat-60.dll', $ignore);
-            }
-            elseif (fs::exists('scrcpy/avutil-58.dll') == false)
-            {
-                $this->ErrorToast('ok', 'scrcpy/avutil-58.dll', $ignore);
-            }
-            elseif (fs::exists('scrcpy/libusb-1.0.dll') == false)
-            {
-                $this->ErrorToast('ok', 'scrcpy/libusb-1.0.dll', $ignore);
-            }
-            elseif (fs::exists('scrcpy/SDL2.dll') == false)
-            {
-                $this->ErrorToast('ok', 'scrcpy/SDL2.dll', $ignore);
-            }
-            elseif (fs::exists('scrcpy/swresample-4.dll') == false)
-            {
-                $this->ErrorToast('ok', 'scrcpy/swresample-4.dll', $ignore);
-            }
-        }
-    }
-    
     function ErrorToast($code, $path, $ignore = false)
     {
         if ($ignore == true)
@@ -1875,12 +1827,161 @@ class MainForm extends AbstractForm
             $this->tabPane->selectedTab->text = 'Скрипти';
             $this->tabPane->selectNextTab();
             $this->tabPane->selectedTab->text = 'Консоль (Ручне)';
+            $this->tabPane->selectFirstTab();
             $this->radioGroup->items->clear();
             $this->radioGroup->items->add('Усі');
             $this->radioGroup->items->add('Вимкнуті');
             $this->radioGroup->items->add('Увімкнуті');
             $this->radioGroup->items->add('Системні');
             $this->radioGroup->items->add('Сторонні');
+            $this->spoiler->text = 'Керування пристроєм';
+            $this->spoiler3->text = 'Стерти';
+            $this->spoiler5->text = 'Записати';
+            $this->combobox->promptText = 'Розділ...';
+            $this->comboboxAlt->promptText = 'Розділ...';
+            $this->combobox3->promptText = 'Пристрій...';
+            $this->combobox3->text = 'Пристрій...';
+            $this->editimg->promptText = 'Образ запису...';
+            $this->editAlt->promptText = 'Ім`я скрипту';
+            $this->edit3->promptText = 'Команда';
+            $this->button25->text = 'Допомога';
+            $this->button44->text = 'Про программу';
+            $this->button7->text = 'Перезавантажити';
+            $this->button9->text = 'До завантажувача';
+            $this->button11->text = 'Вимкнути';
+            $this->button10->text = 'Ввмк/Вимк Екран';
+            $this->button20->text = 'Відкрити scrcpy';
+            $this->button12->text = 'Стерти';
+            $this->button29->text = 'ОЕМ Розблк.';
+            $this->button30->text = 'Розбл. Запису';
+            $this->button16->text = 'Крит. Розблк.';
+            $this->button24->text = 'ОЕМ Блок.';
+            $this->button26->text = 'Блок. Запису';
+            $this->button18->text = 'Крит. Блок.';
+            $this->button31->text = 'До EDL';
+            $this->button32->text = 'Записати';
+            $this->button14->text = 'Локально';
+            $this->button42->text = 'Застосунки на пристрої';
+            $this->button19->text = 'Виконати';
+        }
+        elseif ($locale == 'ru-RU')
+        {
+            $this->tabPane->selectFirstTab();
+            $this->tabPane->selectedTab->text = 'Приложения (Ручное)';
+            $this->tabPane->selectNextTab();
+            $this->tabPane->selectedTab->text = 'Fastboot (Ручное)';
+            $this->tabPane->selectNextTab();
+            $this->tabPane->selectedTab->text = 'Скрипты';
+            $this->tabPane->selectNextTab();
+            $this->tabPane->selectedTab->text = 'Консоль (Ручное)';
+            $this->tabPane->selectFirstTab();
+            $this->radioGroup->items->clear();
+            $this->radioGroup->items->add('Все');
+            $this->radioGroup->items->add('Отключенные');
+            $this->radioGroup->items->add('Включенные');
+            $this->radioGroup->items->add('Системные');
+            $this->radioGroup->items->add('Сторонние');
+            $this->spoiler->text = 'Управление устройством';
+            $this->spoiler3->text = 'Стереть';
+            $this->spoiler5->text = 'Записать';
+            $this->combobox->promptText = 'Раздел...';
+            $this->comboboxAlt->promptText = 'Раздел...';
+            $this->combobox3->promptText = 'Устройство...';
+            $this->combobox3->text = 'Устройство...';
+            $this->editimg->promptText = 'Образ записи...';
+            $this->editAlt->promptText = 'Имя скрипта';
+            $this->edit3->promptText = 'Команда';
+            $this->button25->text = 'Помощь';
+            $this->button44->text = 'О программе';
+            $this->button7->text = 'Перезагрузить';
+            $this->button9->text = 'К загрузчику';
+            $this->button11->text = 'Выключить';
+            $this->button10->text = 'Вкл/Выкл Экран';
+            $this->button20->text = 'Открыть scrcpy';
+            $this->button12->text = 'Стереть';
+            $this->button29->text = 'ОЕМ Разбл.';
+            $this->button30->text = 'Разбл. Записи';
+            $this->button16->text = 'Крит. Разблк.';
+            $this->button24->text = 'ОЕМ Блок.';
+            $this->button26->text = 'Блок. Записи';
+            $this->button18->text = 'Крит. Блок.';
+            $this->button31->text = 'Перейти к EDL';
+            $this->button32->text = 'Записать';
+            $this->button14->text = 'Локально';
+            $this->button42->text = 'Приложения устройства';
+            $this->button19->text = 'Выполнить';
+        }
+        elseif ($locale == 'en-US')
+        {
+            $this->tabPane->selectFirstTab();
+            $this->tabPane->selectedTab->text = 'Apps (Manual)';
+            $this->tabPane->selectNextTab();
+            $this->tabPane->selectedTab->text = 'Fastboot (Manual)';
+            $this->tabPane->selectNextTab();
+            $this->tabPane->selectedTab->text = 'Scripts';
+            $this->tabPane->selectNextTab();
+            $this->tabPane->selectedTab->text = 'Console (Manual)';
+            $this->tabPane->selectFirstTab();
+            $this->radioGroup->items->clear();
+            $this->radioGroup->items->add('All');
+            $this->radioGroup->items->add('Disabled');
+            $this->radioGroup->items->add('Enabled');
+            $this->radioGroup->items->add('System');
+            $this->radioGroup->items->add('Third-party');
+            $this->spoiler->text = 'Device controls';
+            $this->spoiler3->text = 'Wipe';
+            $this->spoiler5->text = 'Flash';
+            $this->combobox->promptText = 'Partition...';
+            $this->comboboxAlt->promptText = 'Partition...';
+            $this->combobox3->promptText = 'Device...';
+            $this->combobox3->text = 'Device...';
+            $this->editimg->promptText = 'Flashing image...';
+            $this->editAlt->promptText = 'Script name';
+            $this->edit3->promptText = 'Command';
+            $this->button25->text = 'Help';
+            $this->button44->text = 'About';
+            $this->button7->text = 'Reboot';
+            $this->button9->text = 'Reboot to B-loader';
+            $this->button11->text = 'Shutdown';
+            $this->button10->text = 'On/Off Screen';
+            $this->button20->text = 'Open scrcpy';
+            $this->button12->text = 'Wipe';
+            $this->button29->text = 'ОЕМ Unlock';
+            $this->button30->text = 'Flash Unlock';
+            $this->button16->text = 'Critical Unlock';
+            $this->button24->text = 'ОЕМ Lock';
+            $this->button26->text = 'Flash Lock';
+            $this->button18->text = 'Critical Lock';
+            $this->button31->text = 'Move to EDL';
+            $this->button32->text = 'Flash';
+            $this->button14->text = 'Local';
+            $this->button42->text = 'Packages on device';
+            $this->button19->text = 'Execute';
+        }
+    }
+    
+    function getUpdate()
+    {
+        $current = '2024.01';
+        
+        try 
+        {
+            $version = file_get_contents('https://samarin-dev.github.io/androcut/VERSION.md');
+        }
+        catch (Error $e) {$this->toast($e);}
+        
+        try 
+        {
+            $changelog = file_get_contents('https://samarin-dev.github.io/androcut/CHANGELOG.md');
+        }
+        catch (Error $e) {$this->toast($e);}
+        
+        if ($version != $current)
+        {
+            app()->showForm('update');
+            app()->form('update')->labelAlt->text = "Current ver.: $current";
+            app()->form('update')->label3->text = "New ver.: $version";
+            app()->form('update')->textArea->text = $changelog;
         }
     }
 }

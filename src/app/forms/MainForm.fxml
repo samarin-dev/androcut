@@ -62,14 +62,14 @@
           <tabs>
             <Tab text="Apps (Manual)">
               <content>
-                <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="450" prefWidth="800" styleClass="">
+                <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="443" prefWidth="798" styleClass="">
                   <children>
-                    <TitledPane AnchorPane.bottomAnchor="5" AnchorPane.leftAnchor="8" AnchorPane.topAnchor="48" alignment="CENTER_LEFT" animated="true" collapsible="false" contentDisplay="LEFT" ellipsisString="..." expanded="true" focusTraversable="true" graphicTextGap="4.9382716049383" id="spoiler" layoutX="8" layoutY="48" opacity="0.93" prefHeight="400" prefWidth="184" styleClass="titled-pane " text="Phone controls" textAlignment="LEFT" underline="false" wrapText="false">
+                    <TitledPane AnchorPane.bottomAnchor="5" AnchorPane.leftAnchor="8" AnchorPane.topAnchor="48" alignment="CENTER_LEFT" animated="true" collapsible="false" contentDisplay="LEFT" ellipsisString="..." expanded="true" focusTraversable="true" graphicTextGap="4.9382716049383" id="spoiler" layoutX="8" layoutY="48" opacity="0.93" prefHeight="400" prefWidth="184" styleClass="titled-pane " text="Device controls" textAlignment="LEFT" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
                       <content>
-                        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="375" prefWidth="180" styleClass="">
+                        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="368" prefWidth="180" styleClass="">
                           <padding>
                             <Insets bottom="9.6" left="9.6" right="9.6" top="9.6"/>
                           </padding>
@@ -113,33 +113,33 @@
                         <FXCollections fx:factory="observableArrayList"/>
                       </items>
                     </ListViewEx>
-                    <Button AnchorPane.rightAnchor="8" AnchorPane.topAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="86.926829268293" id="button" layoutX="752" layoutY="8" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button AnchorPane.rightAnchor="8" AnchorPane.topAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="86.926829268293" id="button" layoutX="750" layoutY="8" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
                     </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/reload.png" id="data-button" visible="1"/>
-                    <Button AnchorPane.rightAnchor="8" AnchorPane.topAnchor="64" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="buttonAlt" layoutX="752" layoutY="64" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button AnchorPane.rightAnchor="8" AnchorPane.topAnchor="64" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="buttonAlt" layoutX="750" layoutY="64" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
                     </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/stop.png" id="data-buttonAlt" visible="1"/>
-                    <Button AnchorPane.rightAnchor="8" AnchorPane.topAnchor="160" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button3" layoutX="752" layoutY="160" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button AnchorPane.rightAnchor="8" AnchorPane.topAnchor="160" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button3" layoutX="750" layoutY="160" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
                     </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/remove.png" id="data-button3" visible="1"/>
-                    <Button AnchorPane.rightAnchor="8" AnchorPane.topAnchor="216" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button4" layoutX="752" layoutY="216" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button AnchorPane.rightAnchor="8" AnchorPane.topAnchor="216" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button4" layoutX="750" layoutY="216" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
                     </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/download.png" id="data-button4" visible="1"/>
-                    <RadioGroupPane AnchorPane.bottomAnchor="13" AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="54" alignment="TOP_LEFT" focusTraversable="false" id="radioGroup" layoutX="200" layoutY="413" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" orientation="HORIZONTAL" prefHeight="24" prefWidth="546" selectedIndex="0" spacing="19.634146341463" styleClass="" textColor="#ffffff">
+                    <RadioGroupPane AnchorPane.bottomAnchor="13" AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="54" alignment="TOP_LEFT" focusTraversable="false" id="radioGroup" layoutX="200" layoutY="406" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" orientation="HORIZONTAL" prefHeight="24" prefWidth="544" selectedIndex="0" spacing="19.634146341463" styleClass="" textColor="#ffffff">
                       <children>
-                        <HBox alignment="BASELINE_LEFT" focusTraversable="false" id="" layoutX="0" layoutY="0" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="17" prefWidth="546" spacing="19" styleClass="">
+                        <HBox alignment="BASELINE_LEFT" focusTraversable="false" id="" layoutX="0" layoutY="0" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="17" prefWidth="544" spacing="19" styleClass="">
                           <children/>
                         </HBox>
                       </children>
@@ -157,7 +157,7 @@
                       </items>
                     </RadioGroupPane>
                     <Data cursor="DEFAULT" enabled="1" id="data-radioGroup" visible="1"/>
-                    <Button AnchorPane.rightAnchor="8" AnchorPane.topAnchor="112" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button8" layoutX="752" layoutY="112" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button AnchorPane.rightAnchor="8" AnchorPane.topAnchor="112" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button8" layoutX="750" layoutY="112" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
@@ -165,31 +165,31 @@
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/enable.png" id="data-button8" visible="1"/>
                     <Data cursor="DEFAULT" enabled="1" id="data-listView" visible="1"/>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/device.png" id="data-spoiler" visible="1"/>
-                    <Button AnchorPane.rightAnchor="8" AnchorPane.topAnchor="272" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button13" layoutX="752" layoutY="272" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button AnchorPane.rightAnchor="8" AnchorPane.topAnchor="272" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button13" layoutX="750" layoutY="272" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
                     </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/display.png" id="data-button13" visible="1"/>
-                    <ListViewEx AnchorPane.bottomAnchor="44" AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="294" editable="false" fixedCellSize="-1" focusTraversable="true" id="listViewAlt" layoutX="200" layoutY="254" opacity="0.9" prefHeight="152" prefWidth="304" styleClass="list-view ">
+                    <ListViewEx AnchorPane.bottomAnchor="44" AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="294" editable="false" fixedCellSize="-1" focusTraversable="true" id="listViewAlt" layoutX="200" layoutY="247" opacity="0.9" prefHeight="152" prefWidth="304" styleClass="list-view ">
                       <items xmlns:fx="http://javafx.com/fxml">
                         <FXCollections fx:factory="observableArrayList"/>
                       </items>
                     </ListViewEx>
                     <Data cursor="DEFAULT" enabled="1" id="data-listViewAlt" visible="1"/>
-                    <LabelEx AnchorPane.bottomAnchor="20" AnchorPane.rightAnchor="62" alignment="CENTER_RIGHT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label41" layoutX="642" layoutY="413" prefHeight="17" prefWidth="96" styleClass="label " text="Total: 0" textAlignment="LEFT" underline="false" wrapText="false">
+                    <LabelEx AnchorPane.bottomAnchor="20" AnchorPane.rightAnchor="62" alignment="CENTER_RIGHT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label41" layoutX="640" layoutY="406" prefHeight="17" prefWidth="96" styleClass="label " text="Total: 0" textAlignment="LEFT" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
                     </LabelEx>
                     <Data cursor="DEFAULT" enabled="1" id="data-label41" visible="1"/>
-                    <Button AnchorPane.rightAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button28" layoutX="752" layoutY="319" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button AnchorPane.rightAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button28" layoutX="750" layoutY="319" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
                     </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/drive.png" id="data-button28" visible="1"/>
-                    <Panel AnchorPane.bottomAnchor="44" AnchorPane.rightAnchor="54" backgroundColor="#1a1a1a" borderColor="#c0c0c0" borderRadius="5" borderStyle="SOLID" borderWidth="0" focusTraversable="false" id="panel3" layoutX="514" layoutY="254" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" opacity="0.9" prefHeight="152" prefWidth="232" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+                    <Panel AnchorPane.bottomAnchor="44" AnchorPane.rightAnchor="54" backgroundColor="#1a1a1a" borderColor="#c0c0c0" borderRadius="5" borderStyle="SOLID" borderWidth="0" focusTraversable="false" id="panel3" layoutX="512" layoutY="247" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" opacity="0.9" prefHeight="152" prefWidth="232" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
                       <children>
                         <ImageViewEx autoSize="false" centered="false" focusTraversable="false" height="16" id="imageAlt" layoutX="8" layoutY="8" mosaic="false" mosaicGap="0" proportional="false" stretch="false" styleClass="" textFill="#000000" width="16">
                           <font>
@@ -227,7 +227,7 @@
             </Tab>
             <Tab text="Fastboot (Manual)">
               <content>
-                <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="450" prefWidth="800" styleClass="">
+                <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="443" prefWidth="798" styleClass="">
                   <children>
                     <ListViewEx AnchorPane.bottomAnchor="8" AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="6" AnchorPane.topAnchor="176" editable="false" fixedCellSize="-1" focusTraversable="true" id="listView3" layoutX="200" layoutY="176" opacity="0.9" prefHeight="256" prefWidth="592" styleClass="list-view ">
                       <items xmlns:fx="http://javafx.com/fxml">
@@ -281,7 +281,7 @@
                         <Font name="System Regular" size="12"/>
                       </font>
                       <content>
-                        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="292" prefWidth="180" styleClass="">
+                        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="285" prefWidth="180" styleClass="">
                           <padding>
                             <Insets bottom="9.6" left="9.6" right="9.6" top="9.6"/>
                           </padding>
@@ -338,7 +338,7 @@
                         <Font name="System Regular" size="12"/>
                       </font>
                       <content>
-                        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="140" prefWidth="590" styleClass="">
+                        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="140" prefWidth="588" styleClass="">
                           <padding>
                             <Insets bottom="9.6" left="9.6" right="9.6" top="9.6"/>
                           </padding>
@@ -351,7 +351,7 @@
                               </font>
                             </TextField>
                             <Data cursor="DEFAULT" enabled="1" id="data-editimg" visible="1"/>
-                            <Button AnchorPane.rightAnchor="12.4" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button27" layoutX="536" layoutY="48" prefHeight="35" prefWidth="32" styleClass="button " text="Кнопка" textAlignment="CENTER" underline="false" wrapText="false">
+                            <Button AnchorPane.rightAnchor="12.4" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button27" layoutX="534" layoutY="48" prefHeight="35" prefWidth="32" styleClass="button " text="Кнопка" textAlignment="CENTER" underline="false" wrapText="false">
                               <font>
                                 <Font name="System Regular" size="12"/>
                               </font>
@@ -394,9 +394,9 @@
             </Tab>
             <Tab text="Scripts">
               <content>
-                <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="450" prefWidth="800" styleClass="">
+                <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="443" prefWidth="798" styleClass="">
                   <children>
-                    <TextField AnchorPane.rightAnchor="88" AnchorPane.topAnchor="8" alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="editAlt" layoutX="568" layoutY="8" prefColumnCount="12" prefHeight="35" prefWidth="144" promptText="Script name" styleClass="text-input text-field " text="">
+                    <TextField AnchorPane.rightAnchor="88" AnchorPane.topAnchor="8" alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="editAlt" layoutX="566" layoutY="8" prefColumnCount="12" prefHeight="35" prefWidth="144" promptText="Script name" styleClass="text-input text-field " text="">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
@@ -420,32 +420,32 @@
                       </font>
                     </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/remove.png" id="data-button17" visible="1"/>
-                    <ListViewEx AnchorPane.bottomAnchor="11" AnchorPane.rightAnchor="54" AnchorPane.topAnchor="40" editable="false" fixedCellSize="-1" focusTraversable="true" id="listView5" layoutX="530" layoutY="40" opacity="0.9" prefHeight="389" prefWidth="216" styleClass="list-view ">
+                    <ListViewEx AnchorPane.bottomAnchor="11" AnchorPane.rightAnchor="54" AnchorPane.topAnchor="40" editable="false" fixedCellSize="-1" focusTraversable="true" id="listView5" layoutX="528" layoutY="40" opacity="0.9" prefHeight="389" prefWidth="216" styleClass="list-view ">
                       <items xmlns:fx="http://javafx.com/fxml">
                         <FXCollections fx:factory="observableArrayList"/>
                       </items>
                     </ListViewEx>
                     <Data cursor="DEFAULT" enabled="1" id="data-listView5" visible="1"/>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/add.png" id="data-button36" visible="1"/>
-                    <Button AnchorPane.rightAnchor="230" AnchorPane.topAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button37" layoutX="530" layoutY="8" opacity="0.9" prefHeight="32" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button AnchorPane.rightAnchor="230" AnchorPane.topAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button37" layoutX="528" layoutY="8" opacity="0.9" prefHeight="32" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
                     </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/enable.png" id="data-button37" visible="1"/>
-                    <Button AnchorPane.rightAnchor="6" AnchorPane.topAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button39" layoutX="754" layoutY="8" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button AnchorPane.rightAnchor="6" AnchorPane.topAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button39" layoutX="752" layoutY="8" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
                     </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/stop.png" id="data-button39" visible="1"/>
-                    <Button AnchorPane.rightAnchor="6" AnchorPane.topAnchor="56" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button40" layoutX="754" layoutY="56" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button AnchorPane.rightAnchor="6" AnchorPane.topAnchor="56" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button40" layoutX="752" layoutY="56" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
                     </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/enable.png" id="data-button40" visible="1"/>
-                    <Button AnchorPane.rightAnchor="6" AnchorPane.topAnchor="104" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button41" layoutX="754" layoutY="104" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button AnchorPane.rightAnchor="6" AnchorPane.topAnchor="104" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button41" layoutX="752" layoutY="104" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
@@ -469,7 +469,7 @@
                       </font>
                     </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/reload.png" id="data-button43" visible="1"/>
-                    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button14" layoutX="48" layoutY="8" opacity="0.9" prefHeight="32" prefWidth="128" styleClass="button " text="Local repository..." textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button14" layoutX="48" layoutY="8" opacity="0.9" prefHeight="32" prefWidth="128" styleClass="button " text="Local" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
@@ -481,13 +481,13 @@
                       </items>
                     </ListViewEx>
                     <Data cursor="DEFAULT" enabled="1" id="data-editAlt" visible="1"/>
-                    <Button AnchorPane.rightAnchor="6" AnchorPane.topAnchor="160" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button21" layoutX="754" layoutY="160" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button AnchorPane.rightAnchor="6" AnchorPane.topAnchor="160" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button21" layoutX="752" layoutY="160" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
                     </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/edit.png" id="data-button21" visible="1"/>
-                    <Button AnchorPane.rightAnchor="54" AnchorPane.topAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button36" layoutX="706" layoutY="8" opacity="0.9" prefHeight="32" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button AnchorPane.rightAnchor="54" AnchorPane.topAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button36" layoutX="704" layoutY="8" opacity="0.9" prefHeight="32" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
@@ -498,7 +498,7 @@
             </Tab>
             <Tab text="Console (Manual)">
               <content>
-                <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="450" prefWidth="800" styleClass="">
+                <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="443" prefWidth="798" styleClass="">
                   <children>
                     <ListViewEx AnchorPane.bottomAnchor="48" AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="6" AnchorPane.topAnchor="8" editable="false" fixedCellSize="-1" focusTraversable="true" id="listView7" layoutX="8" layoutY="8" prefHeight="384" prefWidth="784" style="-fx-text-color: #e6994d" styleClass="list-view ">
                       <items xmlns:fx="http://javafx.com/fxml">
@@ -512,13 +512,13 @@
                       </items>
                     </ListViewEx>
                     <Data cursor="DEFAULT" enabled="1" id="data-listView7" visible="1"/>
-                    <TextField AnchorPane.bottomAnchor="5" AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="118" alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="edit3" layoutX="8" layoutY="410" prefColumnCount="12" prefHeight="35" prefWidth="672" promptText="Command" styleClass="text-input text-field " text="">
+                    <TextField AnchorPane.bottomAnchor="5" AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="118" alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="edit3" layoutX="8" layoutY="403" prefColumnCount="12" prefHeight="35" prefWidth="672" promptText="Command" styleClass="text-input text-field " text="">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
                     </TextField>
                     <Data cursor="DEFAULT" enabled="1" id="data-edit3" visible="1"/>
-                    <Button AnchorPane.bottomAnchor="5" AnchorPane.rightAnchor="6" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button19" layoutX="682" layoutY="410" prefHeight="35" prefWidth="112" styleClass="button " text="Execute" textAlignment="CENTER" underline="false" wrapText="false">
+                    <Button AnchorPane.bottomAnchor="5" AnchorPane.rightAnchor="6" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button19" layoutX="680" layoutY="403" prefHeight="35" prefWidth="112" styleClass="button " text="Execute" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
@@ -656,13 +656,13 @@
           </font>
         </Button>
         <Data cursor="DEFAULT" enabled="1" graphic=".data/img/info.png" id="data-button44" visible="1"/>
-        <Button AnchorPane.leftAnchor="287" AnchorPane.rightAnchor="-1" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button45" layoutX="288" layoutY="0" prefHeight="32" prefWidth="512" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+        <Data cursor="DEFAULT" enabled="1" id="data-button45" visible="1"/>
+        <Data cursor="DEFAULT" enabled="1" id="data-helper" visible="1"/>
+        <Button AnchorPane.leftAnchor="287" AnchorPane.rightAnchor="159" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button45" layoutX="288" layoutY="0" prefHeight="33" prefWidth="352" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
           <font>
             <Font name="System Regular" size="12"/>
           </font>
         </Button>
-        <Data cursor="DEFAULT" enabled="" id="data-button45" visible="1"/>
-        <Data cursor="DEFAULT" enabled="1" id="data-helper" visible="1"/>
       </children>
       <titleFont>
         <Font name="System Regular" size="12"/>
@@ -671,5 +671,11 @@
     <Data cursor="DEFAULT" enabled="1" id="data-panel" visible="1"/>
     <Data cursor="DEFAULT" enabled="1" id="data-notice" visible=""/>
     <Data cursor="DEFAULT" enabled="1" id="data-image" image=".data/img/android2.png" visible="1"/>
+    <ComboBox AnchorPane.rightAnchor="0" AnchorPane.topAnchor="1" editable="false" focusTraversable="true" id="combobox4" layoutX="640" layoutY="1" prefHeight="32" prefWidth="160" promptText="" styleClass="combo-box-base combo-box " value="" visibleRowCount="10">
+      <items xmlns:fx="http://javafx.com/fxml">
+        <FXCollections fx:factory="observableArrayList"/>
+      </items>
+    </ComboBox>
+    <Data cursor="DEFAULT" enabled="1" id="data-combobox4" visible="1"/>
   </children>
 </AnchorPane>
