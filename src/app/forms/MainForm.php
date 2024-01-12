@@ -1834,6 +1834,7 @@ class MainForm extends AbstractForm
             $this->radioGroup->items->add('Увімкнуті');
             $this->radioGroup->items->add('Системні');
             $this->radioGroup->items->add('Сторонні');
+            $this->radioGroup->selectedIndex = 0;
             $this->spoiler->text = 'Керування пристроєм';
             $this->spoiler3->text = 'Стерти';
             $this->spoiler5->text = 'Записати';
@@ -1881,6 +1882,7 @@ class MainForm extends AbstractForm
             $this->radioGroup->items->add('Включенные');
             $this->radioGroup->items->add('Системные');
             $this->radioGroup->items->add('Сторонние');
+            $this->radioGroup->selectedIndex = 0;
             $this->spoiler->text = 'Управление устройством';
             $this->spoiler3->text = 'Стереть';
             $this->spoiler5->text = 'Записать';
@@ -1928,6 +1930,7 @@ class MainForm extends AbstractForm
             $this->radioGroup->items->add('Enabled');
             $this->radioGroup->items->add('System');
             $this->radioGroup->items->add('Third-party');
+            $this->radioGroup->selectedIndex = 0;
             $this->spoiler->text = 'Device controls';
             $this->spoiler3->text = 'Wipe';
             $this->spoiler5->text = 'Flash';
@@ -1962,11 +1965,11 @@ class MainForm extends AbstractForm
     
     function getUpdate()
     {
-        $current = '2024.01';
+        $current = '2024.02';
         
         try 
         {
-            $version = file_get_contents('https://samarin-dev.github.io/androcut/VERSION.md');
+            $version = str::trim(file_get_contents('https://samarin-dev.github.io/androcut/VERSION.md'));
         }
         catch (Error $e) {$this->toast($e);}
         
