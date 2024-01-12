@@ -21,3 +21,8 @@ First publical beta release
 - Social icons improved
 - Minor bugfixes and optimizations
 - Documentation updated
+
+=======================================
+2024.02
+=======================================
+- Updater hotfix
