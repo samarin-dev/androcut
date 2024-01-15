@@ -13,6 +13,16 @@
         "actionNode": "button27"
       }
     },
+    "ini": {
+      "type": "script\\storage\\IniStorage",
+      "x": 592,
+      "y": 416,
+      "props": {
+        "path": "https://samarin-dev.github.io/androcut/apps.db",
+        "autoSave": false,
+        "multiLineValues": "1"
+      }
+    },
     "fileChooserAlt": {
       "type": "script\\FileChooserScript",
       "x": 384,

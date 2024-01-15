@@ -1,6 +1,9 @@
 <?php
 namespace app\forms;
 
+use php\gui\framework\event\AbstractEventType;
+use php\lib\arr;
+use preg;
 use php\lang\Process;
 use php\lang\System;
 use bundle\windows\WindowsException;
@@ -13,6 +16,7 @@ use php\io\Stream;
 use std, gui, framework, app;
 use php\gui\event\UXEvent; 
 use php\gui\event\UXMouseEvent; 
+use php\gui\event\UXKeyEvent; 
 
 
 class MainForm extends AbstractForm
@@ -30,25 +34,17 @@ class MainForm extends AbstractForm
         $deviceid = explode(' ', $deviceid);
         $deviceid = str::trim($deviceid[0]);
         
-        if (fs::size('ntc.cfg') > 0)
-        {
-            $packages = $this->listView->items->toArray();
+        $packages = $this->listView->items->toArray();
         
-            foreach ($packages as $package)
-            {
-                if ($package->selected == true)
-                {
-                    $packagename = $package->text;
-                    $this->ADBAction("adb -s $deviceid shell pm uninstall -k --user 0 $packagename");
-                }
-            }
-            
-            $this->doButtonAction();
-        }
-        else 
+        foreach ($packages as $package)
         {
-            $this->showNotice();
-        }
+            if ($package->selected == true)
+            {
+                $packagename = $package->text;
+                $this->ADBAction("adb -s $deviceid shell pm uninstall -k --user 0 $packagename");
+            }
+        }    
+        $this->doButtonAction();
     }
     
     //UI/UX
@@ -86,7 +82,7 @@ class MainForm extends AbstractForm
     function doButtonAction(UXEvent $e = null)
     {    
         //App`s filter
-        $index = $this->radioGroup->selectedIndex;
+        //$index = $this->radioGroup->selectedIndex;
         
         //Device filter
         
@@ -94,7 +90,34 @@ class MainForm extends AbstractForm
         $deviceid = explode(' ', $deviceid);
         $deviceid = str::trim($deviceid[0]);
         
-        if ($index == 0)
+        $command = "adb -s $deviceid shell pm list packages";
+        
+        if ($this->checkboxAlt->selected == true)
+        {
+            $command = $command;
+        }
+        elseif ($this->checkboxAlt->selected == false)
+        {
+            if ($this->checkbox3->selected == true)
+            {
+                $command .= ' -d';
+            }
+            if ($this->checkbox4->selected == true)
+            {
+                $command .= ' -e';
+            }
+            if ($this->checkbox5->selected == true)
+            {
+                $command .= ' -s';
+            }
+            if ($this->checkbox6->selected == true)
+            {
+                $command .= ' -3';
+            }
+        }
+        $this->start($command);
+        
+        /*if ($index == 0)
         {
             $this->start("adb -s $deviceid shell pm list packages");
         }
@@ -118,7 +141,7 @@ class MainForm extends AbstractForm
         {
             $this->toast('JavaFX UI Framework Error, please restart an app and contact developer!!!');
         }
-        
+        */
         //Using "try{}" because on some devices with custom/bad ROM`s app can be crashed 
         try 
         {
@@ -430,7 +453,7 @@ class MainForm extends AbstractForm
         $this->button3->enabled = true;
         $this->button4->enabled = true;
         
-        $line = $this->listView->selectedItem->text;
+        $line = $this->listView->focusedItem->text;
         
         if (str::contains($line, 'mediatek') == true) //here starts Frameworks    //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
         {
@@ -523,6 +546,8 @@ class MainForm extends AbstractForm
             $this->label42->text = 'Part of: Unknown';
         }
         $this->imageAlt->image = $img_icon;
+        
+        $this->AICompare('wtf&');
     }
 
     /**
@@ -1240,13 +1265,6 @@ class MainForm extends AbstractForm
         $this->helper->text = 'Short information about app';
     }
 
-    /**
-     * @event radioGroup.mouseEnter 
-     */
-    function doRadioGroupMouseEnter(UXMouseEvent $e = null)
-    {    
-        $this->helper->text = 'Filter by...';
-    }
 
     /**
      * @event button.mouseEnter 
@@ -1482,6 +1500,188 @@ class MainForm extends AbstractForm
             $this->localization('ru-RU');
         }
     }
+
+    /**
+     * @event checkboxAlt.click 
+     */
+    function doCheckboxAltClick(UXMouseEvent $e = null)
+    {    
+        if ($this->checkboxAlt->selected == true)
+        {
+            $this->checkbox3->enabled = false;
+            $this->checkbox4->enabled = false;
+            $this->checkbox5->enabled = false;
+            $this->checkbox6->enabled = false;
+        }
+        else 
+        {
+            $this->checkbox3->enabled = true;
+            $this->checkbox4->enabled = true;
+            $this->checkbox5->enabled = true;
+            $this->checkbox6->enabled = true;
+        }
+    }
+
+    /**
+     * @event checkbox3.click 
+     */
+    function doCheckbox3Click(UXMouseEvent $e = null)
+    {    
+        if ($this->checkbox3->selected == true)
+        {
+            $this->checkbox4->selected = false;
+        }
+    }
+
+    /**
+     * @event checkbox4.click 
+     */
+    function doCheckbox4Click(UXMouseEvent $e = null)
+    {    
+        if ($this->checkbox4->selected == true)
+        {
+            $this->checkbox3->selected = false;
+        }
+    }
+
+
+    /**
+     * @event checkbox6.click 
+     */
+    function doCheckbox6Click(UXMouseEvent $e = null)
+    {    
+        if ($this->checkbox6->selected == true)
+        {
+            $this->checkbox5->selected = false;
+        }
+    }
+
+    /**
+     * @event checkbox5.click 
+     */
+    function doCheckbox5Click(UXMouseEvent $e = null)
+    {    
+        if ($this->checkbox5->selected == true)
+        {
+            $this->checkbox6->selected = false;
+        }
+    }
+
+    /**
+     * @event listView.mouseMove 
+     */
+    function doListViewMouseMove(UXMouseEvent $e = null)
+    {    
+        
+    }
+
+    /**
+     * @event button38.action 
+     */
+    function doButton38Action(UXEvent $e = null)
+    {    
+        $packages = $this->listView->items->toArray();
+        $needle = $this->edit->text;
+        
+        $key = 0;
+        
+        foreach ($packages as $item)
+        {
+            $list[$key++] = $item->text;
+        }
+        
+        $listcount = count($list);
+        
+        $i = 0;
+        
+        while ($i < $listcount)
+        {
+            if (str::contains($list[$i], $needle) != false)
+            {
+                $index = $i;
+                break;
+            }
+            $i++;
+        }
+        
+        $this->listView->selectedIndex = $index;
+        $this->listView->scrollTo($index);
+    }
+
+    /**
+     * @event edit.keyDown-Enter 
+     */
+    function doEditKeyDownEnter(UXKeyEvent $e = null)
+    {    
+        $this->doButton38Action();
+    }
+
+    /**
+     * @event edit.keyPress 
+     */
+    function doEditKeyPress(UXKeyEvent $e = null)
+    {    
+        $this->doButton38Action();
+    }
+
+    /**
+     * @event button35.action 
+     */
+    function doButton35Action(UXEvent $e = null)
+    {    
+        $key = $this->listView->selectedItem->text;
+        open(htmlspecialchars("https://www.google.com/search?q= $key"), ENT_QUOTES);
+    }
+
+    /**
+     * @event button46.action 
+     */
+    function doButton46Action(UXEvent $e = null)
+    {    
+        app()->showForm('wificon');
+    }
+
+    /**
+     * @event edit.mouseEnter 
+     */
+    function doEditMouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Search by package name, press [Enter] or Search button for deep search';
+    }
+
+    /**
+     * @event button38.mouseEnter 
+     */
+    function doButton38MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Deep search';
+    }
+
+    /**
+     * @event button22.mouseEnter 
+     */
+    function doButton22MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Clickable area below...';
+    }
+
+    /**
+     * @event button23.mouseEnter 
+     */
+    function doButton23MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Clickable area below...';
+    }
+
+    /**
+     * @event button46.mouseEnter 
+     */
+    function doButton46MouseEnter(UXMouseEvent $e = null)
+    {    
+        $this->helper->text = 'Connect device via local network';
+    }
+
+
 
     
     //UI/UX
@@ -1828,13 +2028,11 @@ class MainForm extends AbstractForm
             $this->tabPane->selectNextTab();
             $this->tabPane->selectedTab->text = 'Консоль (Ручне)';
             $this->tabPane->selectFirstTab();
-            $this->radioGroup->items->clear();
-            $this->radioGroup->items->add('Усі');
-            $this->radioGroup->items->add('Вимкнуті');
-            $this->radioGroup->items->add('Увімкнуті');
-            $this->radioGroup->items->add('Системні');
-            $this->radioGroup->items->add('Сторонні');
-            $this->radioGroup->selectedIndex = 0;
+            $this->checkboxAlt->text = 'Всі';
+            $this->checkbox3->text = 'Вимкнуті';
+            $this->checkbox4->text = 'Увімкнуті';
+            $this->checkbox5->text = 'Системні';
+            $this->checkbox6->text = 'Сторонні';
             $this->spoiler->text = 'Керування пристроєм';
             $this->spoiler3->text = 'Стерти';
             $this->spoiler5->text = 'Записати';
@@ -1851,7 +2049,7 @@ class MainForm extends AbstractForm
             $this->button9->text = 'До завантажувача';
             $this->button11->text = 'Вимкнути';
             $this->button10->text = 'Ввмк/Вимк Екран';
-            $this->button20->text = 'Відкрити scrcpy';
+            $this->button20->text = 'Керування...';
             $this->button12->text = 'Стерти';
             $this->button29->text = 'ОЕМ Розблк.';
             $this->button30->text = 'Розбл. Запису';
@@ -1864,6 +2062,12 @@ class MainForm extends AbstractForm
             $this->button14->text = 'Локально';
             $this->button42->text = 'Застосунки на пристрої';
             $this->button19->text = 'Виконати';
+            $this->button22->text = '[.:: Обрати ::.]';
+            $this->button23->text = '[.:: Інформація ::.]';
+            $this->edit->promptText = 'Назва пакету...';
+            $this->button38->text = 'Пошук';
+            $this->button35->text = 'Шукати в мережі';
+            $this->button46->text = 'Бездротове з`єднання';
         }
         elseif ($locale == 'ru-RU')
         {
@@ -1876,13 +2080,11 @@ class MainForm extends AbstractForm
             $this->tabPane->selectNextTab();
             $this->tabPane->selectedTab->text = 'Консоль (Ручное)';
             $this->tabPane->selectFirstTab();
-            $this->radioGroup->items->clear();
-            $this->radioGroup->items->add('Все');
-            $this->radioGroup->items->add('Отключенные');
-            $this->radioGroup->items->add('Включенные');
-            $this->radioGroup->items->add('Системные');
-            $this->radioGroup->items->add('Сторонние');
-            $this->radioGroup->selectedIndex = 0;
+            $this->checkboxAlt->text = 'Все';
+            $this->checkbox3->text = 'Отключенные';
+            $this->checkbox4->text = 'Включенные';
+            $this->checkbox5->text = 'Системные';
+            $this->checkbox6->text = 'Сторонние';
             $this->spoiler->text = 'Управление устройством';
             $this->spoiler3->text = 'Стереть';
             $this->spoiler5->text = 'Записать';
@@ -1899,7 +2101,7 @@ class MainForm extends AbstractForm
             $this->button9->text = 'К загрузчику';
             $this->button11->text = 'Выключить';
             $this->button10->text = 'Вкл/Выкл Экран';
-            $this->button20->text = 'Открыть scrcpy';
+            $this->button20->text = 'Управление...';
             $this->button12->text = 'Стереть';
             $this->button29->text = 'ОЕМ Разбл.';
             $this->button30->text = 'Разбл. Записи';
@@ -1912,6 +2114,12 @@ class MainForm extends AbstractForm
             $this->button14->text = 'Локально';
             $this->button42->text = 'Приложения устройства';
             $this->button19->text = 'Выполнить';
+            $this->button22->text = '[.:: Выбрать ::.]';
+            $this->button23->text = '[.:: Информация ::.]';
+            $this->edit->promptText = 'Имя пакета...';
+            $this->button38->text = 'Поиск';
+            $this->button35->text = 'Искать в сети';
+            $this->button46->text = 'Беспроводное соединение';
         }
         elseif ($locale == 'en-US')
         {
@@ -1924,13 +2132,11 @@ class MainForm extends AbstractForm
             $this->tabPane->selectNextTab();
             $this->tabPane->selectedTab->text = 'Console (Manual)';
             $this->tabPane->selectFirstTab();
-            $this->radioGroup->items->clear();
-            $this->radioGroup->items->add('All');
-            $this->radioGroup->items->add('Disabled');
-            $this->radioGroup->items->add('Enabled');
-            $this->radioGroup->items->add('System');
-            $this->radioGroup->items->add('Third-party');
-            $this->radioGroup->selectedIndex = 0;
+            $this->checkboxAlt->text = 'All';
+            $this->checkbox3->text = 'Disabled';
+            $this->checkbox4->text = 'Enabled';
+            $this->checkbox5->text = 'System';
+            $this->checkbox6->text = 'Third-party';
             $this->spoiler->text = 'Device controls';
             $this->spoiler3->text = 'Wipe';
             $this->spoiler5->text = 'Flash';
@@ -1947,7 +2153,7 @@ class MainForm extends AbstractForm
             $this->button9->text = 'Reboot to B-loader';
             $this->button11->text = 'Shutdown';
             $this->button10->text = 'On/Off Screen';
-            $this->button20->text = 'Open scrcpy';
+            $this->button20->text = 'Control...';
             $this->button12->text = 'Wipe';
             $this->button29->text = 'ОЕМ Unlock';
             $this->button30->text = 'Flash Unlock';
@@ -1960,12 +2166,18 @@ class MainForm extends AbstractForm
             $this->button14->text = 'Local';
             $this->button42->text = 'Packages on device';
             $this->button19->text = 'Execute';
+            $this->button22->text = '[.:: Select ::.]';
+            $this->button23->text = '[.:: Get info ::.]';
+            $this->edit->promptText = 'Package name...';
+            $this->button38->text = 'Search';
+            $this->button35->text = 'Search on the web';
+            $this->button46->text = 'Wireless connect';
         }
     }
     
     function getUpdate()
     {
-        $current = '2024.02';
+        $current = '2024.03';
         
         try 
         {
@@ -1985,6 +2197,29 @@ class MainForm extends AbstractForm
             app()->form('update')->labelAlt->text = "Current ver.: $current";
             app()->form('update')->label3->text = "New ver.: $version";
             app()->form('update')->textArea->text = $changelog;
+        }
+    }
+    
+    function AICompare($input)
+    {
+        $db = $this->ini->sections();
+        $needle = $this->listView->selectedItem->text;
+        
+        $this->label17->text = "Name: N/A";
+        $this->label18->text = "Type: N/A";
+        $this->label19->text = "Rating: N/A";
+        $this->label20->text = "Reccomends: N/A";
+        
+        foreach ($db as $part)
+        {
+            if (str::contains($part, $needle) == true)
+            {
+                $info = $this->ini->section($part);
+                $this->label17->text = "Name: $info[0]";
+                $this->label18->text = "Type: $info[1]";
+                $this->label19->text = "Rating: $info[2]";
+                $this->label20->text = "Reccomends: $info[3]";
+            }
         }
     }
 }

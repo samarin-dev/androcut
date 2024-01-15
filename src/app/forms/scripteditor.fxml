@@ -12,7 +12,7 @@
         <Font name="System Regular" size="12"/>
       </font>
     </Button>
-    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/enable.png" id="data-buttonAlt" visible="1"/>
+    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/save.png" id="data-buttonAlt" visible="1"/>
     <TextField AnchorPane.leftAnchor="88" AnchorPane.rightAnchor="48" AnchorPane.topAnchor="8" alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="scriptpath" layoutX="88" layoutY="8" prefColumnCount="12" prefHeight="41" prefWidth="504" promptText="Path to script..." styleClass="text-input text-field " text="scripts/new.aaus">
       <font>
         <Font name="System Regular" size="12"/>
@@ -30,7 +30,7 @@
         <Font name="System Regular" size="12"/>
       </font>
     </Button>
-    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/dump.png" id="data-buttonpath" visible="1"/>
+    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/saveus.png" id="data-buttonpath" visible="1"/>
     <Button AnchorPane.bottomAnchor="-1" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button" layoutX="0" layoutY="449" prefHeight="16" prefWidth="640" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
       <font>
         <Font name="System Regular" size="12"/>

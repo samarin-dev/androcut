@@ -64,12 +64,12 @@
               <content>
                 <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="450" prefWidth="800" styleClass="">
                   <children>
-                    <TitledPane AnchorPane.bottomAnchor="5" AnchorPane.leftAnchor="8" AnchorPane.topAnchor="48" alignment="CENTER_LEFT" animated="true" collapsible="false" contentDisplay="LEFT" ellipsisString="..." expanded="true" focusTraversable="true" graphicTextGap="4.9382716049383" id="spoiler" layoutX="8" layoutY="48" opacity="0.93" prefHeight="400" prefWidth="184" styleClass="titled-pane " text="Device controls" textAlignment="LEFT" underline="false" wrapText="false">
+                    <TitledPane AnchorPane.bottomAnchor="5" AnchorPane.leftAnchor="8" AnchorPane.topAnchor="88" alignment="CENTER_LEFT" animated="true" collapsible="false" contentDisplay="LEFT" ellipsisString="..." expanded="true" focusTraversable="true" graphicTextGap="4.9382716049383" id="spoiler" layoutX="8" layoutY="88" opacity="0.93" prefHeight="352" prefWidth="184" styleClass="titled-pane " text="Device controls" textAlignment="LEFT" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
                       <content>
-                        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="375" prefWidth="180" styleClass="">
+                        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="335" prefWidth="180" styleClass="">
                           <padding>
                             <Insets bottom="9.6" left="9.6" right="9.6" top="9.6"/>
                           </padding>
@@ -98,17 +98,17 @@
                               </font>
                             </Button>
                             <Data cursor="DEFAULT" enabled="1" graphic=".data/img/reload.png" id="data-button7" visible="1"/>
-                            <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button20" layoutX="16" layoutY="168" prefHeight="32" prefWidth="144" styleClass="button " text="Open scrcpy" textAlignment="CENTER" underline="false" wrapText="false">
+                            <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button20" layoutX="16" layoutY="168" prefHeight="32" prefWidth="144" styleClass="button " text="Control" textAlignment="CENTER" underline="false" wrapText="false">
                               <font>
                                 <Font name="System Regular" size="12"/>
                               </font>
                             </Button>
-                            <Data cursor="DEFAULT" enabled="1" graphic=".data/img/android.png" id="data-button20" visible="1"/>
+                            <Data cursor="DEFAULT" enabled="1" graphic=".data/img/device.png" id="data-button20" visible="1"/>
                           </children>
                         </AnchorPane>
                       </content>
                     </TitledPane>
-                    <ListViewEx AnchorPane.bottomAnchor="204" AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="56" AnchorPane.topAnchor="8" editable="false" fixedCellSize="-1" focusTraversable="true" id="listView" layoutX="200" layoutY="8" opacity="0.9" prefHeight="241" prefWidth="536" styleClass="list-view ">
+                    <ListViewEx AnchorPane.bottomAnchor="204" AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="54" AnchorPane.topAnchor="80" editable="false" fixedCellSize="-1" focusTraversable="true" id="listView" layoutX="200" layoutY="80" opacity="0.9" prefHeight="152" prefWidth="544" styleClass="list-view ">
                       <items xmlns:fx="http://javafx.com/fxml">
                         <FXCollections fx:factory="observableArrayList"/>
                       </items>
@@ -137,26 +137,6 @@
                       </font>
                     </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/download.png" id="data-button4" visible="1"/>
-                    <RadioGroupPane AnchorPane.bottomAnchor="13" AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="54" alignment="TOP_LEFT" focusTraversable="false" id="radioGroup" layoutX="200" layoutY="413" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" orientation="HORIZONTAL" prefHeight="24" prefWidth="546" selectedIndex="0" spacing="19.634146341463" styleClass="" textColor="#ffffff">
-                      <children>
-                        <HBox alignment="BASELINE_LEFT" focusTraversable="false" id="" layoutX="0" layoutY="0" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="17" prefWidth="546" spacing="19" styleClass="">
-                          <children/>
-                        </HBox>
-                      </children>
-                      <font>
-                        <Font name="System Regular" size="12"/>
-                      </font>
-                      <items xmlns:fx="http://javafx.com/fxml">
-                        <FXCollections fx:factory="observableArrayList">
-                          <String fx:value="All"/>
-                          <String fx:value="Disabled"/>
-                          <String fx:value="Enabled"/>
-                          <String fx:value="System"/>
-                          <String fx:value="Third party"/>
-                        </FXCollections>
-                      </items>
-                    </RadioGroupPane>
-                    <Data cursor="DEFAULT" enabled="1" id="data-radioGroup" visible="1"/>
                     <Button AnchorPane.rightAnchor="8" AnchorPane.topAnchor="112" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button8" layoutX="752" layoutY="112" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
@@ -177,7 +157,7 @@
                       </items>
                     </ListViewEx>
                     <Data cursor="DEFAULT" enabled="1" id="data-listViewAlt" visible="1"/>
-                    <LabelEx AnchorPane.bottomAnchor="20" AnchorPane.rightAnchor="62" alignment="CENTER_RIGHT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label41" layoutX="642" layoutY="413" prefHeight="17" prefWidth="96" styleClass="label " text="Total: 0" textAlignment="LEFT" underline="false" wrapText="false">
+                    <LabelEx AnchorPane.bottomAnchor="19" AnchorPane.rightAnchor="62" alignment="CENTER_RIGHT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label41" layoutX="642" layoutY="407" prefHeight="24" prefWidth="96" styleClass="label " text="Total: 0" textAlignment="LEFT" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
                       </font>
@@ -203,6 +183,36 @@
                           </font>
                         </LabelEx>
                         <Data cursor="DEFAULT" enabled="1" id="data-label42" visible="1"/>
+                        <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button35" layoutX="8" layoutY="112" prefHeight="32" prefWidth="216" styleClass="button " text="Search on the web" textAlignment="CENTER" underline="false" wrapText="false">
+                          <font>
+                            <Font name="System Regular" size="12"/>
+                          </font>
+                        </Button>
+                        <Data cursor="DEFAULT" enabled="1" graphic=".data/img/link.png" id="data-button35" visible="1"/>
+                        <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label17" layoutX="8" layoutY="32" prefHeight="17" prefWidth="216" styleClass="label " text="Name:" textAlignment="LEFT" underline="false" wrapText="false">
+                          <font>
+                            <Font name="System Regular" size="12"/>
+                          </font>
+                        </LabelEx>
+                        <Data cursor="DEFAULT" enabled="1" id="data-label17" visible="1"/>
+                        <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label18" layoutX="8" layoutY="48" prefHeight="17" prefWidth="216" styleClass="label " text="Type:" textAlignment="LEFT" underline="false" wrapText="false">
+                          <font>
+                            <Font name="System Regular" size="12"/>
+                          </font>
+                        </LabelEx>
+                        <Data cursor="DEFAULT" enabled="1" id="data-label18" visible="1"/>
+                        <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label19" layoutX="8" layoutY="64" prefHeight="17" prefWidth="216" styleClass="label " text="Rating:" textAlignment="LEFT" underline="false" wrapText="false">
+                          <font>
+                            <Font name="System Regular" size="12"/>
+                          </font>
+                        </LabelEx>
+                        <Data cursor="DEFAULT" enabled="1" id="data-label19" visible="1"/>
+                        <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label20" layoutX="8" layoutY="80" prefHeight="17" prefWidth="216" styleClass="label " text="Reccomends:" textAlignment="LEFT" underline="false" wrapText="false">
+                          <font>
+                            <Font name="System Regular" size="12"/>
+                          </font>
+                        </LabelEx>
+                        <Data cursor="DEFAULT" enabled="1" id="data-label20" visible="1"/>
                       </children>
                       <titleFont>
                         <Font name="System Regular" size="12"/>
@@ -221,6 +231,66 @@
                       </font>
                     </Button>
                     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/reload.png" id="data-button15" visible="1"/>
+                    <Button AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="262" AnchorPane.topAnchor="48" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button22" layoutX="200" layoutY="48" prefHeight="32" prefWidth="336" styleClass="button " text="[ .:: Select ::. ]" textAlignment="CENTER" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </Button>
+                    <Data cursor="DEFAULT" enabled="" id="data-button22" visible="1"/>
+                    <Button AnchorPane.rightAnchor="54" AnchorPane.topAnchor="48" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button23" layoutX="538" layoutY="48" prefHeight="32" prefWidth="208" styleClass="button " text="[ .:: Get info ::. ]" textAlignment="CENTER" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </Button>
+                    <Data cursor="DEFAULT" enabled="" id="data-button23" visible="1"/>
+                    <CheckBox AnchorPane.bottomAnchor="11" AnchorPane.leftAnchor="200" alignment="CENTER_LEFT" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="checkboxAlt" layoutX="200" layoutY="415" prefHeight="24" prefWidth="144" styleClass="check-box " text="All" textAlignment="LEFT" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </CheckBox>
+                    <Data cursor="DEFAULT" enabled="1" id="data-checkboxAlt" visible="1"/>
+                    <CheckBox AnchorPane.bottomAnchor="11" AnchorPane.leftAnchor="256" alignment="CENTER_LEFT" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="checkbox3" layoutX="256" layoutY="415" prefHeight="24" prefWidth="144" styleClass="check-box " text="Disabled" textAlignment="LEFT" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </CheckBox>
+                    <Data cursor="DEFAULT" enabled="1" id="data-checkbox3" visible="1"/>
+                    <CheckBox AnchorPane.bottomAnchor="11" AnchorPane.leftAnchor="344" alignment="CENTER_LEFT" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="checkbox4" layoutX="344" layoutY="415" prefHeight="24" prefWidth="144" styleClass="check-box " text="Enabled" textAlignment="LEFT" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </CheckBox>
+                    <Data cursor="DEFAULT" enabled="1" id="data-checkbox4" visible="1"/>
+                    <CheckBox AnchorPane.bottomAnchor="11" AnchorPane.leftAnchor="432" alignment="CENTER_LEFT" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="checkbox5" layoutX="432" layoutY="415" prefHeight="24" prefWidth="144" styleClass="check-box " text="System" textAlignment="LEFT" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </CheckBox>
+                    <Data cursor="DEFAULT" enabled="1" id="data-checkbox5" visible="1"/>
+                    <CheckBox AnchorPane.bottomAnchor="11" AnchorPane.leftAnchor="512" alignment="CENTER_LEFT" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="checkbox6" layoutX="512" layoutY="415" prefHeight="24" prefWidth="144" styleClass="check-box " text="Third-party" textAlignment="LEFT" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </CheckBox>
+                    <Data cursor="DEFAULT" enabled="1" id="data-checkbox6" visible="1"/>
+                    <Button AnchorPane.rightAnchor="54" AnchorPane.topAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button38" layoutX="602" layoutY="8" prefHeight="35" prefWidth="144" styleClass="button " text="Search" textAlignment="CENTER" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </Button>
+                    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/search.png" id="data-button38" visible="1"/>
+                    <TextField AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="198" AnchorPane.topAnchor="8" alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="edit" layoutX="200" layoutY="8" prefColumnCount="12" prefHeight="35" prefWidth="400" promptText="Package name..." styleClass="text-input text-field " text="">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </TextField>
+                    <Data cursor="DEFAULT" enabled="1" id="data-edit" visible="1"/>
+                    <Button AnchorPane.leftAnchor="8" AnchorPane.topAnchor="48" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button46" layoutX="8" layoutY="48" prefHeight="32" prefWidth="184" styleClass="button " text="Wireless connect" textAlignment="CENTER" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </Button>
+                    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/wifi.png" id="data-button46" visible="1"/>
                   </children>
                 </AnchorPane>
               </content>
@@ -432,7 +502,7 @@
                         <Font name="System Regular" size="12"/>
                       </font>
                     </Button>
-                    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/enable.png" id="data-button37" visible="1"/>
+                    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/save.png" id="data-button37" visible="1"/>
                     <Button AnchorPane.rightAnchor="6" AnchorPane.topAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button39" layoutX="754" layoutY="8" prefHeight="40" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
                       <font>
                         <Font name="System Regular" size="12"/>
@@ -656,9 +726,9 @@
           </font>
         </Button>
         <Data cursor="DEFAULT" enabled="1" graphic=".data/img/info.png" id="data-button44" visible="1"/>
-        <Data cursor="DEFAULT" enabled="1" id="data-button45" visible="1"/>
+        <Data cursor="DEFAULT" enabled="" id="data-button45" visible="1"/>
         <Data cursor="DEFAULT" enabled="1" id="data-helper" visible="1"/>
-        <Button AnchorPane.leftAnchor="287" AnchorPane.rightAnchor="159" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button45" layoutX="288" layoutY="0" prefHeight="33" prefWidth="352" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+        <Button AnchorPane.leftAnchor="287" AnchorPane.rightAnchor="159" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button45" layoutX="288" layoutY="0" prefHeight="32" prefWidth="352" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
           <font>
             <Font name="System Regular" size="12"/>
           </font>
@@ -671,7 +741,7 @@
     <Data cursor="DEFAULT" enabled="1" id="data-panel" visible="1"/>
     <Data cursor="DEFAULT" enabled="1" id="data-notice" visible=""/>
     <Data cursor="DEFAULT" enabled="1" id="data-image" image=".data/img/android2.png" visible="1"/>
-    <ComboBox AnchorPane.rightAnchor="0" AnchorPane.topAnchor="1" editable="false" focusTraversable="true" id="combobox4" layoutX="640" layoutY="1" prefHeight="32" prefWidth="160" promptText="" styleClass="combo-box-base combo-box " value="" visibleRowCount="10">
+    <ComboBox AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" editable="false" focusTraversable="true" id="combobox4" layoutX="640" layoutY="0" prefHeight="32" prefWidth="160" promptText="" styleClass="combo-box-base combo-box " value="" visibleRowCount="10">
       <items xmlns:fx="http://javafx.com/fxml">
         <FXCollections fx:factory="observableArrayList"/>
       </items>
