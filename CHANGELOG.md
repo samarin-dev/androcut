@@ -26,3 +26,17 @@ First publical beta release
 2024.02
 =======================================
 - Updater hotfix
+
+=======================================
+2024.03 - Major Update 1
+=======================================
+- Uninstall option bugfix
+- Search bar improved
+- Extended apps filtering bar
+- Wireless Connectivity improved
+- Apps AI Rating system improved (server-side implementation in process)
+- Some icons updated to make app more intuitive
+- Helpbar for clickable areas improved
+- Search package info on the web button added
+- Minor bugfixes
+- Copyright update
