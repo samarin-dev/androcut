@@ -2,13 +2,13 @@
 0=Test Package
 1=Social
 2=Bloatware
-3=Remove/Disable
+3=Remove or Disable
 
 [com.test2.app]
 0=Test Package 2
 1=Media
 2=Deprecated
-3=Remove/Disable
+3=Remove or Disable
 
 [com.android.cts.priv.ctsshim]
 0=Compatibility Test Suite
@@ -25,7 +25,7 @@
 [com.google.android.youtube]
 0=YouTube
 1=Google Software
-2=Social/Media
+2=Social & Media
 3=Leave it
 
 [com.android.internal.display.cutout.emulation.corner]
@@ -43,31 +43,31 @@
 [com.android.internal.display.cutout.emulation.double]
 0=Engeneering
 1=Android System Services
-2=OEM Test Software
+2=OEM
 3=Leave it
 
 [com.google.android.ext.services]
 0=System GUI
 1=Google System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.android.phone.overlay.common.vendor]
 0=System GUI
 1=Android System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.android.providers.telephony]
 0=Telephony Service
 1=Android System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.android.dynsystem]
 0=Dynamic System Updates
 1=Android System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.sprd.engineermode]
@@ -79,31 +79,31 @@
 [com.android.theme.icon.pebble]
 0=Pebble Icon Pack
 1=Android System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.android.providers.calendar]
 0=Calendar Provider
 1=Android System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [org.telegram.messenger]
 0=Telegram
 1=Messenger
-2=Social/Media
+2=Social & Media
 3=Leave it
 
 [com.android.providers.media]
 0=Media Provider
 1=Android System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.google.android.onetimeinitializer]
 0=Google One Time Init
 1=Google System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.jacksoftw.webcam]
@@ -115,72 +115,282 @@
 [com.android.internal.systemui.navbar.gestural_wide_back]
 0=System GUI
 1=Android System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.android.networkstack.tethering_zte.overlay]
 0=System GUI
 1=ZTE System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.android.wallpapercropper]
 0=Wallpaper Cropper
 1=Android System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.android.theme.icon.vessel]
 0=Vessel Icon Pack
 1=Android System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.android.theme.color.cinnamon]
 0=Cinnamon Theme
 1=Android System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.android.overlay.soundrecorder]
 0=Sound Recorder Overlay
 1=Android System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.android.theme.icon_pack.rounded.systemui]
 0=Icon Pack Rounded
 1=Android System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.android.theme.icon.taperedrect]
 0=Tapered Rect Icon Pack
 1=Android System Services
-2=Services/Frameworks
-3=Leave it
-
-[com.android.theme.icon.taperedrect]
-0=Tapered Rect Icon Pack
-1=Android System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
 [com.viber.voip]
 0=Viber
 1=Messenger
-2=Social/Media
+2=Social & Media
 3=Leave it
 
 [com.android.wifi.resources.overlay]
 0=Wi-Fi Overlay
 1=Android System Services
-2=Services/Frameworks
+2=Services & Frameworks
 3=Leave it
 
-[com.android.wifi.resources.overlay]
-0=Wi-Fi Overlay
-1=Android System Services
-2=Services/Frameworks
-3=Leave it
+[com.miui.analytics]
+0=Mi Analytics
+1=MIUI Services
+2=Spyware
+3=Remove or Disable
+
+[com.xiaomi.mipicks]
+0=GetApps
+1=MIUI Service
+2=Bloatware
+3=Remove or Disable
+
+[com.miui.msa.global]
+0=MIUI Ad Services
+1=MIUI Services
+2=Adware
+3=Remove or Disable
+
+[com.miui.cloudservice]
+0=Mi Cloud
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.miui.cloudservice.sysbase]
+0=Mi Cloud
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.miui.newmidrive]
+0=Mi Cloud
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.miui.cloudbackup]
+0=Mi Cloud Backup
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.miui.backup]
+0=MIUI Backup
+1=MIUI Service
+2=Bloatware
+3=Remove or Disable
+
+[com.xiaomi.glgm]
+0=Games
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.xiaomi.payment]
+0=Mi Credit
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.mipay.wallet.in]
+0=Mi Credit
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.tencent.soter.soterserver]
+0=Nihao laowai
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[cn.wps.xiaomi.abroad.lite]
+0=Mi DocViewer(Powered by WPS Office)
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.miui.videoplayer]
+0=Mi Video
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[Mi Music]
+0=Mi Video
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.mi.globalbrowser]
+0=Mi Browser
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.xiaomi.midrop]
+0=Mi ShareMe
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.miui.yellowpage]
+0=Mi YellowPages
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.miui.android.fashiongallery]
+0=Wallpaper Carousel
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.miui.bugreport]
+0=Mi Bug Report
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.miui.miservice]
+0=Mi Bug Report
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.miui.weather2]
+0=MIUI Weather
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.miui.hybrid]
+0=Quick apps
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.miui.hybrid.accessory]
+0=Quick apps
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.miui.global.packageinstaller]
+0=MIUI package installer
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.xiaomi.joyose]
+0=MIUI
+1=MIUI Services
+2=Bloatware
+3=Remove or Disable
+
+[com.google.android.videos]
+0=Google Movies
+1=Google Software
+2=Deprecated
+3=Remove or Disable
+
+[com.google.android.music]
+0=Google Music
+1=Google Software
+2=Deprecated
+3=Remove or Disable
+
+[com.google.android.apps.tachyon]
+0=Google Duo
+1=Google Software
+2=Deprecated
+3=Remove or Disable
+
+[com.zhiliaoapp.musically]
+0=TikTok
+1=Social
+2=Spyware
+3=Remove or Disable
+
+[com.zhiliaoapp.musicallyl.go]
+0=TikTok
+1=Social & Media
+2=Spyware
+3=Remove or Disable
+
+[ru.yandex.searchplugin]
+0=Yandex Search
+1=Utilities
+2=Bloatware
+3=Remove or Disable
+
+[com.yandex.zen]
+0=Yandex Zen
+1=Utilities
+2=Bloatware
+3=Remove or Disable
+
+[ru.ozon.app.android]
+0=Ozon Store
+1=Utilities
+2=Bloatware
+3=Remove or Disable
+
+[com.alibaba.aliexpresshd]
+0=Aliexpress Store
+1=Utilities
+2=Bloatware
+3=Remove or Disable
+
+[sg.bigo.live]
+0=Some social media
+1=Social
+2=Bloatware
+3=Remove or Disable
+
+[ru.auto.ara]
+0=auto.ru
+1=Utilities
+2=Bloatware
+3=Remove or Disable
 
