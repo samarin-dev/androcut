@@ -17,10 +17,10 @@
 3=Virus Test
 
 [com.android.cts.ctsshim]
-0=Compatibility Test Suite
+0=CTS
 1=Android System Services
-2=OEM Test Software
-3=Virus Test
+2=Services & Framewroks
+3=Leave it
 
 [com.google.android.youtube]
 0=YouTube
@@ -35,9 +35,9 @@
 3=Leave it
 
 [com.android.internal.display.cutout.emulation.tall]
-0=Engeneering
+0=Support display cutouts
 1=Android System Services
-2=OEM
+2=Services & Framewroks
 3=Leave it
 
 [com.android.internal.display.cutout.emulation.double]
@@ -329,10 +329,10 @@
 3=Remove or Disable
 
 [com.google.android.videos]
-0=Google Movies
+0=Google TV
 1=Google Software
-2=Deprecated
-3=Remove or Disable
+2=Services & Framewroks
+3=Leave it
 
 [com.google.android.music]
 0=Google Music
@@ -393,4 +393,1246 @@
 1=Utilities
 2=Bloatware
 3=Remove or Disable
+
+[com.android.documentsui]
+0=DocumentsUI
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[cn.zte.recorder]
+0=ZTE Voice Recorder
+1=Utilities
+2=Services & Framewroks
+3=Leave it
+
+[com.android.externalstorage]
+0=External Storage Provider
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.htmlviewer]
+0=HTML Viewer
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.whatsapp]
+0=WhatsApp
+1=Messenger
+2=Social & Media
+3=Leave it
+
+[com.ghisler.android.TotalCommander]
+0=Total Commander
+1=Utilities
+2=Services & Framewroks
+3=Leave it
+
+[com.android.companiondevicemanager]
+0=CompanionDeviceManager
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.overlay.wallpaper]
+0=Wallpaper
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.mms.service]
+0=MmsService
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.docs.editors.sheets]
+0=Google Sheets
+1=Software
+2=Services & Framewroks
+3=Leave it
+
+[com.flightradar24free]
+0=Flightradar24 Flight Tracker
+1=Software
+2=Services & Framewroks
+3=Leave it
+
+[com.android.providers.downloads]
+0=Download Manager
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.overlay.quicksearchbox]
+0=Search
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.overlay.wallpaperconfig]
+0=WallpaperConfig
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.messaging]
+0=Google Messages
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.networkstack.inprocess]
+0=Network Stack
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.theme.icon_pack.rounded.android]
+0=Rounded Icon Pack
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.overlay.emergency]
+0=Emergency Provider
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.zte.beautify]
+0=Camera AI
+1=ZTE Services
+2=Services & Framewroks
+3=Leave it
+
+[com.discord]
+0=Discord
+1=Messenger
+2=Social & Media
+3=Leave it
+
+[com.android.dreams.overlay.phototable]
+0=Photos Provider
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.openai.chatgpt]
+0=ChatGPT
+1=Utilities
+2=Services & Framewroks
+3=Leave it
+
+[com.microsoft.office.officelens]
+0=Microsoft Lens - PDF Scanner
+1=Utilities
+2=Services & Framewroks
+3=Leave it
+
+[com.zte.powersavemode]
+0=Battery APK
+1=ZTE Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.theme.icon_pack.circular.themepicker]
+0=Circular Icon Pack
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.configupdater]
+0=ConfigUpdater
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.zte.zdm.omacp]
+0=Omacp
+1=ZTE Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.overlay.logmanager]
+0=OverlayManager
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.zte.videoplayer]
+0=ZTE Video Player APK
+1=ZTE Services
+2=Bloatware
+3=Remove or Disable
+
+[com.google.android.overlay.modules.permissioncontroller]
+0=PermissionController
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.github.android]
+0=GitHub
+1=Utilities
+2=Services & Framewroks
+3=Leave it
+
+[ru.fourpda.client]
+0=4PDA
+1=Social
+2=Social & Media
+3=Leave it
+
+[com.android.providers.downloads.ui]
+0=Downloads UI
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.vending]
+0=Android
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.pacprocessor]
+0=PacProcessor
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.simappdialog]
+0=Sim App Dialog
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.networkstack.inprocess_zte.overlay]
+0=Network Stack
+1=ZTE Services
+2=Services & Framewroks
+3=Leave it
+
+[com.sprd.validationtools]
+0=Validation Tools
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.widgetable.theme.android]
+0=Widgetable
+1=Social
+2=Social & Media
+3=Leave it
+
+[com.android.internal.display.cutout.emulation.hole]
+0=Support display cutouts
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.certinstaller]
+0=CertInstaller
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.theme.color.black]
+0=Implement dark theme
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.carrierconfig]
+0=Carrier Configuration
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.theme.color.green]
+0=Green Theme
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.theme.color.ocean]
+0=Ocean Theme
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.theme.color.space]
+0=ColorSpace
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.internal.systemui.navbar.threebutton]
+0=3 Button Navigation Bar
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.zte.emode]
+0=Emode
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[android]
+0=Android Core
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.camera2]
+0=Camera2
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.theme.icon_pack.rounded.launcher]
+0=Icon Pack Rounded
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.spreadtrum.proxy.nfwlocation]
+0=Bmax / Unisoc device
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[android.overlay.navbar]
+0=layoutparams
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.egg]
+0=Easter Egg
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.mtp]
+0=MTP Protocol
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.nfc]
+0=NFC Protocol
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.ons]
+0=ONS Protocol
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.stk]
+0=SIM Tookit
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.phone.injection]
+0=Injection
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.zte.emodeservice]
+0=EmodeService
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.backupconfirm]
+0=Android Backup Confirm
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.instagram.android]
+0=Instagram
+1=Social
+2=Social & Media
+3=Leave it
+
+[com.sprd.quickcamera]
+0=Quick Camera
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.statementservice]
+0=StatementService
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.gm]
+0=Google MSF
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.unisoc.storageclearmanager]
+0=Bmax / Unisoc device
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[ua.privatbank.ap24]
+0=Приват24
+1=Utilities
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.overlay.gmsconfig.common]
+0=GMS Config
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.zte.mifavor.launcher.resource]
+0=Mifavor Launcher
+1=ZTE Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.settings.intelligence]
+0=Android System Intelligence
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.sprd.cameracalibration]
+0=Camera Calibration
+1=Android System Services
+2=OEM
+3=Leave it
+
+[com.google.android.apps.searchlite]
+0=Google Go
+1=Google Software
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.search]
+0=Google
+1=Google Software
+2=Services & Framewroks
+3=Leave it
+
+[om.android.internal.systemui.navbar.gestural_extra_wide_back]
+0=Gestures
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.overlay.fmradio]
+0=FM Radio
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.vendorlogpermission]
+0=Privileged Permission Allowlist
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.permissioncontroller]
+0=PermissionController
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.setupwizard]
+0=Android Setup
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.sprd.overlay.sprdnote]
+0=Bmax / Unisoc device
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.wifi.resources_zte.overlay]
+0=ZTE WiFi
+1=ZTE Services
+2=Services & Framewroks
+3=Leave it
+
+[com.zte.mifavor.launcher.adapter]
+0=ZTE UI
+1=ZTE Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.providers.settings]
+0=Settings
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.sharedstoragebackup]
+0=SharedStorageAgent
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[ua.com.rozetka.shop]
+0=ROZETKA
+1=Utilities
+2=Social & Media
+3=Leave it
+
+[com.android.printspooler]
+0=Print Spooler
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[org.torproject.android]
+0=Orbot
+1=Social
+2=Social & Media
+3=Leave it
+
+[com.android.theme.icon_pack.filled.settings]
+0=Icon Pack Filled
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.dreams.basic]
+0=Basic Daydreams
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.overlay.modules.ext.services]
+0=ExtServices
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.overlay.gmsconfig.gallerygo]
+0=Gallery Go Config
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.se]
+0=Security
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.inputdevices]
+0=InputDevice
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.wellbeing]
+0=Digital Wellbeing
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.overlay.messaging]
+0=MSG Overlay
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.zte.assistant]
+0=Assistant
+1=ZTE Services
+2=Services & Framewroks
+3=Leave it
+
+[com.telephony.service]
+0=Telephony Service
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.dialer]
+0=Google Dialer
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.bips]
+0=Print Service
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.nbu.files]
+0=Google Files
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.yc.gloryfit]
+0=GloryFit
+1=Utilities
+2=Services & Framewroks
+3=Leave it
+
+[com.android.theme.icon_pack.circular.settings]
+0=Icon Pack Circular
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.unisoc.telephony.server]
+0=UNISOC Telephony Server
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.overlay.gmsconfig.comms]
+0=GMS Config
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.musicfx]
+0=MusicFX
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.docs]
+0=Google Docs
+1=Google Software
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.maps]
+0=Google Maps
+1=Google Software
+2=Services & Framewroks
+3=Leave it
+
+[no.nrk.yr]
+0=Yr
+1=Utilities
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.modulemetadata]
+0=ModuleMetadata
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[ua.work.mobileClient]
+0=Work.ua
+1=Utilities
+2=Social & Media
+3=Leave it
+
+[ua.prom.b2c]
+0=Prom.ua
+1=Utilities
+2=Social & Media
+3=Leave it
+
+[com.microsoft.office.word]
+0=Microsoft Word
+1=Utilities
+2=Services & Framewroks
+3=Leave it
+
+[com.android.cellbroadcastreceiver]
+0=Cell Broadcast
+1=Utilities
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.webview]
+0=Android System WebView
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.theme.icon.teardrop]
+0=Icon Pack Tear Drop
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.sprd.autoslt]
+0=Bmax / Unisoc device
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.pearlauncher.pearlauncher]
+0=Pear Launcher
+1=Utilities
+2=Services & Framewroks
+3=Leave it
+
+[com.sprd.cameraipcontrol]
+0=Bmax / Unisoc device
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.contacts]
+0=Google Contacts
+1=Google Software
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.fitness]
+0=Google Fit
+1=Google Software
+2=Services & Framewroks
+3=Leave it
+
+[com.android.server.telecom]
+0=android.telecom
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.syncadapters.contacts]
+0=Google Contacts Sync
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.cellbroadcastservice]
+0=CellBroadcast
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.theme.icon_pack.rounded.themepicker]
+0=ThemePicker
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.keychain]
+0=Key Chain
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.calculator]
+0=Google Calculator
+1=Google Software
+2=Services & Framewroks
+3=Leave it
+
+[com.android.chrome]
+0=Google Chrome
+1=Google Software
+2=Services & Framewroks
+3=Leave it
+
+[com.sprd.uasetting]
+0=U/A Switch
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.rstgames.durak]
+0=Дурак Онлайн
+1=Games
+2=Social & Media
+3=Leave it
+
+[com.android.theme.icon_pack.filled.systemui]
+0=SysUI
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.packageinstaller]
+0=Package installer
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.spreadtrum.ims]
+0=Implementing IMS
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.spreadtrum.vce]
+0=VceDaemon
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.gms]
+0=Google Play services
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.gsf]
+0=Google Services Framework
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.ims]
+0=Carrier Services
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.tag]
+0=Google Tag Manager
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.tts]
+0=Speech Recognition & Synthesis
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.wifi.resources]
+0=System Wi-Fi Resources
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.walletnfcrel]
+0=Google Wallet
+1=Google Software
+2=Services & Framewroks
+3=Leave it
+
+[com.android.calllogbackup]
+0=Backup Log
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.zte.zdmdaemon]
+0=ZDM Daemon
+1=ZTE Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.partnersetup]
+0=Google Partner Setup
+1=Google Software
+2=Services & Framewroks
+3=Leave it
+
+[com.android.localtransport]
+0=LocalTransport
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.ketchapp.rider]
+0=Rider
+1=Games
+2=Social & Media
+3=Leave it
+
+[com.android.carrierdefaultapp]
+0=Carrier Services
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.sprd.linkturbo]
+0=Link Turbo
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[org.xbmc.kore]
+0=Kore Official Remote for Kodi
+1=Software
+2=Services & Framewroks
+3=Leave it
+
+[com.android.theme.font.notoserifsource]
+0=NotoSerif
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.theme.icon_pack.filled.android]
+0=Icon Pack Filled
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.proxyhandler]
+0=ProxyHandler
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.internal.display.cutout.emulation.waterfall]
+0=Test
+1=Android System Services
+2=OEM
+3=Leave it
+
+[com.android.theme.icon_pack.circular.systemui]
+0=Icon Pack Circular
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[org.videolan.vlc]
+0=VLC
+1=Media
+2=Services & Framewroks
+3=Leave it
+
+[com.android.Launcher3.overlay.Launcher3QuickStepGoConfig]
+0=Launcher3 Go Config
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.overlay.modules.permissioncontroller.forframework]
+0=PermissionController
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.feedback]
+0=Google Feedback
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.printservice.recommendation]
+0=Print Service Recommendation Service
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.sprd.logmanager]
+0=LogManager
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.calendar]
+0=Google Calendar
+1=Google Software
+2=Services & Framewroks
+3=Leave it
+
+[ua.rabota.app]
+0=robota.ua
+1=Social
+2=Social & Media
+3=Leave it
+
+[com.android.managedprovisioning]
+0=Provisioning for Device Management
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.spreadtrum.vowifi.conf]
+0=Bmax / Unisoc device
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.spotify.music]
+0=Spotify: Music and Podcasts
+1=Media
+2=Social & Media
+3=Leave it
+
+[com.android.overlay.unreadnumberconfig]
+0=Alert
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.overlay.launcher3]
+0=Launcher3 Overlay
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.soundpicker]
+0=Sound Picker
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.networkstack.tethering.inprocess_zte.overlay]
+0=Tethering
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.ftband.mono]
+0=monobank
+1=Utilities
+2=Social & Media
+3=Leave it
+
+[androidzte]
+0=ZTE Core
+1=Utilities
+2=Social & Media
+3=Leave it
+
+[com.android.subsys]
+0=Subsystem
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.zte.zdmdaemon.install]
+0=ZTE Daemon
+1=ZTE Services
+2=Services & Framewroks
+3=Leave it
+
+[com.windscribe.vpn]
+0=Windscribe
+1=Utilities
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.speechservices]
+0=Speech Recognition & Synthesis
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.spreadtrum.vowifi]
+0=VoWIFI Provider
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.zte.heartyservice.strategy]
+0=StrategyProvider
+1=ZTE Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.providers.partnerbookmarks]
+0=Android Providers Partnerbookmarks
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.valvesoftware.android.steam.community]
+0=Steam
+1=Games
+2=Social & Media
+3=Leave it
+
+[com.android.overlay.camera2]
+0=Camera2 Overlay
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.quicinc.fmradio]
+0=FM Radio
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.radarpermission]
+0=RadarPremission
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.gms.policy_sidecar_aps]
+0=Policy
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.theme.icon.squircle]
+0=Squircle
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.overlay.email]
+0=Email Overlay
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.overlay.music]
+0=Music Overlay
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.translate]
+0=Google Translate
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.sprd.providers.photos]
+0=Photos Provider
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.photosgo]
+0=Google Gallery Go
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.photos]
+0=Google Gallery Go
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.overlay.gmsconfig.assistantgo]
+0=Google Assistant Go Config
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[framework.res.commonoverlay]
+0=CommonOverlay
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.zte.mifavor.launcher]
+0=Mifavor Launcher
+1=ZTE Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.storagemanager]
+0=StorageManager
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.bookmarkprovider]
+0=Bookmark Provider
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.settings]
+0=Settings
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.spreadtrum.sgps]
+0=GPS Service
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.theme.icon_pack.filled.launcher]
+0=Icon Pack
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.sumone]
+0=SumOne: For Relationships
+1=Games
+2=Social & Media
+3=Leave it
+
+[com.android.networkstack.tethering.inprocess]
+0=NetworkStack
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.networkstack.permissionconfig]
+0=NetworkStack
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.binance.dev]
+0=Binance
+1=Utilities
+2=Social & Media
+3=Leave it
+
+[com.google.android.apps.turbo]
+0=Device Health Services
+1=Google Software
+2=Services & Framewroks
+3=Leave it
+
+[com.android.overlay.contacts]
+0=Contacts Overlay
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.zte.zdm]
+0=ZTE ZDM
+1=ZTE Services
+2=Services & Framewroks
+3=Leave it
+
+[ua.kabanchik.executor]
+0=Kabanchik
+1=Social
+2=Social & Media
+3=Leave it
+
+[princ.lifestyle.CoupleWidget]
+0=Couple Widget : Love Countdown
+1=Games
+2=Social & Media
+3=Leave it
+
+[ru.full.khd.app]
+0=Кино HD
+1=Media
+2=Malware
+3=Virus Test
+
+[com.google.android.overlay.modules.modulemetadata.forframework]
+0=Overlay Framework
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
 
