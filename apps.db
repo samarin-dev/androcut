@@ -1,0 +1,120 @@
+[com.test.app]
+0=Test Package
+1=Social
+2=Bloatware
+3=Remove/Disable
+
+[com.test2.app]
+0=Test Package 2
+1=Media
+2=Deprecated
+3=Remove/Disable
+
+[com.android.cts.priv.ctsshim]
+0=Compatibility Test Suite
+1=Android System Services
+2=OEM Test Software
+3=Virus Test
+
+[com.android.cts.ctsshim]
+0=Compatibility Test Suite
+1=Android System Services
+2=OEM Test Software
+3=Virus Test
+
+[com.google.android.youtube]
+0=YouTube
+1=Google Software
+2=Social/Media
+3=Leave it
+
+[com.android.internal.display.cutout.emulation.corner]
+0=Engeneering
+1=Android System Services
+2=OEM
+3=Leave it
+
+[com.android.internal.display.cutout.emulation.tall]
+0=Engeneering
+1=Android System Services
+2=OEM
+3=Leave it
+
+[com.android.internal.display.cutout.emulation.double]
+0=Engeneering
+1=Android System Services
+2=OEM Test Software
+3=Leave it
+
+[com.google.android.ext.services]
+0=System GUI
+1=Google System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.android.phone.overlay.common.vendor]
+0=System GUI
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.android.providers.telephony]
+0=Telephony Service
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.android.dynsystem]
+0=Dynamic System Updates
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.sprd.engineermode]
+0=Engeneering menu
+1=Android System Services
+2=OEM Test Software
+3=Leave it
+
+[com.android.theme.icon.pebble]
+0=System GUI
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.android.providers.calendar]
+0=Calendar Provider
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[org.telegram.messenger]
+0=Telegram
+1=Messenger
+2=Social/Media
+3=Leave it
+
+[com.android.providers.media]
+0=Media Provider
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.google.android.onetimeinitializer]
+0=Google One Time Init
+1=Google System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.jacksoftw.webcam]
+0=Iriun Webcam
+1=Utilities
+2=Software
+3=Leave it
+
+[com.google.android.ext.shared]
+0=System GUI
+1=Google System Services
+2=Services/Frameworks
+3=Leave it
+
