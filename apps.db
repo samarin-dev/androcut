@@ -77,7 +77,7 @@
 3=Leave it
 
 [com.android.theme.icon.pebble]
-0=System GUI
+0=Pebble Icon Pack
 1=Android System Services
 2=Services/Frameworks
 3=Leave it
@@ -112,9 +112,75 @@
 2=Software
 3=Leave it
 
-[com.google.android.ext.shared]
+[com.android.internal.systemui.navbar.gestural_wide_back]
 0=System GUI
-1=Google System Services
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.android.networkstack.tethering_zte.overlay]
+0=System GUI
+1=ZTE System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.android.wallpapercropper]
+0=Wallpaper Cropper
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.android.theme.icon.vessel]
+0=Vessel Icon Pack
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.android.theme.color.cinnamon]
+0=Cinnamon Theme
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.android.overlay.soundrecorder]
+0=Sound Recorder Overlay
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.android.theme.icon_pack.rounded.systemui]
+0=Icon Pack Rounded
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.android.theme.icon.taperedrect]
+0=Tapered Rect Icon Pack
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.android.theme.icon.taperedrect]
+0=Tapered Rect Icon Pack
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.viber.voip]
+0=Viber
+1=Messenger
+2=Social/Media
+3=Leave it
+
+[com.android.wifi.resources.overlay]
+0=Wi-Fi Overlay
+1=Android System Services
+2=Services/Frameworks
+3=Leave it
+
+[com.android.wifi.resources.overlay]
+0=Wi-Fi Overlay
+1=Android System Services
 2=Services/Frameworks
 3=Leave it
 
