@@ -1996,3 +1996,351 @@
 2=Services & Framewroks
 3=Leave it
 
+[com.mediatek.ppl]
+0=PlatformManager
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.camera]
+0=Camera Provider
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.transsion.manualguide]
+0=Manual
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.ext.shared]
+0=Notification Service
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.schpwronoff]
+0=Power Management
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.mapslite]
+0=Google Maps Go
+1=Google Software
+2=Services & Framewroks
+3=Leave it
+
+[com.transsion.agingfunction]
+0=Device
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.simprocessor]
+0=MTK SIM Provider
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.apps.navlite]
+0=Navigation for Google Maps Go
+1=Google Software
+2=Services & Framewroks
+3=Leave it
+
+[com.jasonkung.launcher3]
+0=Launcher<3
+1=Utilities
+2=Services & Framewroks
+3=Leave it
+
+[com.transsion.appupdate]
+0=App Update
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[de.wetteronline.wetterapp]
+0=Weather & Radar
+1=Software
+2=Social & Media
+3=Leave it
+
+[com.mediatek.engineermode]
+0=MTK Engeneer Mode
+1=Android System Services
+2=OEM
+3=Leave it
+
+[com.mediatek.omacp]
+0=OMA Client Provisioning
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.defcontainer]
+0=DefaultContainerService
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.google.android.gm.lite]
+0=Gmail Go
+1=Google Software
+2=Social & Media
+3=Leave it
+
+[com.csdroid.pkg]
+0=Package Name Viewer
+1=Utilities
+2=Services & Framewroks
+3=Leave it
+
+[com.transsion.theme.icon]
+0=Icon Theme
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.contacts]
+0=Contacts
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.transsion.powercenter]
+0=Power Center
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.security]
+0=MTK Security Provider
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.bluetooth.dtt]
+0=BT Tool
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.transsion.hilauncherconfig]
+0=HiLauncher Config
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.mdmlsample]
+0=MDML Sample
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.providers.drm]
+0=MTK DRM Provider
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.systemui.theme.dark]
+0=Dark Theme
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.batterywarning]
+0=MTK Battery Health Service
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.transsion.phonemanager]
+0=Phone Manager
+1=HiOS Services
+2=Services & Framewroks
+3=Virus Test
+
+[com.mediatek]
+0=MTK Core
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.dialer]
+0=AOSP Dialer
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.transsion.applock]
+0=AppLock
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[radio]
+0=FM Radio
+1=Software
+2=OEM
+3=Leave it
+
+[fmradio]
+0=FM Radio
+1=Software
+2=OEM
+3=Leave it
+
+[fm]
+0=FM Radio
+1=Software
+2=OEM
+3=Leave it
+
+[radiofm]
+0=FM Radio
+1=Software
+2=OEM
+3=Leave it
+
+[com.transsion]
+0=HiOS Core
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[com.reallytek.wg]
+0=Midtest
+1=Utilities
+2=OEM
+3=Leave it
+
+[com.mediatek.calendarimporter]
+0=VCalendar
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.thermalmanager]
+0=MTK thermal manager
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.callrecorder]
+0=Call Recorder
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.webview]
+0=MTK WebView
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.smspush]
+0=SMS Push
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mtk.telephony]
+0=BSPTelephonyDevTool
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.transsion.overlaysuw]
+0=System Overlay
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[ua.oschadbank.flumo]
+0=Ощад
+1=Social
+2=Social & Media
+3=Leave it
+
+[com.google.android.backuptransport]
+0=Google Backup Transport
+1=Google System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.rlk.mi]
+0=Hi Account
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.mdmconfig]
+0=MDM Config
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.transsion.keyguardgesture]
+0=Gestures
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[com.transsion.soundrecorder]
+0=Sound Recorder
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[com.transsion.calculator]
+0=Calculator
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.location.mtknlp]
+0=MTK NLP Service
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.mtklogger]
+0=MTKLogger
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.transsion.notebook]
+0=Notebook
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[com.android.wallpaperpicker]
+0=WallpaperPicker
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.mtklogger.proxy]
+0=MTKLoggerProxy
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
+[com.transsion.deskclock]
+0=Clock
+1=HiOS Services
+2=Services & Framewroks
+3=Leave it
+
+[com.mediatek.dataprotection]
+0=Data protection
+1=Android System Services
+2=Services & Framewroks
+3=Leave it
+
