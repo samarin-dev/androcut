@@ -40,3 +40,9 @@ First publical beta release
 - Search package info on the web button added
 - Minor bugfixes
 - Copyright update
+
+=======================================
+2024.04
+=======================================
+- Apps filtering system hotfix
+- Device auto-selection after device list refreshing added
