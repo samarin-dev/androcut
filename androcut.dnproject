@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project author="Михаил" authorOS="Windows 10" createdAt="1673819218273" ideName="FXEdition | " ideVersion="1.8" ideVersionHash="2017103112" name="androcut" packageName="app" template="ide\project\templates\DefaultGuiProjectTemplate" updatedAt="1705356231856">
+<project author="Михаил" authorOS="Windows 10" createdAt="1673819218273" ideName="FXEdition | " ideVersion="1.8" ideVersionHash="2017103112" name="androcut" packageName="app" template="ide\project\templates\DefaultGuiProjectTemplate" updatedAt="1705452382754">
   <tree>
     <expanded>
     <path src=""/>
@@ -19,11 +19,11 @@
     <file src="src/app/forms/runonce.php"/>
     <file src="src/app/forms/dump.php"/>
     <file src="src/app/forms/savescript.php"/>
-    <file src="src/app/forms/about.php"/>
+    <file selected="1" src="src/app/forms/about.php"/>
     <file src="src/app/forms/error.php"/>
     <file src="src/app/forms/scripteditor.php"/>
     <file src="src/app/forms/update.php"/>
-    <file selected="1" src="src/app/forms/wificon.php"/>
+    <file src="src/app/forms/wificon.php"/>
   </openedFiles>
   <files/>
   <behaviours>

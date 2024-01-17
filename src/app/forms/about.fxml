@@ -7,7 +7,7 @@
       </font>
     </ImageViewEx>
     <Data cursor="DEFAULT" enabled="1" id="data-image" image=".data/img/anrocut-logo-big.png" visible="1"/>
-    <TextField alignment="CENTER_LEFT" editable="false" focusTraversable="true" id="edit" layoutX="8" layoutY="144" prefColumnCount="12" prefHeight="35" prefWidth="512" promptText="" styleClass="text-input text-field " text="Version: 2024.03">
+    <TextField alignment="CENTER_LEFT" editable="false" focusTraversable="true" id="edit" layoutX="8" layoutY="144" prefColumnCount="12" prefHeight="35" prefWidth="512" promptText="" styleClass="text-input text-field " text="Version: 2024.04">
       <font>
         <Font name="System Regular" size="12"/>
       </font>

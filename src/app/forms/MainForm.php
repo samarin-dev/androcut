@@ -717,7 +717,8 @@ class MainForm extends AbstractForm
     function doButton43Action(UXEvent $e = null)
     {   
         $this->button42->text = 'Packages on device';
-        $this->radioGroup->selectedIndex = 0;
+        $this->checkboxAlt->selected = true;
+        $this->doCheckboxAltClick();
         $this->doButtonAction();
     }
 
@@ -959,17 +960,25 @@ class MainForm extends AbstractForm
         {
             if ($line != str::contains($line, 'List of devices attached'))
             {
-                $fxout = new UXLabelEx;
-                $fxout->rightAnchor = 1;
-                $fxout->leftAnchor = 1;
-                $fxout->text = $line;
-                $fxout->textColor = UXColor::of('#ffff4d');
-                $img_icon = new UXImageView(new UXImage('res://.data/img/device.png'));                          
-                $icon = new UXHBox([$img_icon]);
-                $fxout->graphic = $icon;
-                $this->combobox3->items->add($fxout);
+                if ($line != str::contains($line, '* daemon not running; starting now at tcp:'))
+                {
+                    if ($line != str::contains($line, '* daemon started successfully'))
+                    {
+                        $fxout = new UXLabelEx;
+                        $fxout->rightAnchor = 1;
+                        $fxout->leftAnchor = 1;
+                        $fxout->text = $line;
+                        $fxout->textColor = UXColor::of('#ffff4d');
+                        $img_icon = new UXImageView(new UXImage('res://.data/img/device.png'));                          
+                        $icon = new UXHBox([$img_icon]);
+                        $fxout->graphic = $icon;
+                        $this->combobox3->items->add($fxout);
+                    }
+                }
             }
         }
+        $this->combobox3->selectedIndex = 0;
+        $this->doButtonAction();
     }
 
     /**
@@ -1512,6 +1521,10 @@ class MainForm extends AbstractForm
             $this->checkbox4->enabled = false;
             $this->checkbox5->enabled = false;
             $this->checkbox6->enabled = false;
+            $this->checkbox3->selected = false;
+            $this->checkbox4->selected = false;
+            $this->checkbox5->selected = false;
+            $this->checkbox6->selected = false;
         }
         else 
         {
@@ -2177,7 +2190,7 @@ class MainForm extends AbstractForm
     
     function getUpdate()
     {
-        $current = '2024.03';
+        $current = '2024.04';
         
         try 
         {
