@@ -1,0 +1,15 @@
+[classes]
+app\forms\about
+app\forms\add
+app\forms\dump
+app\forms\error
+app\forms\install
+app\forms\MainForm
+app\forms\runonce
+app\forms\savescript
+app\forms\scripteditor
+app\forms\tps
+app\forms\update
+app\forms\wificon
+app\modules\AppModule
+app\modules\MainModule

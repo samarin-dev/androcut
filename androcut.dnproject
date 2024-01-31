@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project author="Михаил" authorOS="Windows 10" createdAt="1673819218273" ideName="FXEdition | " ideVersion="1.8" ideVersionHash="2017103112" name="androcut" packageName="app" template="ide\project\templates\DefaultGuiProjectTemplate" updatedAt="1705452382754">
+<project author="Михаил" authorOS="Windows 10" createdAt="1673819218273" ideName="FXEdition | " ideVersion="1.8" ideVersionHash="2017103112" name="androcut" packageName="app" template="ide\project\templates\DefaultGuiProjectTemplate" updatedAt="1706662843369">
   <tree>
     <expanded>
     <path src=""/>
@@ -10,20 +10,27 @@
       <path src="/src/app"/>
       <path src="/src/app/forms"/>
       <path src="/src/app/modules"/>
+      <path src="/vendor"/>
+      <path src="/vendor/develnext.bundle.gignight.LocalizationBundle"/>
+      <path src="/vendor/develnext.bundle.gignight.LocalizationBundle/bundle"/>
+      <path src="/vendor/develnext.bundle.jfoenix.JFoenixBundle"/>
     </expanded>
   </tree>
   <openedFiles>
   <file src="androcut.dnproject"/>
     <file src="src/app/modules/MainModule.php"/>
-    <file src="src/app/forms/MainForm.php"/>
+    <file selected="1" src="src/app/forms/MainForm.php"/>
     <file src="src/app/forms/runonce.php"/>
     <file src="src/app/forms/dump.php"/>
     <file src="src/app/forms/savescript.php"/>
-    <file selected="1" src="src/app/forms/about.php"/>
+    <file src="src/app/forms/about.php"/>
     <file src="src/app/forms/error.php"/>
     <file src="src/app/forms/scripteditor.php"/>
     <file src="src/app/forms/update.php"/>
     <file src="src/app/forms/wificon.php"/>
+    <file src="src/app/forms/install.php"/>
+    <file src="vendor/develnext.bundle.jfoenix.JFoenixBundle/jfoenix-custom.fx.css"/>
+    <file src="src/app/forms/tps.php"/>
   </openedFiles>
   <files/>
   <behaviours>

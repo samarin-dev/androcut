@@ -35,17 +35,17 @@
         "actionNode": "buttonfldr"
       }
     },
-    "fileChooser": {
+    "fileChooser4": {
       "type": "script\\FileChooserScript",
-      "x": 384,
+      "x": 704,
       "y": 288,
       "props": {
-        "multiple": false,
         "initialDirectory": "/scripts",
         "filterName": "Androcut Automatical Uninstall Script (*.aaus)",
         "filterExtensions": "*.aaus",
         "filterAny": true,
-        "actionNode": "button34"
+        "inputNode": "scriptpath",
+        "actionNode": "buttonopen"
       }
     },
     "fileChooser3": {
@@ -62,17 +62,17 @@
         "actionNode": "buttonpath"
       }
     },
-    "fileChooser4": {
+    "fileChooser": {
       "type": "script\\FileChooserScript",
-      "x": 704,
+      "x": 384,
       "y": 288,
       "props": {
+        "multiple": false,
         "initialDirectory": "/scripts",
         "filterName": "Androcut Automatical Uninstall Script (*.aaus)",
         "filterExtensions": "*.aaus",
         "filterAny": true,
-        "inputNode": "scriptpath",
-        "actionNode": "buttonopen"
+        "actionNode": "button34"
       }
     },
     "dirChooser": {
@@ -82,6 +82,27 @@
       "props": {
         "inputNode": "edit",
         "actionNode": "buttonfldr"
+      }
+    },
+    "dirChooserAlt": {
+      "type": "script\\DirectoryChooserScript",
+      "x": 256,
+      "y": 96,
+      "props": {
+        "inputNode": "apkdirout",
+        "actionNode": "apkdirbut"
+      }
+    },
+    "fileChooser6": {
+      "type": "script\\FileChooserScript",
+      "x": 144,
+      "y": 96,
+      "props": {
+        "filterName": "APK",
+        "filterExtensions": "*.apk",
+        "filterAny": "0",
+        "inputNode": "apkoutpath",
+        "actionNode": "apkoutbut"
       }
     }
   }

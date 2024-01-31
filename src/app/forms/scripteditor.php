@@ -86,14 +86,6 @@ class scripteditor extends AbstractForm
         
     }
 
-    /**
-     * @event slider.mouseDrag 
-     */
-    function doSliderMouseDrag(UXMouseEvent $e = null)
-    {    
-        $this->numberField->value = $this->slider->value;
-        $this->textArea->font->size = $this->numberField->value;
-    }
 
     /**
      * @event numberField.click 
@@ -113,13 +105,6 @@ class scripteditor extends AbstractForm
         $this->textArea->font->size = $this->slider->value;
     }
 
-    /**
-     * @event slider.mouseEnter 
-     */
-    function doSliderMouseEnter(UXMouseEvent $e = null)
-    {    
-        $this->button->text = 'Font size';
-    }
 
     /**
      * @event numberField.mouseEnter 
@@ -135,6 +120,23 @@ class scripteditor extends AbstractForm
     function doKeyDownCtrlS(UXKeyEvent $e = null)
     {    
         $this->doButtonAltAction();
+    }
+
+    /**
+     * @event slider.mouseDrag 
+     */
+    function doSliderMouseDrag(UXMouseEvent $e = null)
+    {    
+        $this->numberField->value = $this->slider->value;
+        $this->textArea->font->size = $this->numberField->value;
+    }
+
+    /**
+     * @event slider.mouseEnter 
+     */
+    function doSliderMouseEnter(UXMouseEvent $e = null)
+    {    
+            $this->button->text = 'Font size';
     }
 
 

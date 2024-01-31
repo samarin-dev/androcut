@@ -64,4 +64,29 @@ class about extends AbstractForm
         open('"https://send.monobank.ua/jar/AEFwnbzMFo"');
     }
 
+    /**
+     * @event button9.action 
+     */
+    function doButton9Action(UXEvent $e = null)
+    {    
+        app()->showForm('tps');
+    }
+
+    /**
+     * @event button10.action 
+     */
+    function doButton10Action(UXEvent $e = null)
+    {    
+        open('"https://github.com/samarin-dev/androcut/blob/main/LICENSE"');
+    }
+
+    /**
+     * @event button11.action 
+     */
+    function doButton11Action(UXEvent $e = null)
+    {    
+        $this->toast('Checking updates on server...');
+        $this->form('MainForm')->getUpdate();
+    }
+
 }

@@ -24,7 +24,7 @@
                     <Font name="System Regular" size="12"/>
                   </font>
                 </Button>
-                <Data cursor="DEFAULT" enabled="1" graphic=".data/img/enable.png" id="data-button" visible="1"/>
+                <Data cursor="DEFAULT" enabled="1" graphic=".data/img/next.png" id="data-button" visible="1"/>
                 <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="buttonAlt" layoutX="76" layoutY="408" prefHeight="32" prefWidth="144" styleClass="button " text="Skip" textAlignment="CENTER" underline="false" wrapText="false">
                   <font>
                     <Font name="System Regular" size="12"/>
@@ -80,7 +80,7 @@
                     <Font name="System Regular" size="12"/>
                   </font>
                 </Button>
-                <Data cursor="DEFAULT" enabled="1" graphic=".data/img/enable.png" id="data-button3" visible="1"/>
+                <Data cursor="DEFAULT" enabled="1" graphic=".data/img/next.png" id="data-button3" visible="1"/>
               </children>
             </AnchorPane>
           </content>
@@ -118,7 +118,7 @@
                     <Font name="System Regular" size="12"/>
                   </font>
                 </Button>
-                <Data cursor="DEFAULT" enabled="1" graphic=".data/img/enable.png" id="data-button4" visible="1"/>
+                <Data cursor="DEFAULT" enabled="1" graphic=".data/img/next.png" id="data-button4" visible="1"/>
               </children>
             </AnchorPane>
           </content>
@@ -156,7 +156,7 @@
                     <Font name="System Regular" size="12"/>
                   </font>
                 </Button>
-                <Data cursor="DEFAULT" enabled="1" graphic=".data/img/enable.png" id="data-button5" visible="1"/>
+                <Data cursor="DEFAULT" enabled="1" graphic=".data/img/next.png" id="data-button5" visible="1"/>
               </children>
             </AnchorPane>
           </content>

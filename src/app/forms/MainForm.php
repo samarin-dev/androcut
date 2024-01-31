@@ -1,6 +1,13 @@
 <?php
 namespace app\forms;
 
+use php\gui\UXCheckbox;
+use php\gui\UXMaterialCheckbox;
+use php\gui\UXMaterialTabPane;
+use bundle\anipp\Curves\EaseElasticIn;
+use php\gui\animatefx\AnimationFX;
+use bundle\anipp\Curves\EaseCubicIn;
+use bundle\anipp\AniPP;
 use php\gui\framework\event\AbstractEventType;
 use php\lib\arr;
 use preg;
@@ -48,42 +55,14 @@ class MainForm extends AbstractForm
     }
     
     //UI/UX
-    /**
-     * @event button5.action 
-     */
-    function doButton5Action(UXEvent $e = null)
-    {    
-        $this->panel->show();
-        $this->notice->hide();
-        
-        $packagename = $this->listView->selectedItem->text;
-        $this->start("adb shell pm uninstall -k --user 0 $packagename");
-        
-        if ($this->checkbox->selected == true)
-        {
-            fs::makeFile('ntc.cfg');
-            file_put_contents('ntc.cfg', '1');
-        }
-    }
     
     //UI/UX
-    /**
-     * @event button6.action 
-     */
-    function doButton6Action(UXEvent $e = null)
-    {    
-        $this->panel->show();
-        $this->notice->hide();
-    }
 
     /**
      * @event button.action 
      */
     function doButtonAction(UXEvent $e = null)
     {    
-        //App`s filter
-        //$index = $this->radioGroup->selectedIndex;
-        
         //Device filter
         
         $deviceid = $this->combobox3->selected->text;
@@ -117,31 +96,6 @@ class MainForm extends AbstractForm
         }
         $this->start($command);
         
-        /*if ($index == 0)
-        {
-            $this->start("adb -s $deviceid shell pm list packages");
-        }
-        elseif ($index == 1)
-        {
-            $this->start("adb -s $deviceid shell pm list packages -d");
-        }
-        elseif ($index == 2)
-        {
-            $this->start("adb -s $deviceid shell pm list packages -e");
-        }
-        elseif ($index == 3)
-        {
-            $this->start("adb -s $deviceid shell pm list packages -s");
-        }
-        elseif ($index == 4)
-        {
-            $this->start("adb -s $deviceid shell pm list packages -3");
-        }
-        else 
-        {
-            $this->toast('JavaFX UI Framework Error, please restart an app and contact developer!!!');
-        }
-        */
         //Using "try{}" because on some devices with custom/bad ROM`s app can be crashed 
         try 
         {
@@ -275,6 +229,7 @@ class MainForm extends AbstractForm
         $deviceid = explode(' ', $deviceid);
         $deviceid = str::trim($deviceid[0]);
         
+        
         $packages = $this->listView->items->toArray();
         
         foreach ($packages as $package)
@@ -371,20 +326,6 @@ class MainForm extends AbstractForm
      */
     function doShow(UXWindowEvent $e = null)
     {    
-        if (fs::size('rnc.cfg') > 0)
-        {
-            $this->doButton15Action();
-            $this->doButton33Action();
-            
-            $path = fs::abs('./');
-            $this->listView7->items->add("Current application path - $path");
-        }
-        else 
-        {
-            app()->showForm('runonce');
-            $this->hide();
-        }
-        
         $img_icon = new UXImageView(new UXImage('res://.data/img/dump.png'));
         $icon = new UXHBox([$img_icon]);
         $this->tabPane->selectFirstTab();
@@ -400,7 +341,7 @@ class MainForm extends AbstractForm
         $this->tabPane->selectNextTab();
         $this->tabPane->selectedTab->graphic = $icon;
         
-        $img_icon = new UXImageView(new UXImage('res://.data/img/log.png'));
+        $img_icon = new UXImageView(new UXImage('res://.data/img/terminal.png'));
         $icon = new UXHBox([$img_icon]);
         $this->tabPane->selectNextTab();
         $this->tabPane->selectedTab->graphic = $icon;
@@ -440,6 +381,20 @@ class MainForm extends AbstractForm
         $this->combobox4->selectedIndex = 0;
         
         $this->getUpdate();
+        
+        if (fs::size('rnc.cfg') > 0)
+        {
+            $this->doButton15Action();
+            $this->doButton33Action();
+            
+            $path = fs::abs('./');
+            $this->listView7->items->add("Current application path - $path");
+        }
+        else 
+        {
+            app()->showForm('runonce');
+            $this->hide();
+        }
     }
 
 
@@ -614,20 +569,6 @@ class MainForm extends AbstractForm
         $this->ADBAction("adb -s $deviceid shell reboot");
     }
 
-    /**
-     * @event button13.action 
-     */
-    function doButton13Action(UXEvent $e = null)
-    {
-        if ($this->fullScreen == true)
-        {
-            $this->fullScreen = false;
-        }
-        else 
-        {
-            $this->fullScreen = true;
-        }
-    }
 
 
     /**
@@ -1315,13 +1256,6 @@ class MainForm extends AbstractForm
         $this->helper->text = 'Get an *.apk of one (or first) selected app';
     }
 
-    /**
-     * @event button13.mouseEnter 
-     */
-    function doButton13MouseEnter(UXMouseEvent $e = null)
-    {    
-        $this->helper->text = 'Workstation mode';
-    }
 
     /**
      * @event button28.mouseEnter 
@@ -1510,75 +1444,11 @@ class MainForm extends AbstractForm
         }
     }
 
-    /**
-     * @event checkboxAlt.click 
-     */
-    function doCheckboxAltClick(UXMouseEvent $e = null)
-    {    
-        if ($this->checkboxAlt->selected == true)
-        {
-            $this->checkbox3->enabled = false;
-            $this->checkbox4->enabled = false;
-            $this->checkbox5->enabled = false;
-            $this->checkbox6->enabled = false;
-            $this->checkbox3->selected = false;
-            $this->checkbox4->selected = false;
-            $this->checkbox5->selected = false;
-            $this->checkbox6->selected = false;
-        }
-        else 
-        {
-            $this->checkbox3->enabled = true;
-            $this->checkbox4->enabled = true;
-            $this->checkbox5->enabled = true;
-            $this->checkbox6->enabled = true;
-        }
-    }
-
-    /**
-     * @event checkbox3.click 
-     */
-    function doCheckbox3Click(UXMouseEvent $e = null)
-    {    
-        if ($this->checkbox3->selected == true)
-        {
-            $this->checkbox4->selected = false;
-        }
-    }
-
-    /**
-     * @event checkbox4.click 
-     */
-    function doCheckbox4Click(UXMouseEvent $e = null)
-    {    
-        if ($this->checkbox4->selected == true)
-        {
-            $this->checkbox3->selected = false;
-        }
-    }
 
 
-    /**
-     * @event checkbox6.click 
-     */
-    function doCheckbox6Click(UXMouseEvent $e = null)
-    {    
-        if ($this->checkbox6->selected == true)
-        {
-            $this->checkbox5->selected = false;
-        }
-    }
 
-    /**
-     * @event checkbox5.click 
-     */
-    function doCheckbox5Click(UXMouseEvent $e = null)
-    {    
-        if ($this->checkbox5->selected == true)
-        {
-            $this->checkbox6->selected = false;
-        }
-    }
+
+
 
     /**
      * @event listView.mouseMove 
@@ -1693,6 +1563,176 @@ class MainForm extends AbstractForm
     {    
         $this->helper->text = 'Connect device via local network';
     }
+
+
+
+    /**
+     * @event button47.action 
+     */
+    function doButton47Action(UXEvent $e = null)
+    {
+        app()->showForm('install');
+    }
+
+    /**
+     * @event button47.mouseEnter 
+     */
+    function doButton47MouseEnter(UXMouseEvent $e = null)
+    {
+        $this->helper->text = 'Install application(s) from local *.apk file';
+    }
+
+    /**
+     * @event tabPane.change 
+     */
+    function doTabPaneChange(UXEvent $e = null)
+    {    
+        
+    }
+
+
+
+    /**
+     * @event checkbox6.click 
+     */
+    function doCheckbox6Click(UXMouseEvent $e = null)
+    {    
+        if ($this->checkbox6->selected == true)
+        {
+            $this->checkbox5->selected = false;
+        }
+    }
+
+    /**
+     * @event checkbox5.click 
+     */
+    function doCheckbox5Click(UXMouseEvent $e = null)
+    {    
+        if ($this->checkbox5->selected == true)
+        {
+            $this->checkbox6->selected = false;
+        }
+    }
+
+    /**
+     * @event checkbox4.click 
+     */
+    function doCheckbox4Click(UXMouseEvent $e = null)
+    {    
+        if ($this->checkbox4->selected == true)
+        {
+            $this->checkbox3->selected = false;
+        }
+    }
+
+    /**
+     * @event checkbox3.click 
+     */
+    function doCheckbox3Click(UXMouseEvent $e = null)
+    {    
+        if ($this->checkbox3->selected == true)
+        {
+            $this->checkbox4->selected = false;
+        }
+    }
+
+    /**
+     * @event checkboxAlt.click 
+     */
+    function doCheckboxAltClick(UXMouseEvent $e = null)
+    {    
+        if ($this->checkboxAlt->selected == true)
+        {
+            $this->checkbox3->enabled = false;
+            $this->checkbox4->enabled = false;
+            $this->checkbox5->enabled = false;
+            $this->checkbox6->enabled = false;
+            $this->checkbox3->selected = false;
+            $this->checkbox4->selected = false;
+            $this->checkbox5->selected = false;
+            $this->checkbox6->selected = false;
+        }
+        else 
+        {
+            $this->checkbox3->enabled = true;
+            $this->checkbox4->enabled = true;
+            $this->checkbox5->enabled = true;
+            $this->checkbox6->enabled = true;
+        }
+    }
+
+    /**
+     * @event button13.action 
+     */
+    function doButton13Action(UXEvent $e = null)
+    {
+        if ($this->fullScreen == true)
+        {
+            $this->fullScreen = false;
+        }
+        else 
+        {
+            $this->fullScreen = true;
+        }
+    }
+
+    /**
+     * @event button13.mouseEnter 
+     */
+    function doButton13MouseEnter(UXMouseEvent $e = null)
+    {
+        $this->helper->text = 'Workstation mode';
+    }
+
+    /**
+     * @event checkbox.click 
+     */
+    function doCheckboxClick(UXMouseEvent $e = null)
+    {
+        if ($this->checkbox->selected == true)
+        {
+            $items = $this->listView->items->toArray();
+            $this->listView->items->clear();
+            
+            foreach ($items as $item)
+            {
+                $item->selected = true;
+                $this->listView->items->add($item);
+            }
+            
+        }
+        else
+        {
+            $items = $this->listView->items->toArray();
+            $this->listView->items->clear();
+            
+            foreach ($items as $item)
+            {
+                $item->selected = false;
+                $this->listView->items->add($item);
+            }
+        }
+        $this->listView->selectedIndex = 0;
+    }
+
+    /**
+     * @event listView.click 
+     */
+    function doListViewClick(UXMouseEvent $e = null)
+    {    
+        if ($this->listView->selectedItem->selected == true)
+        {
+            $this->listView->selectedItem->selected = false;
+        }
+        else 
+        {
+            $this->listView->selectedItem->selected = true;
+        }
+    }
+
+
+
+
 
 
 
@@ -1952,8 +1992,11 @@ class MainForm extends AbstractForm
         $item->wrapText = TRUE;
         $item->rightAnchor = 1;
         $item->leftAnchor = 1;
+        $item->height = 26;
+        
         $this->listView->items->add($item);
         $this->listView->scrollTo($this->listView->items->count);
+        
         $item_alt = $item->text;
         $this->listView6->items->add($item_alt);
         $this->listView6->scrollTo($this->listView6->items->count);
@@ -2075,8 +2118,8 @@ class MainForm extends AbstractForm
             $this->button14->text = 'Локально';
             $this->button42->text = 'Застосунки на пристрої';
             $this->button19->text = 'Виконати';
-            $this->button22->text = '[.:: Обрати ::.]';
-            $this->button23->text = '[.:: Інформація ::.]';
+            $this->button22->text = 'Обрати';
+            $this->button23->text = 'Інформація';
             $this->edit->promptText = 'Назва пакету...';
             $this->button38->text = 'Пошук';
             $this->button35->text = 'Шукати в мережі';
@@ -2127,8 +2170,8 @@ class MainForm extends AbstractForm
             $this->button14->text = 'Локально';
             $this->button42->text = 'Приложения устройства';
             $this->button19->text = 'Выполнить';
-            $this->button22->text = '[.:: Выбрать ::.]';
-            $this->button23->text = '[.:: Информация ::.]';
+            $this->button22->text = 'Выбрать';
+            $this->button23->text = 'Информация';
             $this->edit->promptText = 'Имя пакета...';
             $this->button38->text = 'Поиск';
             $this->button35->text = 'Искать в сети';
@@ -2179,8 +2222,8 @@ class MainForm extends AbstractForm
             $this->button14->text = 'Local';
             $this->button42->text = 'Packages on device';
             $this->button19->text = 'Execute';
-            $this->button22->text = '[.:: Select ::.]';
-            $this->button23->text = '[.:: Get info ::.]';
+            $this->button22->text = 'Select';
+            $this->button23->text = 'Get info';
             $this->edit->promptText = 'Package name...';
             $this->button38->text = 'Search';
             $this->button35->text = 'Search on the web';
@@ -2190,7 +2233,7 @@ class MainForm extends AbstractForm
     
     function getUpdate()
     {
-        $current = '2024.04';
+        $current = '2024.05';
         
         try 
         {

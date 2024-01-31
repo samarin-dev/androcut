@@ -16,6 +16,7 @@ $app = new Application();
 $app->loadModules(array (
   0 => 'app\modules\AppModule',
 ));
+$app->addStyle('/jfoenix-custom.fx.css');
 $app->addStyle('/.theme/style.fx.css');
 $app->launch();
 

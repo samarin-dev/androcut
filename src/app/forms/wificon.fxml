@@ -18,7 +18,7 @@
         <Font name="System Regular" size="12"/>
       </font>
     </Button>
-    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/link.png" id="data-button" visible="1"/>
+    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/pair2.png" id="data-button" visible="1"/>
     <TextField alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="edit3" layoutX="8" layoutY="48" prefColumnCount="12" prefHeight="35" prefWidth="312" promptText="Pair code (like 111111)" styleClass="text-input text-field " text="">
       <font>
         <Font name="System Regular" size="12"/>

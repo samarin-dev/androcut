@@ -46,3 +46,14 @@ First publical beta release
 =======================================
 - Apps filtering system hotfix
 - Device auto-selection after device list refreshing added
+
+=======================================
+2024.05
+=======================================
+-Fully re-design in material style
+-Using interface icons by Google
+-Animations improved
+-'Check All' checkbox added to the main (App`s) screen
+-EXE-installer improved
+-All license agreements now can be found at 'About' menu
+-Minor bug-fixes and optimizations
