@@ -1,6 +1,7 @@
 <?php
 namespace app\forms;
 
+use php\lib\str;
 use php\gui\framework\AbstractForm;
 use php\gui\event\UXEvent; 
 
@@ -13,14 +14,19 @@ class install extends AbstractForm
      */
     function doButtonAction(UXEvent $e = null)
     {
-        $this->progressIndicator->show();
+        $this->showPreloader('Application install in process...');
         $path = $this->apkoutpath->text;
-        $path = strtolower(htmlspecialchars($path), ENT_QUOTES);
+        $path = htmlspecialchars_decode("&quot;$path&quot;");
+        
+        //Device filter
+        $deviceid = $this->form('MainForm')->combobox3->selected->text;
+        $deviceid = explode(' ', $deviceid);
+        $deviceid = str::trim($deviceid[0]);
         
         if ($this->checkbox->selected == false)
         {
-            $action = "adb shell pm install $path -r -t -d";
-            app()->form('MainForm')->ADBAction($action);
+            $action = "adb -s $deviceid install --no-streaming $path";
+            $this->ADBAction($action);
         }
         else 
         {
@@ -28,14 +34,15 @@ class install extends AbstractForm
             
             foreach ($devices as $device)
             {
+                $device = $device->text;
                 $device = explode(' ', $device);
-                $device= str::trim($deviceid[0]);
-                $action = "adb -s $device shell pm install $path -r -t -d";
-                app()->form('MainForm')->ADBAction($action);
+                $device = str::trim($device[0]);
+                $action = "adb -s $device install --no-streaming $path";
+                $this->ADBAction($action);
             }
         }
         
-        $this->progressIndicator->hide();
+        $this->hidePreloader();
     }
 
     /**

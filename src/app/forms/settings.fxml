@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480" prefWidth="640" styleClass="">
+  <children>
+    <Panel AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" backgroundColor="#1a1a1a" borderColor="#4d4d4d" borderRadius="0" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel" layoutX="0" layoutY="432" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="48" prefWidth="640" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+      <children>
+        <Button AnchorPane.bottomAnchor="6" AnchorPane.rightAnchor="7" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button" layoutX="488" layoutY="9" prefHeight="32" prefWidth="144" styleClass="button " text="Close" textAlignment="CENTER" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </Button>
+        <Data cursor="DEFAULT" enabled="1" graphic=".data/img/stop.png" id="data-button" visible="1"/>
+        <Button AnchorPane.bottomAnchor="6" AnchorPane.rightAnchor="159" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="buttonAlt" layoutX="336" layoutY="9" prefHeight="32" prefWidth="144" styleClass="button " text="Apply" textAlignment="CENTER" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </Button>
+        <Data cursor="DEFAULT" enabled="1" graphic=".data/img/next.png" id="data-buttonAlt" visible="1"/>
+      </children>
+      <titleFont>
+        <Font name="System Regular" size="12"/>
+      </titleFont>
+    </Panel>
+    <org.develnext.jphp.ext.javafx.jfoenix.support.JFXTabPaneFixed AnchorPane.bottomAnchor="48" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="true" id="tabPane" layoutX="0" layoutY="0" prefHeight="432" prefWidth="640" style="&#10;" styleClass="jfx-tab-pane tab-pane " tabClosingPolicy="SELECTED_TAB">
+      <tabs>
+        <Tab text="Main">
+          <content>
+            <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="408" prefWidth="638" styleClass="">
+              <children>
+                <Panel AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" AnchorPane.topAnchor="64" backgroundColor="#333333" borderColor="#666666" borderRadius="5" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panelAlt" layoutX="8" layoutY="64" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="40" prefWidth="622" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+                  <children>
+                    <com.jfoenix.controls.JFXCheckBox alignment="CENTER_LEFT" checkedColor="#0f9d58" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="checkbox" layoutX="40" layoutY="8" prefHeight="24" prefWidth="472" styleClass="check-box jfx-check-box " text="Disable background image" textAlignment="LEFT" unCheckedColor="#5a5a5a" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </com.jfoenix.controls.JFXCheckBox>
+                    <Data cursor="DEFAULT" enabled="1" graphic="" id="data-checkbox" visible="1"/>
+                    <ImageViewEx autoSize="false" centered="true" focusTraversable="false" height="24" id="image" layoutX="8" layoutY="8" mosaic="false" mosaicGap="0" proportional="false" stretch="false" styleClass="" textFill="#000000" width="24">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </ImageViewEx>
+                    <Data cursor="DEFAULT" enabled="1" id="data-image" image=".data/img/break.png" visible="1"/>
+                  </children>
+                  <titleFont>
+                    <Font name="System Regular" size="12"/>
+                  </titleFont>
+                </Panel>
+                <Data cursor="DEFAULT" enabled="1" id="data-panelAlt" visible="1"/>
+                <Panel AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" AnchorPane.topAnchor="8" backgroundColor="#333333" borderColor="#666666" borderRadius="5" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel3" layoutX="8" layoutY="8" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="48" prefWidth="622" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+                  <children>
+                    <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label" layoutX="8" layoutY="8" prefHeight="32" prefWidth="144" styleClass="label " text="Language:" textAlignment="LEFT" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </LabelEx>
+                    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/site.png" id="data-label" visible="1"/>
+                    <ComboBox editable="false" focusTraversable="true" id="combobox4" layoutX="352" layoutY="8" prefHeight="32" prefWidth="264" promptText="" styleClass="combo-box-base combo-box " value="" visibleRowCount="10">
+                      <items xmlns:fx="http://javafx.com/fxml">
+                        <FXCollections fx:factory="observableArrayList"/>
+                      </items>
+                    </ComboBox>
+                    <Data cursor="DEFAULT" enabled="1" id="data-combobox4" visible="1"/>
+                  </children>
+                  <titleFont>
+                    <Font name="System Regular" size="12"/>
+                  </titleFont>
+                </Panel>
+                <Data cursor="DEFAULT" enabled="1" id="data-panel3" visible="1"/>
+                <Panel AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" AnchorPane.topAnchor="112" backgroundColor="#333333" borderColor="#666666" borderRadius="5" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel4" layoutX="8" layoutY="112" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="40" prefWidth="622" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+                  <children>
+                    <com.jfoenix.controls.JFXCheckBox alignment="CENTER_LEFT" checkedColor="#0f9d58" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="checkboxAlt" layoutX="40" layoutY="8" prefHeight="24" prefWidth="472" styleClass="check-box jfx-check-box " text="Start full screen" textAlignment="LEFT" unCheckedColor="#5a5a5a" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </com.jfoenix.controls.JFXCheckBox>
+                    <ImageViewEx autoSize="false" centered="true" focusTraversable="false" height="24" id="imageAlt" layoutX="8" layoutY="8" mosaic="false" mosaicGap="0" proportional="false" stretch="false" styleClass="" textFill="#000000" width="24">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </ImageViewEx>
+                    <Data cursor="DEFAULT" enabled="1" graphic="" id="data-checkboxAlt" visible="1"/>
+                    <Data cursor="DEFAULT" enabled="1" id="data-imageAlt" image=".data/img/display.png" visible="1"/>
+                  </children>
+                  <titleFont>
+                    <Font name="System Regular" size="12"/>
+                  </titleFont>
+                </Panel>
+                <Data cursor="DEFAULT" enabled="1" id="data-panel4" visible="1"/>
+                <Panel AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" AnchorPane.topAnchor="160" backgroundColor="#333333" borderColor="#666666" borderRadius="5" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel5" layoutX="8" layoutY="160" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="40" prefWidth="622" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+                  <children>
+                    <com.jfoenix.controls.JFXCheckBox alignment="CENTER_LEFT" checkedColor="#0f9d58" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="checkbox3" layoutX="40" layoutY="8" prefHeight="24" prefWidth="472" styleClass="check-box jfx-check-box " text="AI Mode (Experimental)" textAlignment="LEFT" unCheckedColor="#5a5a5a" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </com.jfoenix.controls.JFXCheckBox>
+                    <ImageViewEx autoSize="false" centered="true" focusTraversable="false" height="24" id="image3" layoutX="8" layoutY="8" mosaic="false" mosaicGap="0" proportional="false" stretch="false" styleClass="" textFill="#000000" width="24">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </ImageViewEx>
+                    <Data cursor="DEFAULT" enabled="" graphic="" id="data-checkbox3" visible="1"/>
+                    <Data cursor="DEFAULT" enabled="1" id="data-image3" image=".data/img/neural.png" visible="1"/>
+                  </children>
+                  <titleFont>
+                    <Font name="System Regular" size="12"/>
+                  </titleFont>
+                </Panel>
+                <Data cursor="DEFAULT" enabled="1" id="data-panel5" visible="1"/>
+                <Panel AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" AnchorPane.topAnchor="208" backgroundColor="#333333" borderColor="#666666" borderRadius="5" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel6" layoutX="8" layoutY="208" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="40" prefWidth="622" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+                  <children>
+                    <com.jfoenix.controls.JFXCheckBox alignment="CENTER_LEFT" checkedColor="#0f9d58" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="checkbox4" layoutX="40" layoutY="8" prefHeight="24" prefWidth="472" styleClass="check-box jfx-check-box " text="Simplified Interface (restart required)" textAlignment="LEFT" unCheckedColor="#5a5a5a" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </com.jfoenix.controls.JFXCheckBox>
+                    <ImageViewEx autoSize="false" centered="true" focusTraversable="false" height="24" id="image4" layoutX="8" layoutY="8" mosaic="false" mosaicGap="0" proportional="false" stretch="false" styleClass="" textFill="#000000" width="24">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </ImageViewEx>
+                    <Data cursor="DEFAULT" enabled="1" graphic="" id="data-checkbox4" visible="1"/>
+                    <Data cursor="DEFAULT" enabled="1" id="data-image4" image=".data/img/terminal.png" visible="1"/>
+                  </children>
+                  <titleFont>
+                    <Font name="System Regular" size="12"/>
+                  </titleFont>
+                </Panel>
+                <Data cursor="DEFAULT" enabled="1" id="data-panel6" visible="1"/>
+                <Panel AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" AnchorPane.topAnchor="256" backgroundColor="#333333" borderColor="#666666" borderRadius="5" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel7" layoutX="8" layoutY="256" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="40" prefWidth="622" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+                  <children>
+                    <com.jfoenix.controls.JFXCheckBox alignment="CENTER_LEFT" checkedColor="#0f9d58" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="checkbox5" layoutX="40" layoutY="8" prefHeight="24" prefWidth="472" styleClass="check-box jfx-check-box " text="Use a local applications database instead of a cloud database (not recommended)" textAlignment="LEFT" unCheckedColor="#5a5a5a" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </com.jfoenix.controls.JFXCheckBox>
+                    <ImageViewEx autoSize="false" centered="true" focusTraversable="false" height="24" id="image5" layoutX="8" layoutY="8" mosaic="false" mosaicGap="0" proportional="false" stretch="false" styleClass="" textFill="#000000" width="24">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </ImageViewEx>
+                    <Data cursor="DEFAULT" enabled="1" graphic="" id="data-checkbox5" visible="1"/>
+                    <Data cursor="DEFAULT" enabled="1" id="data-image5" image=".data/img/drive.png" visible="1"/>
+                  </children>
+                  <titleFont>
+                    <Font name="System Regular" size="12"/>
+                  </titleFont>
+                </Panel>
+                <Data cursor="DEFAULT" enabled="1" id="data-panel7" visible="1"/>
+                <Panel AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" AnchorPane.topAnchor="304" backgroundColor="#333333" borderColor="#666666" borderRadius="5" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel8" layoutX="8" layoutY="304" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="48" prefWidth="622" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+                  <children>
+                    <ImageViewEx autoSize="false" centered="true" focusTraversable="false" height="32" id="image6" layoutX="8" layoutY="8" mosaic="false" mosaicGap="0" proportional="false" stretch="false" styleClass="" textFill="#000000" width="24">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </ImageViewEx>
+                    <Data cursor="DEFAULT" enabled="1" id="data-image6" image=".data/img/dump.png" visible="1"/>
+                    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button6" layoutX="584" layoutY="8" prefHeight="32" prefWidth="32" styleClass="button " text="..." textAlignment="CENTER" underline="false" wrapText="false">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </Button>
+                    <Data cursor="DEFAULT" enabled="1" id="data-button6" visible="1"/>
+                    <TextField alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="edit" layoutX="40" layoutY="8" prefColumnCount="12" prefHeight="32" prefWidth="544" promptText="Path to the local database" styleClass="text-input text-field " text="">
+                      <font>
+                        <Font name="System Regular" size="12"/>
+                      </font>
+                    </TextField>
+                    <Data cursor="DEFAULT" enabled="1" id="data-edit" visible="1"/>
+                  </children>
+                  <titleFont>
+                    <Font name="System Regular" size="12"/>
+                  </titleFont>
+                </Panel>
+                <Data cursor="DEFAULT" enabled="" id="data-panel8" visible="1"/>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Hotkeys">
+          <content>
+            <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="408" prefWidth="640" styleClass="">
+              <children>
+                <ScrollPane focusTraversable="false" hbarPolicy="NEVER" hvalue="0" id="container" layoutX="0" layoutY="0" prefHeight="408" prefWidth="640" style="-fx-background-color: #333333;&#10;    background-color: #333333;" styleClass="scroll-pane " vbarPolicy="ALWAYS" vvalue="0">
+                  <content>
+                    <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="408" prefWidth="638" styleClass="">
+                      <children>
+                        <Panel AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="14" AnchorPane.topAnchor="0" backgroundColor="#333333" borderColor="#c0c0c0" borderRadius="0" borderStyle="SOLID" borderWidth="0" focusTraversable="false" id="panel10" layoutX="0" layoutY="0" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="408" prefWidth="624" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+                          <children/>
+                          <titleFont>
+                            <Font name="System Regular" size="12"/>
+                          </titleFont>
+                        </Panel>
+                        <Panel AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="22" AnchorPane.topAnchor="8" backgroundColor="#333333" borderColor="#666666" borderRadius="5" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel9" layoutX="8" layoutY="8" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="48" prefWidth="608" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+                          <children>
+                            <ImageViewEx autoSize="false" centered="true" focusTraversable="false" height="32" id="image7" layoutX="8" layoutY="8" mosaic="false" mosaicGap="0" proportional="false" stretch="false" styleClass="" textFill="#000000" width="24">
+                              <font>
+                                <Font name="System Regular" size="12"/>
+                              </font>
+                            </ImageViewEx>
+                            <Data cursor="DEFAULT" enabled="1" id="data-image7" image=".data/img/help.png" visible="1"/>
+                            <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="labelAlt" layoutX="40" layoutY="8" prefHeight="32" prefWidth="432" styleClass="label " text="Online documentation" textAlignment="LEFT" underline="false" wrapText="false">
+                              <font>
+                                <Font name="System Regular" size="12"/>
+                              </font>
+                            </LabelEx>
+                            <Data cursor="DEFAULT" enabled="1" id="data-labelAlt" visible="1"/>
+                            <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button7" layoutX="456" layoutY="8" prefHeight="24" prefWidth="144" styleClass="button " text="F1" textAlignment="CENTER" underline="false" wrapText="false">
+                              <font>
+                                <Font name="System Regular" size="12"/>
+                              </font>
+                            </Button>
+                            <Data cursor="DEFAULT" enabled="1" id="data-button7" visible="1"/>
+                          </children>
+                          <titleFont>
+                            <Font name="System Regular" size="12"/>
+                          </titleFont>
+                        </Panel>
+                        <Data cursor="DEFAULT" enabled="1" id="data-panel9" visible="1"/>
+                        <Data cursor="DEFAULT" enabled="1" id="data-panel10" visible="1"/>
+                        <Panel AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="22" AnchorPane.topAnchor="64" backgroundColor="#333333" borderColor="#666666" borderRadius="5" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel11" layoutX="8" layoutY="64" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="48" prefWidth="608" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+                          <children>
+                            <ImageViewEx autoSize="false" centered="true" focusTraversable="false" height="32" id="image8" layoutX="8" layoutY="8" mosaic="false" mosaicGap="0" proportional="false" stretch="false" styleClass="" textFill="#000000" width="24">
+                              <font>
+                                <Font name="System Regular" size="12"/>
+                              </font>
+                            </ImageViewEx>
+                            <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label3" layoutX="40" layoutY="8" prefHeight="32" prefWidth="432" styleClass="label " text="Reload applications list" textAlignment="LEFT" underline="false" wrapText="false">
+                              <font>
+                                <Font name="System Regular" size="12"/>
+                              </font>
+                            </LabelEx>
+                            <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button8" layoutX="456" layoutY="8" prefHeight="24" prefWidth="144" styleClass="button " text="F5" textAlignment="CENTER" underline="false" wrapText="false">
+                              <font>
+                                <Font name="System Regular" size="12"/>
+                              </font>
+                            </Button>
+                            <Data cursor="DEFAULT" enabled="1" id="data-image8" image=".data/img/reload.png" visible="1"/>
+                            <Data cursor="DEFAULT" enabled="1" id="data-label3" visible="1"/>
+                            <Data cursor="DEFAULT" enabled="1" id="data-button8" visible="1"/>
+                          </children>
+                          <titleFont>
+                            <Font name="System Regular" size="12"/>
+                          </titleFont>
+                        </Panel>
+                        <Data cursor="DEFAULT" enabled="1" id="data-panel11" visible="1"/>
+                        <Panel AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="22" AnchorPane.topAnchor="120" backgroundColor="#333333" borderColor="#666666" borderRadius="5" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel12" layoutX="8" layoutY="120" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="48" prefWidth="608" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+                          <children>
+                            <ImageViewEx autoSize="false" centered="true" focusTraversable="false" height="32" id="image9" layoutX="8" layoutY="8" mosaic="false" mosaicGap="0" proportional="false" stretch="false" styleClass="" textFill="#000000" width="24">
+                              <font>
+                                <Font name="System Regular" size="12"/>
+                              </font>
+                            </ImageViewEx>
+                            <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label4" layoutX="40" layoutY="8" prefHeight="32" prefWidth="432" styleClass="label " text="Full screen/window" textAlignment="LEFT" underline="false" wrapText="false">
+                              <font>
+                                <Font name="System Regular" size="12"/>
+                              </font>
+                            </LabelEx>
+                            <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button9" layoutX="456" layoutY="8" prefHeight="24" prefWidth="144" styleClass="button " text="F11" textAlignment="CENTER" underline="false" wrapText="false">
+                              <font>
+                                <Font name="System Regular" size="12"/>
+                              </font>
+                            </Button>
+                            <Data cursor="DEFAULT" enabled="1" id="data-image9" image=".data/img/display.png" visible="1"/>
+                            <Data cursor="DEFAULT" enabled="1" id="data-label4" visible="1"/>
+                            <Data cursor="DEFAULT" enabled="1" id="data-button9" visible="1"/>
+                          </children>
+                          <titleFont>
+                            <Font name="System Regular" size="12"/>
+                          </titleFont>
+                        </Panel>
+                        <Data cursor="DEFAULT" enabled="1" id="data-panel12" visible="1"/>
+                        <Panel AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="22" AnchorPane.topAnchor="176" backgroundColor="#333333" borderColor="#666666" borderRadius="5" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel13" layoutX="8" layoutY="176" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="48" prefWidth="608" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+                          <children>
+                            <ImageViewEx autoSize="false" centered="true" focusTraversable="false" height="32" id="image10" layoutX="8" layoutY="8" mosaic="false" mosaicGap="0" proportional="false" stretch="false" styleClass="" textFill="#000000" width="24">
+                              <font>
+                                <Font name="System Regular" size="12"/>
+                              </font>
+                            </ImageViewEx>
+                            <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label5" layoutX="40" layoutY="8" prefHeight="32" prefWidth="432" styleClass="label " text="Update devices list" textAlignment="LEFT" underline="false" wrapText="false">
+                              <font>
+                                <Font name="System Regular" size="12"/>
+                              </font>
+                            </LabelEx>
+                            <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button10" layoutX="456" layoutY="8" prefHeight="24" prefWidth="144" styleClass="button " text="Ctrl + F5" textAlignment="CENTER" underline="false" wrapText="false">
+                              <font>
+                                <Font name="System Regular" size="12"/>
+                              </font>
+                            </Button>
+                            <Data cursor="DEFAULT" enabled="1" id="data-image10" image=".data/img/help.png" visible="1"/>
+                            <Data cursor="DEFAULT" enabled="1" id="data-label5" visible="1"/>
+                            <Data cursor="DEFAULT" enabled="1" id="data-button10" visible="1"/>
+                          </children>
+                          <titleFont>
+                            <Font name="System Regular" size="12"/>
+                          </titleFont>
+                        </Panel>
+                        <Data cursor="DEFAULT" enabled="1" id="data-panel13" visible="1"/>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </ScrollPane>
+                <Data cursor="DEFAULT" enabled="1" id="data-container" visible="1"/>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Log">
+          <content>
+            <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="408" prefWidth="638" styleClass="">
+              <children>
+                <ListViewEx editable="false" fixedCellSize="-1" focusTraversable="true" id="listView" layoutX="8" layoutY="8" prefHeight="344" prefWidth="624" styleClass="list-view ">
+                  <items xmlns:fx="http://javafx.com/fxml">
+                    <FXCollections fx:factory="observableArrayList"/>
+                  </items>
+                </ListViewEx>
+                <Data cursor="DEFAULT" enabled="1" id="data-listView" visible="1"/>
+                <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button3" layoutX="8" layoutY="360" prefHeight="32" prefWidth="144" styleClass="button " text="Update log" textAlignment="CENTER" underline="false" wrapText="false">
+                  <font>
+                    <Font name="System Regular" size="12"/>
+                  </font>
+                </Button>
+                <Data cursor="DEFAULT" enabled="1" graphic=".data/img/reload.png" id="data-button3" visible="1"/>
+                <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button4" layoutX="160" layoutY="360" prefHeight="32" prefWidth="144" styleClass="button " text="Copy" textAlignment="CENTER" underline="false" wrapText="false">
+                  <font>
+                    <Font name="System Regular" size="12"/>
+                  </font>
+                </Button>
+                <Data cursor="DEFAULT" enabled="1" graphic=".data/img/edit.png" id="data-button4" visible="1"/>
+                <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button5" layoutX="312" layoutY="360" prefHeight="32" prefWidth="144" styleClass="button " text="Open file" textAlignment="CENTER" underline="false" wrapText="false">
+                  <font>
+                    <Font name="System Regular" size="12"/>
+                  </font>
+                </Button>
+                <Data cursor="DEFAULT" enabled="1" graphic=".data/img/dump.png" id="data-button5" visible="1"/>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </org.develnext.jphp.ext.javafx.jfoenix.support.JFXTabPaneFixed>
+    <Data cursor="DEFAULT" enabled="1" id="data-tabPane" visible="1"/>
+    <Data cursor="DEFAULT" enabled="1" id="data-panel" visible="1"/>
+  </children>
+</AnchorPane>

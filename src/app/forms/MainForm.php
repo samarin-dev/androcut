@@ -1,6 +1,8 @@
 <?php
 namespace app\forms;
 
+use app\forms\settings;
+use php\time\Time;
 use php\gui\UXCheckbox;
 use php\gui\UXMaterialCheckbox;
 use php\gui\UXMaterialTabPane;
@@ -24,6 +26,7 @@ use std, gui, framework, app;
 use php\gui\event\UXEvent; 
 use php\gui\event\UXMouseEvent; 
 use php\gui\event\UXKeyEvent; 
+use php\gui\event\UXWindowEvent; 
 
 
 class MainForm extends AbstractForm
@@ -36,7 +39,6 @@ class MainForm extends AbstractForm
     function doButton3Action(UXEvent $e = null)
     {    
         //Device filter
-        
         $deviceid = $this->combobox3->selected->text;
         $deviceid = explode(' ', $deviceid);
         $deviceid = str::trim($deviceid[0]);
@@ -64,7 +66,6 @@ class MainForm extends AbstractForm
     function doButtonAction(UXEvent $e = null)
     {    
         //Device filter
-        
         $deviceid = $this->combobox3->selected->text;
         $deviceid = explode(' ', $deviceid);
         $deviceid = str::trim($deviceid[0]);
@@ -107,49 +108,52 @@ class MainForm extends AbstractForm
             $devbrand1 = str_replace(PHP_EOL, '', strtoupper($devbrand1));
             $devbrand2 = str_replace(PHP_EOL, '', strtoupper($devbrand2));
             
-            $this->link->text = "$devbrand1 $devbrand2";
+            $brand[0] = $devbrand1;
+            $brand[1] = $devbrand2;
             
-            if ($devbrand1 == 'DOOGEE')
+            $this->link->text = implode(" ", $brand);
+            
+            if (str::contains($devbrand1, 'DOOGEE') == true)
             {
                 $brandlogo = new UXImage('res://.data/img/doogee.png');
             }
-            else if ($devbrand1 == 'HUAWEI')
+            else if (str::contains($devbrand1, 'HUAWEI') == true)
             {
                 $brandlogo = new UXImage('res://.data/img/huawei.png');
             }
-            else if ($devbrand1 == 'LENOVO')
+            else if (str::contains($devbrand1, 'LENOVO') == true)
             {
                 $brandlogo = new UXImage('res://.data/img/lenovo.png');
             }
-            else if ($devbrand1 == 'LG')
+            else if (str::contains($devbrand1, 'LG') == true)
             {
                 $brandlogo = new UXImage('res://.data/img/LG.png');
             }
-            else if ($devbrand1 == 'XIAOMI')
+            else if (str::contains($devbrand1, 'XIAOMI') == true)
             {
                 $brandlogo = new UXImage('res://.data/img/mi.png');
             }
-            else if ($devbrand1 == 'MOTOROLA')
+            else if (str::contains($devbrand1, 'MOTOROLA') == true)
             {
                 $brandlogo = new UXImage('res://.data/img/motorola.png');
             }
-            else if ($devbrand1 == 'SAMSUNG')
+            else if (str::contains($devbrand1, 'SAMSUNG') == true)
             {
                 $brandlogo = new UXImage('res://.data/img/samsung.png');
             }
-            else if ($devbrand1 == 'TECNO')
+            else if (str::contains($devbrand1, 'TECNO') == true)
             {
                 $brandlogo = new UXImage('res://.data/img/tecno.png');
             }
-            else if ($devbrand1 == 'ASUS')
+            else if (str::contains($devbrand1, 'ASUS') == true)
             {
                 $brandlogo = new UXImage('res://.data/img/asus.png');
             }
-            else if ($devbrand1 == 'NOTHING')
+            else if (str::contains($devbrand1, 'NOTHING') == true)
             {
                 $brandlogo = new UXImage('res://.data/img/nothing.png');
             }
-            else if ($devbrand1 == 'ZTE')
+            else if (str::contains($devbrand1, 'ZTE') == true)
             {
                 $brandlogo = new UXImage('res://.data/img/ZTE.png');
             }
@@ -301,7 +305,6 @@ class MainForm extends AbstractForm
     
     
     //UI/UX
-
     /**
      * @event link.action 
      */
@@ -326,75 +329,7 @@ class MainForm extends AbstractForm
      */
     function doShow(UXWindowEvent $e = null)
     {    
-        $img_icon = new UXImageView(new UXImage('res://.data/img/dump.png'));
-        $icon = new UXHBox([$img_icon]);
-        $this->tabPane->selectFirstTab();
-        $this->tabPane->selectedTab->graphic = $icon;
-        
-        $img_icon = new UXImageView(new UXImage('res://.data/img/android.png'));
-        $icon = new UXHBox([$img_icon]);
-        $this->tabPane->selectNextTab();
-        $this->tabPane->selectedTab->graphic = $icon;
-        
-        $img_icon = new UXImageView(new UXImage('res://.data/img/edit.png'));
-        $icon = new UXHBox([$img_icon]);
-        $this->tabPane->selectNextTab();
-        $this->tabPane->selectedTab->graphic = $icon;
-        
-        $img_icon = new UXImageView(new UXImage('res://.data/img/terminal.png'));
-        $icon = new UXHBox([$img_icon]);
-        $this->tabPane->selectNextTab();
-        $this->tabPane->selectedTab->graphic = $icon;
-        
-        $this->tabPane->selectFirstTab();
-        
-        $lang = new UXLabelEx;
-        $lang->rightAnchor = 1;
-        $lang->leftAnchor = 1;
-        $lang->text = 'English';
-        $lang->textColor = UXColor::of('#ffff4d');
-        $img_icon = new UXImageView(new UXImage('res://.data/img/uk-ser.png'));                          
-        $icon = new UXHBox([$img_icon]);
-        $lang->graphic = $icon;
-        $this->combobox4->items->add($lang);
-        
-        $lang = new UXLabelEx;
-        $lang->rightAnchor = 1;
-        $lang->leftAnchor = 1;
-        $lang->text = 'Українська';
-        $lang->textColor = UXColor::of('#ffff4d');
-        $img_icon = new UXImageView(new UXImage('res://.data/img/dia.png'));                          
-        $icon = new UXHBox([$img_icon]);
-        $lang->graphic = $icon;
-        $this->combobox4->items->add($lang);
-        
-        $lang = new UXLabelEx;
-        $lang->rightAnchor = 1;
-        $lang->leftAnchor = 1;
-        $lang->text = 'Русский';
-        $lang->textColor = UXColor::of('#ffff4d');
-        $img_icon = new UXImageView(new UXImage('res://.data/img/rus-ser.png'));                          
-        $icon = new UXHBox([$img_icon]);
-        $lang->graphic = $icon;
-        $this->combobox4->items->add($lang);
-        
-        $this->combobox4->selectedIndex = 0;
-        
-        $this->getUpdate();
-        
-        if (fs::size('rnc.cfg') > 0)
-        {
-            $this->doButton15Action();
-            $this->doButton33Action();
-            
-            $path = fs::abs('./');
-            $this->listView7->items->add("Current application path - $path");
-        }
-        else 
-        {
-            app()->showForm('runonce');
-            $this->hide();
-        }
+        $this->PrepUI();
     }
 
 
@@ -410,99 +345,7 @@ class MainForm extends AbstractForm
         
         $line = $this->listView->focusedItem->text;
         
-        if (str::contains($line, 'mediatek') == true) //here starts Frameworks    //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-        {
-            $img_icon = new UXImage('res://.data/img/system.png');
-            $this->label42->text = 'Part of: MTK Framework';
-        }
-        elseif (str::contains($line, 'mtk') == true)
-        {
-            $img_icon = new UXImage('res://.data/img/system.png');
-            $this->label42->text = 'Part of: MTK Framework';
-        }
-        elseif (str::contains($line, 'sprd') == true)
-        {
-            $img_icon = new UXImage('res://.data/img/system.png');
-            $this->label42->text = 'Part of: Spreadtrum Framework';
-        }
-        elseif (str::contains($line, 'spreadtrum') == true)
-        {
-            $img_icon = new UXImage('res://.data/img/system.png');
-            $this->label42->text = 'Part of: Spreadtrum Framework';
-        }
-        elseif (str::contains($line, 'qualcomm') == true)
-        {
-            $img_icon = new UXImage('res://.data/img/system.png');
-            $this->label42->text = 'Part of: Qualcomm Framework';
-        }
-        elseif (str::contains($line, 'qcom') == true)
-        {
-            $img_icon = new UXImage('res://.data/img/system.png');
-            $this->label42->text = 'Part of: Qualcomm Framework';
-        }
-        elseif (str::contains($line, 'com.android') == true) //here starts GMS and Android    //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-        {
-            $img_icon = new UXImage('res://.data/img/android-ser.png');
-            $this->label42->text = 'Part of: Android OS';
-        }
-        elseif (str::contains($line, 'com.google') == true)
-        {
-            $img_icon = new UXImage('res://.data/img/google.png');
-            $this->label42->text = 'Part of: Google MSF';
-        }
-        elseif (str::contains($line, 'transsion') == true) //here starts OEM/ODM    //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-        {
-            $img_icon = new UXImage('res://.data/img/hios.png');
-            $this->label42->text = 'Part of: HiOS OEM';
-        }
-        elseif (str::contains($line, 'zte') == true)
-        {
-            $img_icon = new UXImage('res://.data/img/zte-ser.png');
-            $this->label42->text = 'Part of: ZTE OEM';
-        }
-        elseif (str::contains($line, 'miui') == true)
-        {
-            $img_icon = new UXImage('res://.data/img/miui.png');
-            $this->label42->text = 'Part of: MIUI OEM';
-        }
-        elseif (str::contains($line, 'xiaomi') == true)
-        {
-            $img_icon = new UXImage('res://.data/img/miui.png');
-            $this->label42->text = 'Part of: MIUI OEM';
-        }
-        elseif (str::contains($line, 'mi') == true)
-        {
-            $img_icon = new UXImage('res://.data/img/miui.png');
-            $this->label42->text = 'Part of: MIUI OEM';
-        }
-        elseif (str::contains($line, 'oneplus') == true)
-        {
-            $img_icon = new UXImage('res://.data/img/oxygen-ser.png');
-            $this->label42->text = 'Part of: OxygenOS OEM';
-        }
-        elseif (str::contains($line, 'meizu') == true)
-        {
-            $img_icon = new UXImage('res://.data/img/flyme-ser.png');
-            $this->label42->text = 'Part of: FlymeOS OEM';
-        }
-        elseif (str::contains($line, 'samsung') == true)
-        {
-            $img_icon = new UXImage('res://.data/img/oneui-ser.png');
-            $this->label42->text = 'Part of: OneUI OEM';
-        }
-        elseif (str::contains($line, 'sec') == true)
-        {
-            $img_icon = new UXImage('res://.data/img/oneui-ser.png');
-            $this->label42->text = 'Part of: OneUI OEM';
-        }
-        else 
-        {
-            $img_icon = new UXImage('res://.data/img/android-ser.png');
-            $this->label42->text = 'Part of: Unknown';
-        }
-        $this->imageAlt->image = $img_icon;
-        
-        $this->AICompare('wtf&');
+        $this->AICompare($line);
     }
 
     /**
@@ -919,7 +762,7 @@ class MainForm extends AbstractForm
             }
         }
         $this->combobox3->selectedIndex = 0;
-        $this->doButtonAction();
+        //$this->doButtonAction();
     }
 
     /**
@@ -932,13 +775,6 @@ class MainForm extends AbstractForm
         $this->doButton25Action();
     }
 
-    /**
-     * @event button44.action 
-     */
-    function doButton44Action(UXEvent $e = null)
-    {    
-        app()->showForm('about');
-    }
 
     /**
      * @event button12.action 
@@ -1077,6 +913,9 @@ class MainForm extends AbstractForm
             $this->listView7->items->add("$output");
             $this->listView7->scrollTo($this->listView7->items->count());
         }
+        
+        $this->AddToLog($input, 'CMD');
+        $this->AddToLog($output, 'RES');
     }
 
     /**
@@ -1103,29 +942,8 @@ class MainForm extends AbstractForm
         UXClipboard::setText($this->listView7->selectedItem);
     }
 
-    /**
-     * @event button25.action 
-     */
-    function doButton25Action(UXEvent $e = null)
-    {    
-        open('manual.chm');
-    }
 
-    /**
-     * @event button25.mouseEnter 
-     */
-    function doButton25MouseEnter(UXMouseEvent $e = null)
-    {    
-        $this->helper->text = 'Get support';
-    }
 
-    /**
-     * @event button44.mouseEnter 
-     */
-    function doButton44MouseEnter(UXMouseEvent $e = null)
-    {    
-        $this->helper->text = 'Show information about app';
-    }
 
     /**
      * @event panelAlt.mouseEnter 
@@ -1426,31 +1244,6 @@ class MainForm extends AbstractForm
     }
 
     /**
-     * @event combobox4.action 
-     */
-    function doCombobox4Action(UXEvent $e = null)
-    {    
-        if ($this->combobox4->selectedIndex == 0)
-        {
-            $this->localization('en-US');
-        }
-        elseif ($this->combobox4->selectedIndex == 1)
-        {
-            $this->localization('uk-UA');
-        }
-        elseif ($this->combobox4->selectedIndex == 2)
-        {
-            $this->localization('ru-RU');
-        }
-    }
-
-
-
-
-
-
-
-    /**
      * @event listView.mouseMove 
      */
     function doListViewMouseMove(UXMouseEvent $e = null)
@@ -1661,28 +1454,7 @@ class MainForm extends AbstractForm
         }
     }
 
-    /**
-     * @event button13.action 
-     */
-    function doButton13Action(UXEvent $e = null)
-    {
-        if ($this->fullScreen == true)
-        {
-            $this->fullScreen = false;
-        }
-        else 
-        {
-            $this->fullScreen = true;
-        }
-    }
 
-    /**
-     * @event button13.mouseEnter 
-     */
-    function doButton13MouseEnter(UXMouseEvent $e = null)
-    {
-        $this->helper->text = 'Workstation mode';
-    }
 
     /**
      * @event checkbox.click 
@@ -1730,6 +1502,131 @@ class MainForm extends AbstractForm
         }
     }
 
+    /**
+     * @event showing 
+     */
+    function doShowing(UXWindowEvent $e = null)
+    {    
+        fs::delete('log.md5');
+    }
+
+    /**
+     * @event keyDown-F11 
+     */
+    function doKeyDownF11(UXKeyEvent $e = null)
+    {    
+        $this->doButton13Action();
+    }
+
+
+
+    /**
+     * @event keyDown-F1 
+     */
+    function doKeyDownF1(UXKeyEvent $e = null)
+    {    
+        $this->doButton25Action();
+    }
+
+    /**
+     * @event button5.action 
+     */
+    function doButton5Action(UXEvent $e = null)
+    {
+        app()->showForm('settings');
+    }
+
+    /**
+     * @event button5.mouseEnter 
+     */
+    function doButton5MouseEnter(UXMouseEvent $e = null)
+    {
+        $this->helper->text = 'Show information about app';
+    }
+
+    /**
+     * @event button25.action 
+     */
+    function doButton25Action(UXEvent $e = null)
+    {
+        open('"https://samarin-dev.github.io/pub/page2.html"');
+    }
+
+    /**
+     * @event button25.mouseEnter 
+     */
+    function doButton25MouseEnter(UXMouseEvent $e = null)
+    {
+        $this->helper->text = 'Get support';
+    }
+
+    /**
+     * @event button44.action 
+     */
+    function doButton44Action(UXEvent $e = null)
+    {
+        app()->showForm('about');
+    }
+
+    /**
+     * @event button44.mouseEnter 
+     */
+    function doButton44MouseEnter(UXMouseEvent $e = null)
+    {
+        $this->helper->text = 'Show information about app';
+    }
+
+    /**
+     * @event button13.action 
+     */
+    function doButton13Action(UXEvent $e = null)
+    {
+        if ($this->fullScreen == true)
+        {
+            $this->fullScreen = false;
+        }
+        else 
+        {
+            $this->fullScreen = true;
+        }
+    }
+
+    /**
+     * @event button13.mouseEnter 
+     */
+    function doButton13MouseEnter(UXMouseEvent $e = null)
+    {
+        $this->helper->text = 'Workstation mode';
+    }
+
+
+    /**
+     * @event keyDown-F5 
+     */
+    function doKeyDownF5(UXKeyEvent $e = null)
+    {    
+        $this->doButtonAction();
+    }
+
+    /**
+     * @event keyDown-Ctrl+F5 
+     */
+    function doKeyDownCtrlF5(UXKeyEvent $e = null)
+    {    
+        $this->doButton15Action();
+    }
+
+    /**
+     * @event spoilerAlt.mouseEnter 
+     */
+    function doSpoilerAltMouseEnter(UXMouseEvent $e = null)
+    {
+        $this->helper->text = 'Let`s do it!';
+    }
+
+
+
+
 
 
 
@@ -1742,540 +1639,5 @@ class MainForm extends AbstractForm
     {
         $this->notice->show();
         $this->panel->hide();
-    }
-    
-    //Starting process and getting output
-    protected $process, $thread;
-    
-    public function start($command)
-    {   
-        $this->listView->items->clear();
-        $this->listView6->items->clear();
-        
-        $this->process = new Process(explode(' ', $command));
-        $this->process = $this->process->start();
-        
-        $this->thread = new Thread(function(){
-            $this->process->getInput()->eachLine(function($line){
-                uiLater(function() use ($line) {
-                    $this->addConsole($line, '#FFFFFF');
-                });
-            });
-
-            $this->process->getError()->eachLine(function($line){
-                uiLater(function () use ($line) {
-                    $this->addConsole($line, '#FFAAAA');
-                }); 
-            });
-            
-            $exitValue = $this->process->getExitValue();
-            uiLater(function () use ($exitValue) {
-              
-            });
-        });
-        
-        $this->thread->start();
-    }
-    
-    
-    //Addidng elements to listView
-    protected function addConsole($line, $color = '#FFFFFF'){
-
-        if(str::length(str::trim($line)) == 0)return; 
-        
-        $line = str_replace('package:', '', $line);
-        
-        if (str::contains($line, 'mediatek') == true) //here starts SoC    //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/system.png'));
-        }
-        elseif (str::contains($line, 'mtk') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/system.png'));
-        }
-        elseif (str::contains($line, 'sprd') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/system.png'));
-        }
-        elseif (str::contains($line, 'spreadtrum') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/system.png'));
-        }
-        elseif (str::contains($line, 'qualcomm') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/system.png'));
-        }
-        elseif (str::contains($line, 'qcom') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/system.png'));
-        }
-        elseif (str::contains($line, 'com.android') == true) //here starts GMS and Android    //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/android-ser.png'));
-        }
-        elseif (str::contains($line, 'com.google') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/google.png'));
-        }
-        elseif (str::contains($line, 'transsion') == true) //here starts OEM/ODM    //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/hios.png'));
-        }
-        elseif (str::contains($line, 'zte') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/zte-ser.png'));
-        }
-        elseif (str::contains($line, 'miui') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/miui.png'));
-        }
-        elseif (str::contains($line, 'xiaomi') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/miui.png'));
-        }
-        elseif (str::contains($line, 'mi') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/miui.png'));
-        }
-        elseif (str::contains($line, 'oneplus') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/oxygen-ser.png'));
-        }
-        elseif (str::contains($line, 'meizu') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/flyme-ser.png'));
-        }
-        elseif (str::contains($line, 'samsung') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/oneui-ser.png'));
-        }
-        elseif (str::contains($line, 'sec') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/oneui-ser.png'));
-        }
-        elseif (str::contains($line, 'ua.') == true) //here starts third-party software    //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/dia.png'));
-        }
-        elseif (str::contains($line, 'facebook') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/facebook.png'));
-        }
-        elseif (str::contains($line, 'instagram') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/instagram.png'));
-        }
-        elseif (str::contains($line, 'viber') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/viber-ser.png'));
-        }
-        elseif (str::contains($line, 'telegram') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/telegram-ser.png'));
-        }
-        elseif (str::contains($line, 'spotify') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/spotify-ser.png'));
-        }
-        elseif (str::contains($line, 'discord') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/discord-ser.png'));
-        }
-        elseif (str::contains($line, 'whatsapp') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/whatsapp-ser.png'));
-        }
-        elseif (str::contains($line, 'openai') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/openai-ser.png'));
-        }
-        elseif (str::contains($line, 'microsoft') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/microsoft-ser.png'));
-        }
-        elseif (str::contains($line, 'binance') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/binance-ser.png'));
-        }
-        elseif (str::contains($line, 'valve') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/steam-ser.png'));
-        }
-        elseif (str::contains($line, 'zhiliaoapp') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/tiktok-ser.png'));
-        }
-        elseif (str::contains($line, 'netflix') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/tiktok-ser.png'));
-        }
-        elseif (str::contains($line, 'amazon') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/amazon-ser.png'));
-        }
-        elseif (str::contains($line, 'reddit') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/reddit-ser.png'));
-        }
-        elseif (str::contains($line, 'twitter') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/x-ser.png'));
-        }
-        elseif (str::contains($line, 'gallery') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/gallery-ser.png'));
-        }
-        elseif (str::contains($line, 'photo') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/gallery-ser.png'));
-        }
-        elseif (str::contains($line, 'music') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/music-ser.png'));
-        }
-        elseif (str::contains($line, 'audio') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/music-ser.png'));
-        }
-        elseif (str::contains($line, 'video') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/video-ser.png'));
-        }
-        elseif (str::contains($line, 'player') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/video-ser.png'));
-        }
-        elseif (str::contains($line, 'launcher') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/launcher-ser.png'));
-        }
-        elseif (str::contains($line, 'theme') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/launcher-ser.png'));
-        }
-        elseif (str::contains($line, 'no.') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/norwey-ser.png'));
-        }
-        elseif (str::contains($line, 'pl.') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/pl-ser.png'));
-        }
-        elseif (str::contains($line, 'us.') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/us-ser.png'));
-        }
-        elseif (str::contains($line, 'uk.') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/uk-ser.png'));
-        }
-        elseif (str::contains($line, 'ro.') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/ro-ser.png'));
-        }
-        elseif (str::contains($line, 'cz.') == true)
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/cz-ser.png'));
-        }
-        else 
-        {
-            $img_icon = new UXImageView(new UXImage('res://.data/img/material.png'));
-        }
-        
-        $item = new UXCheckbox;
-        $item->autoSize = true;
-        $item->textColor = UXColor::of($color);                          
-        $icon = new UXHBox([$img_icon]);
-        $item->text = $line;
-        $item->graphic = $icon;
-        $item->autoSize = TRUE;
-        $item->wrapText = TRUE;
-        $item->rightAnchor = 1;
-        $item->leftAnchor = 1;
-        $item->height = 26;
-        
-        $this->listView->items->add($item);
-        $this->listView->scrollTo($this->listView->items->count);
-        
-        $item_alt = $item->text;
-        $this->listView6->items->add($item_alt);
-        $this->listView6->scrollTo($this->listView6->items->count);
-    }
-    
-    function ADBAction ($action)
-    {   
-        try 
-        {
-            $output = (new Process ( explode(' ', "$action")))->start()->getInput()->readFully();
-        }
-        catch (IOException $e) {$this->toast($e);}
-        
-        $fxout = new UXLabelEx;
-        $fxout->rightAnchor = 1;
-        $fxout->leftAnchor = 1;
-        $fxout->text = $output;
-        $fxout->textColor = UXColor::of('#ffff4d');
-        $img_icon = new UXImageView(new UXImage('res://.data/img/device.png'));                          
-        $icon = new UXHBox([$img_icon]);
-        $fxout->graphic = $icon;
-        
-        $this->listViewAlt->items->add($fxout);
-        $this->listView6->items->add($output);
-        $this->listViewAlt->scrollTo($this->listViewAlt->items->count);
-        $this->listView6->scrollTo($this->listView6->items->count);
-    }
-    
-    function FastbootAction($action)
-    {
-        try 
-        {
-            $output = (new Process ( explode(' ', "$action")))->start()->getInput()->readFully();
-        }
-        catch (IOException $e) {$this->toast($e);}
-        
-        $fxout = new UXLabelEx;
-        $fxout->rightAnchor = 1;
-        $fxout->leftAnchor = 1;
-        $fxout->text = $output;
-        $fxout->textColor = UXColor::of('#ffff4d');
-        $img_icon = new UXImageView(new UXImage('res://.data/img/android.png'));                          
-        $icon = new UXHBox([$img_icon]);
-        $fxout->graphic = $icon;
-        
-        $this->listView3->items->add($fxout);
-        $this->listView3->scrollTo($this->listView3->items->count());
-    }
-    
-    function ErrorToast($code, $path, $ignore = false)
-    {
-        if ($ignore == true)
-        {
-            app()->showForm('MainForm');
-            app()->hideForm('error');
-        }
-        else 
-        {
-            if ($code == 'red')
-            {
-                $this->hide();
-                app()->showForm('error');
-                $this->form('error')->textArea->text = "Some critical parts of Android SDK Platform Tools couldn`t be found: $path. We strongly recommend you to reinstall an app and contact developer for bug-report and support.";
-            }
-            elseif ($code == 'ok')
-            {
-                $this->hide();
-                app()->showForm('error');
-                $this->form('error')->textArea->text = "Some third-party parts of Androcut Software Kit couldn`t be found: $path. Functionallity might be not full. We strongly recommend you to reinstall an app and contact developer for bug-report and support.";
-            }
-        }
-        
-    }
-    
-    function localization($locale = 'en-US')
-    {
-        if ($locale == 'uk-UA')
-        {
-            $this->tabPane->selectFirstTab();
-            $this->tabPane->selectedTab->text = 'Застосунки (Ручне)';
-            $this->tabPane->selectNextTab();
-            $this->tabPane->selectedTab->text = 'Fastboot (Ручне)';
-            $this->tabPane->selectNextTab();
-            $this->tabPane->selectedTab->text = 'Скрипти';
-            $this->tabPane->selectNextTab();
-            $this->tabPane->selectedTab->text = 'Консоль (Ручне)';
-            $this->tabPane->selectFirstTab();
-            $this->checkboxAlt->text = 'Всі';
-            $this->checkbox3->text = 'Вимкнуті';
-            $this->checkbox4->text = 'Увімкнуті';
-            $this->checkbox5->text = 'Системні';
-            $this->checkbox6->text = 'Сторонні';
-            $this->spoiler->text = 'Керування пристроєм';
-            $this->spoiler3->text = 'Стерти';
-            $this->spoiler5->text = 'Записати';
-            $this->combobox->promptText = 'Розділ...';
-            $this->comboboxAlt->promptText = 'Розділ...';
-            $this->combobox3->promptText = 'Пристрій...';
-            $this->combobox3->text = 'Пристрій...';
-            $this->editimg->promptText = 'Образ запису...';
-            $this->editAlt->promptText = 'Ім`я скрипту';
-            $this->edit3->promptText = 'Команда';
-            $this->button25->text = 'Допомога';
-            $this->button44->text = 'Про программу';
-            $this->button7->text = 'Перезавантажити';
-            $this->button9->text = 'До завантажувача';
-            $this->button11->text = 'Вимкнути';
-            $this->button10->text = 'Ввмк/Вимк Екран';
-            $this->button20->text = 'Керування...';
-            $this->button12->text = 'Стерти';
-            $this->button29->text = 'ОЕМ Розблк.';
-            $this->button30->text = 'Розбл. Запису';
-            $this->button16->text = 'Крит. Розблк.';
-            $this->button24->text = 'ОЕМ Блок.';
-            $this->button26->text = 'Блок. Запису';
-            $this->button18->text = 'Крит. Блок.';
-            $this->button31->text = 'До EDL';
-            $this->button32->text = 'Записати';
-            $this->button14->text = 'Локально';
-            $this->button42->text = 'Застосунки на пристрої';
-            $this->button19->text = 'Виконати';
-            $this->button22->text = 'Обрати';
-            $this->button23->text = 'Інформація';
-            $this->edit->promptText = 'Назва пакету...';
-            $this->button38->text = 'Пошук';
-            $this->button35->text = 'Шукати в мережі';
-            $this->button46->text = 'Бездротове з`єднання';
-        }
-        elseif ($locale == 'ru-RU')
-        {
-            $this->tabPane->selectFirstTab();
-            $this->tabPane->selectedTab->text = 'Приложения (Ручное)';
-            $this->tabPane->selectNextTab();
-            $this->tabPane->selectedTab->text = 'Fastboot (Ручное)';
-            $this->tabPane->selectNextTab();
-            $this->tabPane->selectedTab->text = 'Скрипты';
-            $this->tabPane->selectNextTab();
-            $this->tabPane->selectedTab->text = 'Консоль (Ручное)';
-            $this->tabPane->selectFirstTab();
-            $this->checkboxAlt->text = 'Все';
-            $this->checkbox3->text = 'Отключенные';
-            $this->checkbox4->text = 'Включенные';
-            $this->checkbox5->text = 'Системные';
-            $this->checkbox6->text = 'Сторонние';
-            $this->spoiler->text = 'Управление устройством';
-            $this->spoiler3->text = 'Стереть';
-            $this->spoiler5->text = 'Записать';
-            $this->combobox->promptText = 'Раздел...';
-            $this->comboboxAlt->promptText = 'Раздел...';
-            $this->combobox3->promptText = 'Устройство...';
-            $this->combobox3->text = 'Устройство...';
-            $this->editimg->promptText = 'Образ записи...';
-            $this->editAlt->promptText = 'Имя скрипта';
-            $this->edit3->promptText = 'Команда';
-            $this->button25->text = 'Помощь';
-            $this->button44->text = 'О программе';
-            $this->button7->text = 'Перезагрузить';
-            $this->button9->text = 'К загрузчику';
-            $this->button11->text = 'Выключить';
-            $this->button10->text = 'Вкл/Выкл Экран';
-            $this->button20->text = 'Управление...';
-            $this->button12->text = 'Стереть';
-            $this->button29->text = 'ОЕМ Разбл.';
-            $this->button30->text = 'Разбл. Записи';
-            $this->button16->text = 'Крит. Разблк.';
-            $this->button24->text = 'ОЕМ Блок.';
-            $this->button26->text = 'Блок. Записи';
-            $this->button18->text = 'Крит. Блок.';
-            $this->button31->text = 'Перейти к EDL';
-            $this->button32->text = 'Записать';
-            $this->button14->text = 'Локально';
-            $this->button42->text = 'Приложения устройства';
-            $this->button19->text = 'Выполнить';
-            $this->button22->text = 'Выбрать';
-            $this->button23->text = 'Информация';
-            $this->edit->promptText = 'Имя пакета...';
-            $this->button38->text = 'Поиск';
-            $this->button35->text = 'Искать в сети';
-            $this->button46->text = 'Беспроводное соединение';
-        }
-        elseif ($locale == 'en-US')
-        {
-            $this->tabPane->selectFirstTab();
-            $this->tabPane->selectedTab->text = 'Apps (Manual)';
-            $this->tabPane->selectNextTab();
-            $this->tabPane->selectedTab->text = 'Fastboot (Manual)';
-            $this->tabPane->selectNextTab();
-            $this->tabPane->selectedTab->text = 'Scripts';
-            $this->tabPane->selectNextTab();
-            $this->tabPane->selectedTab->text = 'Console (Manual)';
-            $this->tabPane->selectFirstTab();
-            $this->checkboxAlt->text = 'All';
-            $this->checkbox3->text = 'Disabled';
-            $this->checkbox4->text = 'Enabled';
-            $this->checkbox5->text = 'System';
-            $this->checkbox6->text = 'Third-party';
-            $this->spoiler->text = 'Device controls';
-            $this->spoiler3->text = 'Wipe';
-            $this->spoiler5->text = 'Flash';
-            $this->combobox->promptText = 'Partition...';
-            $this->comboboxAlt->promptText = 'Partition...';
-            $this->combobox3->promptText = 'Device...';
-            $this->combobox3->text = 'Device...';
-            $this->editimg->promptText = 'Flashing image...';
-            $this->editAlt->promptText = 'Script name';
-            $this->edit3->promptText = 'Command';
-            $this->button25->text = 'Help';
-            $this->button44->text = 'About';
-            $this->button7->text = 'Reboot';
-            $this->button9->text = 'Reboot to B-loader';
-            $this->button11->text = 'Shutdown';
-            $this->button10->text = 'On/Off Screen';
-            $this->button20->text = 'Control...';
-            $this->button12->text = 'Wipe';
-            $this->button29->text = 'ОЕМ Unlock';
-            $this->button30->text = 'Flash Unlock';
-            $this->button16->text = 'Critical Unlock';
-            $this->button24->text = 'ОЕМ Lock';
-            $this->button26->text = 'Flash Lock';
-            $this->button18->text = 'Critical Lock';
-            $this->button31->text = 'Move to EDL';
-            $this->button32->text = 'Flash';
-            $this->button14->text = 'Local';
-            $this->button42->text = 'Packages on device';
-            $this->button19->text = 'Execute';
-            $this->button22->text = 'Select';
-            $this->button23->text = 'Get info';
-            $this->edit->promptText = 'Package name...';
-            $this->button38->text = 'Search';
-            $this->button35->text = 'Search on the web';
-            $this->button46->text = 'Wireless connect';
-        }
-    }
-    
-    function getUpdate()
-    {
-        $current = '2024.05';
-        
-        try 
-        {
-            $version = str::trim(file_get_contents('https://samarin-dev.github.io/androcut/VERSION.md'));
-        }
-        catch (Error $e) {$this->toast($e);}
-        
-        try 
-        {
-            $changelog = file_get_contents('https://samarin-dev.github.io/androcut/CHANGELOG.md');
-        }
-        catch (Error $e) {$this->toast($e);}
-        
-        if ($version != $current)
-        {
-            app()->showForm('update');
-            app()->form('update')->labelAlt->text = "Current ver.: $current";
-            app()->form('update')->label3->text = "New ver.: $version";
-            app()->form('update')->textArea->text = $changelog;
-        }
-    }
-    
-    function AICompare($input)
-    {
-        $db = $this->ini->sections();
-        $needle = $this->listView->selectedItem->text;
-        
-        $this->label17->text = "Name: N/A";
-        $this->label18->text = "Type: N/A";
-        $this->label19->text = "Rating: N/A";
-        $this->label20->text = "Reccomends: N/A";
-        
-        foreach ($db as $part)
-        {
-            if (str::contains($part, $needle) == true)
-            {
-                $info = $this->ini->section($part);
-                $this->label17->text = "Name: $info[0]";
-                $this->label18->text = "Type: $info[1]";
-                $this->label19->text = "Rating: $info[2]";
-                $this->label20->text = "Reccomends: $info[3]";
-            }
-        }
     }
 }

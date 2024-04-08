@@ -56,4 +56,25 @@
   <target id="button13">
     <behaviour color="#b3b3b3" offsetX="0" offsetY="0" radius="10" type="behaviour\custom\InnerShadowEffectBehaviour" when="HOVER"/>
   </target>
+  <target id="spoiler">
+    <behaviour color="black" offsetX="0" offsetY="0" radius="10" type="behaviour\custom\InnerShadowEffectBehaviour" when="ALWAYS"/>
+  </target>
+  <target id="spoiler4">
+    <behaviour color="black" offsetX="0" offsetY="0" radius="10" type="behaviour\custom\InnerShadowEffectBehaviour" when="ALWAYS"/>
+  </target>
+  <target id="spoiler3">
+    <behaviour color="black" offsetX="0" offsetY="0" radius="10" type="behaviour\custom\InnerShadowEffectBehaviour" when="ALWAYS"/>
+  </target>
+  <target id="spoiler5">
+    <behaviour color="black" offsetX="0" offsetY="0" radius="10" type="behaviour\custom\InnerShadowEffectBehaviour" when="ALWAYS"/>
+  </target>
+  <target id="listView7">
+    <behaviour color="black" offsetX="0" offsetY="0" radius="10" type="behaviour\custom\InnerShadowEffectBehaviour" when="ALWAYS"/>
+  </target>
+  <target id="panel3">
+    <behaviour color="black" offsetX="0" offsetY="0" radius="10" type="behaviour\custom\InnerShadowEffectBehaviour" when="ALWAYS"/>
+  </target>
+  <target id="spoilerAlt">
+    <behaviour color="black" offsetX="0" offsetY="0" radius="10" type="behaviour\custom\InnerShadowEffectBehaviour" when="ALWAYS"/>
+  </target>
 </behaviours>

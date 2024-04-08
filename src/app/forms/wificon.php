@@ -25,6 +25,7 @@ class wificon extends AbstractForm
         }
         else 
         {
+            $this->form('MainForm')->ADBAction("adb tcpip $port");
             $this->form('MainForm')->ADBAction("adb connect $host:$port");
             $this->hide();
         }

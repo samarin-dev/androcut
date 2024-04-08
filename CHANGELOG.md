@@ -57,3 +57,19 @@ First publical beta release
 -EXE-installer improved
 -All license agreements now can be found at 'About' menu
 -Minor bug-fixes and optimizations
+
+=======================================
+2024.06
+=======================================
+-Added ability to install *.apk files (including on multiple devices simultaneously)
+-UI optimized
+-Realized settings menu
+-Added ability to use third-party application databases (currently used for AI recommendations)
+-Added hotkey system
+-Added a system for logging user actions
+-Added a non-strict comparison system for background image selection, which improved device recognition and background selection.
+-Built a foundation for AI-based unwanted software detection system.
+-Translation has been improved
+-A color coding system has been introduced to make the app easier to use
+-Optimized the app's source code to improve community interaction
+-Added a lightweight mode for weak devices

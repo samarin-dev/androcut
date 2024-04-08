@@ -2,6 +2,7 @@
 .debug/preloader.php
 app/forms/about.php
 app/forms/add.php
+app/forms/ai.php
 app/forms/dump.php
 app/forms/error.php
 app/forms/install.php
@@ -9,6 +10,7 @@ app/forms/MainForm.php
 app/forms/runonce.php
 app/forms/savescript.php
 app/forms/scripteditor.php
+app/forms/settings.php
 app/forms/tps.php
 app/forms/update.php
 app/forms/wificon.php

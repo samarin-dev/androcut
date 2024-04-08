@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<behaviours>
+  <target id="image3">
+    <behaviour color="#000000" offsetX="0" offsetY="0" radius="40" spread="0" type="behaviour\custom\DropShadowEffectBehaviour" when="ALWAYS"/>
+  </target>
+  <target id="circle">
+    <behaviour centered="" hideOrigin="1" offsetX="0" offsetY="0" type="behaviour\custom\CursorBindBehaviour"/>
+  </target>
+  <target id="panel">
+    <behaviour color="#4d4d4d" offsetX="0" offsetY="0" radius="40" type="behaviour\custom\InnerShadowEffectBehaviour" when="ALWAYS"/>
+    <behaviour radius="63" type="behaviour\custom\GaussianBlurEffectBehaviour" when="ALWAYS"/>
+  </target>
+</behaviours>

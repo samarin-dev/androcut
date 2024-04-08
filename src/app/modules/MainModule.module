@@ -13,6 +13,16 @@
         "actionNode": "button27"
       }
     },
+    "cfg": {
+      "type": "script\\storage\\IniStorage",
+      "x": 688,
+      "y": 432,
+      "props": {
+        "path": "config.ini",
+        "autoSave": "1",
+        "multiLineValues": "1"
+      }
+    },
     "ini": {
       "type": "script\\storage\\IniStorage",
       "x": 592,
@@ -35,17 +45,17 @@
         "actionNode": "buttonfldr"
       }
     },
-    "fileChooser4": {
+    "fileChooser": {
       "type": "script\\FileChooserScript",
-      "x": 704,
+      "x": 384,
       "y": 288,
       "props": {
+        "multiple": false,
         "initialDirectory": "/scripts",
         "filterName": "Androcut Automatical Uninstall Script (*.aaus)",
         "filterExtensions": "*.aaus",
         "filterAny": true,
-        "inputNode": "scriptpath",
-        "actionNode": "buttonopen"
+        "actionNode": "button34"
       }
     },
     "fileChooser3": {
@@ -62,17 +72,17 @@
         "actionNode": "buttonpath"
       }
     },
-    "fileChooser": {
+    "fileChooser4": {
       "type": "script\\FileChooserScript",
-      "x": 384,
+      "x": 704,
       "y": 288,
       "props": {
-        "multiple": false,
         "initialDirectory": "/scripts",
         "filterName": "Androcut Automatical Uninstall Script (*.aaus)",
         "filterExtensions": "*.aaus",
         "filterAny": true,
-        "actionNode": "button34"
+        "inputNode": "scriptpath",
+        "actionNode": "buttonopen"
       }
     },
     "dirChooser": {
@@ -82,15 +92,6 @@
       "props": {
         "inputNode": "edit",
         "actionNode": "buttonfldr"
-      }
-    },
-    "dirChooserAlt": {
-      "type": "script\\DirectoryChooserScript",
-      "x": 256,
-      "y": 96,
-      "props": {
-        "inputNode": "apkdirout",
-        "actionNode": "apkdirbut"
       }
     },
     "fileChooser6": {
@@ -103,6 +104,27 @@
         "filterAny": "0",
         "inputNode": "apkoutpath",
         "actionNode": "apkoutbut"
+      }
+    },
+    "dirChooserAlt": {
+      "type": "script\\DirectoryChooserScript",
+      "x": 256,
+      "y": 96,
+      "props": {
+        "inputNode": "apkdirout",
+        "actionNode": "apkdirbut"
+      }
+    },
+    "fileChooser7": {
+      "type": "script\\FileChooserScript",
+      "x": 704,
+      "y": 96,
+      "props": {
+        "filterName": "Все файлы",
+        "filterExtensions": "*.*",
+        "filterAny": "0",
+        "inputNode": "edit",
+        "actionNode": "button6"
       }
     }
   }

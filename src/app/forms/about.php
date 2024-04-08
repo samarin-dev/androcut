@@ -40,29 +40,8 @@ class about extends AbstractForm
         open('"https://samarin-dev.github.io/pub/"');
     }
 
-    /**
-     * @event button6.action 
-     */
-    function doButton6Action(UXEvent $e = null)
-    {
-        open('"https://www.buymeacoffee.com/samarin.dev/introduction-2260066"');
-    }
 
-    /**
-     * @event button7.action 
-     */
-    function doButton7Action(UXEvent $e = null)
-    {
-        open('"https://www.paypal.com/donate/?hosted_button_id=MB2VZZATFBMZ2"');
-    }
 
-    /**
-     * @event button8.action 
-     */
-    function doButton8Action(UXEvent $e = null)
-    {
-        open('"https://send.monobank.ua/jar/AEFwnbzMFo"');
-    }
 
     /**
      * @event button9.action 
@@ -87,6 +66,14 @@ class about extends AbstractForm
     {    
         $this->toast('Checking updates on server...');
         $this->form('MainForm')->getUpdate();
+    }
+
+    /**
+     * @event button6.action 
+     */
+    function doButton6Action(UXEvent $e = null)
+    {    
+        open('"https://samarin-dev.github.io/pub/index.html#features20-4"');
     }
 
 }

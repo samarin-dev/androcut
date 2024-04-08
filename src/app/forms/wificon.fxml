@@ -7,7 +7,7 @@
       </font>
     </TextField>
     <Data cursor="DEFAULT" enabled="1" id="data-edit" visible="1"/>
-    <TextField alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="editAlt" layoutX="216" layoutY="8" prefColumnCount="12" prefHeight="35" prefWidth="104" promptText="Port (5555 def.)" styleClass="text-input text-field " text="">
+    <TextField alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="editAlt" layoutX="216" layoutY="8" prefColumnCount="12" prefHeight="35" prefWidth="104" promptText="Port (5555 def.)" styleClass="text-input text-field " text="5555">
       <font>
         <Font name="System Regular" size="12"/>
       </font>

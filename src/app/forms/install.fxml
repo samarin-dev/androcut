@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120" prefWidth="536" styleClass="">
+<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="152" prefWidth="536" styleClass="">
   <children>
     <org.develnext.jphp.ext.javafx.jfoenix.support.JFXTabPaneFixed focusTraversable="true" id="tabPane" layoutX="0" layoutY="0" prefHeight="120" prefWidth="536" style="&#10;-fx-background-color: #333333;" styleClass="jfx-tab-pane tab-pane " tabClosingPolicy="SELECTED_TAB">
       <tabs>
@@ -38,33 +38,43 @@
                     <Font name="System Regular" size="12"/>
                   </font>
                 </TextField>
-                <Data cursor="DEFAULT" enabled="1" id="data-apkdirout" visible="1"/>
+                <Data cursor="DEFAULT" enabled="" id="data-apkdirout" visible="1"/>
                 <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="apkdirbut" layoutX="496" layoutY="8" prefHeight="35" prefWidth="32" styleClass="button " text="Кнопка" textAlignment="CENTER" underline="false" wrapText="false">
                   <font>
                     <Font name="System Regular" size="12"/>
                   </font>
                 </Button>
-                <Data cursor="DEFAULT" enabled="1" id="data-apkdirbut" visible="1"/>
+                <Data cursor="DEFAULT" enabled="" id="data-apkdirbut" visible="1"/>
                 <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="buttonAlt" layoutX="384" layoutY="56" prefHeight="32" prefWidth="144" styleClass="button " text="Install" textAlignment="CENTER" underline="false" wrapText="false">
                   <font>
                     <Font name="System Regular" size="12"/>
                   </font>
                 </Button>
-                <Data cursor="DEFAULT" enabled="1" graphic=".data/img/next.png" id="data-buttonAlt" visible="1"/>
+                <Data cursor="DEFAULT" enabled="" graphic=".data/img/next.png" id="data-buttonAlt" visible="1"/>
+                <com.jfoenix.controls.JFXCheckBox alignment="CENTER_LEFT" checkedColor="#4d4d4d" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="checkboxAlt" layoutX="8" layoutY="48" prefHeight="48" prefWidth="368" styleClass="check-box jfx-check-box " text="Multi-APK" textAlignment="LEFT" unCheckedColor="#5a5a5a" underline="false" wrapText="false">
+                  <font>
+                    <Font name="System Regular" size="12"/>
+                  </font>
+                </com.jfoenix.controls.JFXCheckBox>
+                <Data cursor="DEFAULT" enabled="" id="data-checkboxAlt" visible="1"/>
+                <ImageViewEx autoSize="false" centered="true" focusTraversable="false" height="32" id="image" layoutX="96" layoutY="56" mosaic="false" mosaicGap="0" proportional="false" stretch="false" styleClass="" textFill="#000000" width="32">
+                  <font>
+                    <Font name="System Regular" size="12"/>
+                  </font>
+                </ImageViewEx>
+                <Data cursor="DEFAULT" enabled="1" id="data-image" image=".data/img/help.png" visible="1"/>
               </children>
             </AnchorPane>
           </content>
         </Tab>
       </tabs>
     </org.develnext.jphp.ext.javafx.jfoenix.support.JFXTabPaneFixed>
-    <com.jfoenix.controls.JFXCheckBox alignment="CENTER_LEFT" checkedColor="#4d4d4d" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="checkbox" layoutX="8" layoutY="72" prefHeight="48" prefWidth="368" styleClass="check-box jfx-check-box " text="To all devices" textAlignment="LEFT" unCheckedColor="#5a5a5a" underline="false" wrapText="false">
+    <com.jfoenix.controls.JFXCheckBox alignment="CENTER_LEFT" checkedColor="#4d4d4d" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="checkbox" layoutX="8" layoutY="112" prefHeight="48" prefWidth="368" styleClass="check-box jfx-check-box " text="To all devices" textAlignment="LEFT" unCheckedColor="#5a5a5a" underline="false" wrapText="false">
       <font>
         <Font name="System Regular" size="12"/>
       </font>
     </com.jfoenix.controls.JFXCheckBox>
     <Data cursor="DEFAULT" enabled="1" id="data-tabPane" visible="1"/>
     <Data cursor="DEFAULT" enabled="1" id="data-checkbox" visible="1"/>
-    <com.jfoenix.controls.JFXSpinner focusTraversable="false" id="progressIndicator" layoutX="512" layoutY="8" prefHeight="16" prefWidth="16" progress="-1" radius="16" styleClass="progress-indicator jfx-spinner "/>
-    <Data cursor="DEFAULT" enabled="1" id="data-progressIndicator" visible=""/>
   </children>
 </AnchorPane>

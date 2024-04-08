@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512" prefWidth="672" styleClass=" ">
+  <children>
+    <Panel AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" backgroundColor="#333333" borderColor="#c0c0c0" borderRadius="0" borderStyle="SOLID" borderWidth="0" focusTraversable="false" id="panel" layoutX="0" layoutY="0" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="512" prefWidth="672" styleClass="" titleColor="#afb1b3" titleOffset="15" titlePosition="TOP_LEFT">
+      <children/>
+      <titleFont>
+        <Font name="System Regular" size="12"/>
+      </titleFont>
+    </Panel>
+    <FlatButton alignment="CENTER" borderRadius="10" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" hoverColor="#4d4d4d" id="button" layoutX="8" layoutY="8" prefHeight="40" prefWidth="160" style="&#10;-fx-text-fill: #999999;" styleClass="x-flat-button " text="Switch to manual" textAlignment="CENTER" textFill="#999999" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="12"/>
+      </font>
+    </FlatButton>
+    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/click.png" id="data-button" visible="1"/>
+    <ImageViewEx autoSize="true" centered="true" focusTraversable="false" height="128" id="image3" layoutX="272" layoutY="96" mosaic="false" mosaicGap="0" opacity="0.72527472527473" proportional="false" stretch="false" styleClass="" textFill="#000000" width="128">
+      <font>
+        <Font name="System Regular" size="12"/>
+      </font>
+    </ImageViewEx>
+    <Data cursor="DEFAULT" enabled="1" id="data-image3" image=".data/img/androcut-icon.png" visible="1"/>
+    <FlatButton alignment="CENTER" borderRadius="10" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" hoverColor="#4d4d4d" id="buttonAlt" layoutX="624" layoutY="8" prefHeight="40" prefWidth="40" style="&#10;-fx-text-fill: #999999;" styleClass="x-flat-button " text="" textAlignment="CENTER" textFill="#999999" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="12"/>
+      </font>
+    </FlatButton>
+    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/params.png" id="data-buttonAlt" visible="1"/>
+    <FlatButton alignment="CENTER" borderRadius="10" color="#4d4d4d" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" hoverColor="#4d804d" id="button3" layoutX="184" layoutY="312" opacity="0.76923076923077" prefHeight="40" prefWidth="304" style="&#10;-fx-text-fill: #999999;" styleClass="x-flat-button " text="Start checking" textAlignment="CENTER" textFill="#999999" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="12"/>
+      </font>
+    </FlatButton>
+    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/params.png" id="data-button3" visible="1"/>
+    <LabelEx alignment="CENTER" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label" layoutX="184" layoutY="248" opacity="0.70212765957447" prefHeight="17" prefWidth="304" styleClass="label " text="Select device:" textAlignment="LEFT" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="12"/>
+      </font>
+    </LabelEx>
+    <Data cursor="DEFAULT" enabled="1" id="data-label" visible="1"/>
+    <ComboBox editable="false" focusTraversable="true" id="combobox" layoutX="184" layoutY="272" opacity="0.70212765957447" prefHeight="32" prefWidth="304" promptText="" styleClass="combo-box-base combo-box " value="" visibleRowCount="10">
+      <items xmlns:fx="http://javafx.com/fxml">
+        <FXCollections fx:factory="observableArrayList"/>
+      </items>
+    </ComboBox>
+    <Data cursor="DEFAULT" enabled="1" id="data-combobox" visible="1"/>
+    <Circle fill="#ffffff" focusTraversable="false" id="circle" layoutX="540" layoutY="212" radius="4" stroke="#ffffff" strokeType="INSIDE" strokeWidth="2" styleClass=""/>
+    <Data cursor="DEFAULT" enabled="1" id="data-circle" visible="1"/>
+    <Data cursor="DEFAULT" enabled="1" id="data-panel" visible="1"/>
+  </children>
+</AnchorPane>
